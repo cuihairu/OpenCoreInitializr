@@ -1,0 +1,149 @@
+{
+  "intel": {
+    "brand": "Intel",
+    "chipsets": [
+      {
+        "series": "700 Series",
+        "models": [
+          "Z790",
+          "H770",
+          "B760",
+          "H610"
+        ],
+        "supportedCpus": ["13th Gen", "12th Gen"],
+        "socket": "LGA1700"
+      },
+      {
+        "series": "600 Series",
+        "models": [
+          "Z690",
+          "H670",
+          "B660",
+          "H610"
+        ],
+        "supportedCpus": ["12th Gen", "11th Gen"],
+        "socket": "LGA1700"
+      },
+      {
+        "series": "500 Series",
+        "models": [
+          "Z590",
+          "H570",
+          "B560",
+          "H510"
+        ],
+        "supportedCpus": ["11th Gen", "10th Gen"],
+        "socket": "LGA1200"
+      },
+      {
+        "series": "400 Series",
+        "models": [
+          "Z490",
+          "H470",
+          "B460",
+          "H410"
+        ],
+        "supportedCpus": ["10th Gen"],
+        "socket": "LGA1200"
+      },
+      {
+        "series": "300 Series",
+        "models": [
+          "Z390",
+          "H370",
+          "B365",
+          "B360",
+          "H310"
+        ],
+        "supportedCpus": ["9th Gen", "8th Gen"],
+        "socket": "LGA1151"
+      },
+      {
+        "series": "200 Series",
+        "models": [
+          "Z270",
+          "H270",
+          "B250",
+          "H110"
+        ],
+        "supportedCpus": ["7th Gen", "6th Gen"],
+        "socket": "LGA1151"
+      },
+      {
+        "series": "100 Series",
+        "models": [
+          "Z170",
+          "H170",
+          "B150",
+          "H110"
+        ],
+        "supportedCpus": ["6th Gen"],
+        "socket": "LGA1151"
+      }
+    ]
+  },
+  "amd": {
+    "brand": "AMD",
+    "chipsets": [
+      {
+        "series": "700 Series",
+        "models": [
+          "X670E",
+          "X670",
+          "B650E",
+          "B650",
+          "A620"
+        ],
+        "supportedCpus": ["Ryzen 7000 Series"],
+        "socket": "AM5"
+      },
+      {
+        "series": "600 Series",
+        "models": [
+          "TRX50",
+          "WRX90"
+        ],
+        "supportedCpus": ["Ryzen Threadripper 7000"],
+        "socket": "sTR5"
+      },
+      {
+        "series": "500 Series",
+        "models": [
+          "X570",
+          "B550",
+          "A520"
+        ],
+        "supportedCpus": ["Ryzen 5000 Series", "Ryzen 3000 Series"],
+        "socket": "AM4"
+      },
+      {
+        "series": "400 Series",
+        "models": [
+          "X470",
+          "B450",
+          "A320"
+        ],
+        "supportedCpus": ["Ryzen 3000 Series", "Ryzen 2000 Series", "Ryzen 1000 Series"],
+        "socket": "AM4"
+      },
+      {
+        "series": "300 Series",
+        "models": [
+          "X370",
+          "B350",
+          "A320"
+        ],
+        "supportedCpus": ["Ryzen 2000 Series", "Ryzen 1000 Series"],
+        "socket": "AM4"
+      },
+      {
+        "series": "TRX40",
+        "models": [
+          "TRX40"
+        ],
+        "supportedCpus": ["Ryzen Threadripper 3000"],
+        "socket": "sTRX4"
+      }
+    ]
+  }
+}

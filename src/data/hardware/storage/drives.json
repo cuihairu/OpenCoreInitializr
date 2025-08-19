@@ -1,0 +1,175 @@
+{
+  "nvme": {
+    "type": "NVMe SSD",
+    "interface": "PCIe",
+    "brands": [
+      {
+        "name": "Samsung",
+        "models": [
+          {
+            "model": "980 PRO",
+            "capacities": ["250GB", "500GB", "1TB", "2TB", "4TB"],
+            "interface": "PCIe 4.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          },
+          {
+            "model": "980",
+            "capacities": ["250GB", "500GB", "1TB"],
+            "interface": "PCIe 3.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          },
+          {
+            "model": "970 EVO Plus",
+            "capacities": ["250GB", "500GB", "1TB", "2TB"],
+            "interface": "PCIe 3.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          }
+        ]
+      },
+      {
+        "name": "Western Digital",
+        "models": [
+          {
+            "model": "WD Black SN850X",
+            "capacities": ["500GB", "1TB", "2TB", "4TB"],
+            "interface": "PCIe 4.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          },
+          {
+            "model": "WD Blue SN570",
+            "capacities": ["250GB", "500GB", "1TB", "2TB"],
+            "interface": "PCIe 3.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          }
+        ]
+      },
+      {
+        "name": "Crucial",
+        "models": [
+          {
+            "model": "P5 Plus",
+            "capacities": ["500GB", "1TB", "2TB"],
+            "interface": "PCIe 4.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          },
+          {
+            "model": "P2",
+            "capacities": ["250GB", "500GB", "1TB", "2TB"],
+            "interface": "PCIe 3.0 x4",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, no additional drivers needed"
+          }
+        ]
+      }
+    ],
+    "generalSupport": "Excellent",
+    "notes": "NVMe drives are generally well supported in macOS"
+  },
+  "sata_ssd": {
+    "type": "SATA SSD",
+    "interface": "SATA III",
+    "brands": [
+      {
+        "name": "Samsung",
+        "models": [
+          {
+            "model": "870 EVO",
+            "capacities": ["250GB", "500GB", "1TB", "2TB", "4TB"],
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, widely compatible"
+          },
+          {
+            "model": "870 QVO",
+            "capacities": ["1TB", "2TB", "4TB", "8TB"],
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, QLC technology"
+          }
+        ]
+      },
+      {
+        "name": "Crucial",
+        "models": [
+          {
+            "model": "MX500",
+            "capacities": ["250GB", "500GB", "1TB", "2TB", "4TB"],
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, reliable performance"
+          }
+        ]
+      },
+      {
+        "name": "Western Digital",
+        "models": [
+          {
+            "model": "WD Blue 3D NAND",
+            "capacities": ["250GB", "500GB", "1TB", "2TB", "4TB"],
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, good value"
+          }
+        ]
+      }
+    ],
+    "generalSupport": "Excellent",
+    "notes": "SATA SSDs are universally supported in macOS"
+  },
+  "hdd": {
+    "type": "Hard Disk Drive",
+    "interface": "SATA III",
+    "brands": [
+      {
+        "name": "Western Digital",
+        "models": [
+          {
+            "model": "WD Blue",
+            "capacities": ["500GB", "1TB", "2TB", "4TB", "6TB"],
+            "rpm": "5400/7200",
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, good for storage"
+          },
+          {
+            "model": "WD Black",
+            "capacities": ["500GB", "1TB", "2TB", "4TB", "6TB"],
+            "rpm": "7200",
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, high performance"
+          }
+        ]
+      },
+      {
+        "name": "Seagate",
+        "models": [
+          {
+            "model": "Barracuda",
+            "capacities": ["500GB", "1TB", "2TB", "4TB", "8TB"],
+            "rpm": "7200",
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, reliable storage"
+          },
+          {
+            "model": "IronWolf",
+            "capacities": ["1TB", "2TB", "4TB", "6TB", "8TB", "10TB", "12TB"],
+            "rpm": "7200",
+            "interface": "SATA III",
+            "openCoreSupport": "Excellent",
+            "notes": "Native support, NAS optimized"
+          }
+        ]
+      }
+    ],
+    "generalSupport": "Excellent",
+    "notes": "Traditional HDDs are fully supported, but slower than SSDs"
+  }
+}

@@ -404,9 +404,30 @@
       "autoGenerate": "Automatically generate SMBIOS values"
     },
     "security": {
-      "secureBootModel": "Set the secure boot model for security",
-      "vault": "Enable vault for additional security",
-      "scanPolicy": "Configure which drives to scan for boot entries"
+      "secureBootModel": "Set Secure Boot model for enhanced security",
+      "vault": "Enable Vault for additional security",
+      "scanPolicy": "Configure drives to scan for boot entries"
+    }
+  },
+  "options": {
+    "cpuBrands": {
+      "Intel": "Intel",
+      "AMD": "AMD"
+    },
+    "memoryTypes": {
+      "DDR3": "DDR3",
+      "DDR4": "DDR4",
+      "DDR5": "DDR5"
+    },
+    "storageTypes": {
+      "SATA": "SATA",
+      "NVMe": "NVMe",
+      "Mixed": "Mixed"
+    },
+    "gpuBrands": {
+      "NVIDIA": "NVIDIA",
+      "AMD": "AMD",
+      "Intel": "Intel"
     }
   }
 }

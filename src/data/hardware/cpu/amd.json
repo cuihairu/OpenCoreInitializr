@@ -1,0 +1,129 @@
+{
+  "brand": "AMD",
+  "generations": [
+    {
+      "name": "Ryzen 7000 Series (Zen 4)",
+      "codename": "Zen 4",
+      "architecture": "5nm",
+      "models": [
+        "Ryzen 9 7950X",
+        "Ryzen 9 7900X",
+        "Ryzen 7 7700X",
+        "Ryzen 5 7600X",
+        "Ryzen 9 7950X3D",
+        "Ryzen 9 7900X3D",
+        "Ryzen 7 7800X3D",
+        "Ryzen 9 7945HX",
+        "Ryzen 9 7940HS",
+        "Ryzen 7 7840HS",
+        "Ryzen 5 7640HS"
+      ]
+    },
+    {
+      "name": "Ryzen 6000 Series (Zen 3+)",
+      "codename": "Zen 3+",
+      "architecture": "6nm",
+      "models": [
+        "Ryzen 9 6980HX",
+        "Ryzen 9 6900HX",
+        "Ryzen 7 6800H",
+        "Ryzen 5 6600H",
+        "Ryzen 9 6980HS",
+        "Ryzen 9 6900HS",
+        "Ryzen 7 6800HS",
+        "Ryzen 5 6600HS",
+        "Ryzen 7 6800U",
+        "Ryzen 5 6600U"
+      ]
+    },
+    {
+      "name": "Ryzen 5000 Series (Zen 3)",
+      "codename": "Zen 3",
+      "architecture": "7nm",
+      "models": [
+        "Ryzen 9 5950X",
+        "Ryzen 9 5900X",
+        "Ryzen 7 5800X",
+        "Ryzen 5 5600X",
+        "Ryzen 9 5900",
+        "Ryzen 7 5800",
+        "Ryzen 5 5600",
+        "Ryzen 9 5980HX",
+        "Ryzen 9 5900HX",
+        "Ryzen 7 5800H",
+        "Ryzen 5 5600H",
+        "Ryzen 7 5700X",
+        "Ryzen 5 5500",
+        "Ryzen 9 5950X3D",
+        "Ryzen 9 5900X3D",
+        "Ryzen 7 5800X3D"
+      ]
+    },
+    {
+      "name": "Ryzen 4000 Series (Zen 2)",
+      "codename": "Zen 2",
+      "architecture": "7nm",
+      "models": [
+        "Ryzen 9 4900H",
+        "Ryzen 9 4900HS",
+        "Ryzen 7 4800H",
+        "Ryzen 7 4800HS",
+        "Ryzen 5 4600H",
+        "Ryzen 5 4600HS",
+        "Ryzen 7 4700U",
+        "Ryzen 5 4500U",
+        "Ryzen 3 4300U"
+      ]
+    },
+    {
+      "name": "Ryzen 3000 Series (Zen 2)",
+      "codename": "Zen 2",
+      "architecture": "7nm",
+      "models": [
+        "Ryzen 9 3950X",
+        "Ryzen 9 3900X",
+        "Ryzen 7 3800X",
+        "Ryzen 7 3700X",
+        "Ryzen 5 3600X",
+        "Ryzen 5 3600",
+        "Ryzen 5 3500X",
+        "Ryzen 3 3300X",
+        "Ryzen 3 3100",
+        "Ryzen 9 3900XT",
+        "Ryzen 7 3800XT",
+        "Ryzen 5 3600XT"
+      ]
+    },
+    {
+      "name": "Ryzen 2000 Series (Zen+)",
+      "codename": "Zen+",
+      "architecture": "12nm",
+      "models": [
+        "Ryzen 7 2700X",
+        "Ryzen 7 2700",
+        "Ryzen 5 2600X",
+        "Ryzen 5 2600",
+        "Ryzen 3 2300X",
+        "Ryzen 7 2800H",
+        "Ryzen 5 2500U",
+        "Ryzen 3 2300U"
+      ]
+    },
+    {
+      "name": "Ryzen 1000 Series (Zen)",
+      "codename": "Zen",
+      "architecture": "14nm",
+      "models": [
+        "Ryzen 7 1800X",
+        "Ryzen 7 1700X",
+        "Ryzen 7 1700",
+        "Ryzen 5 1600X",
+        "Ryzen 5 1600",
+        "Ryzen 5 1500X",
+        "Ryzen 5 1400",
+        "Ryzen 3 1300X",
+        "Ryzen 3 1200"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { useHardwareStore } from '../store';
-import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card';
+import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui';
 import { 
   ResponsiveForm, 
@@ -11,52 +11,64 @@ import {
   ResponsiveButton 
 } from '../components/ui/ResponsiveForm';
 import { ResponsiveContainer } from '../components/layout/ResponsiveLayout';
-import type { HardwareConfig } from '../types';
+import HardwareConfig from '../lib/config/hardware';
+import type { HardwareConfig as HardwareConfigType } from '../types';
 
 const HardwareConfigPage: React.FC = () => {
   const { t } = useTranslation();
   const { config, updateConfig, errors, validateConfig } = useHardwareStore();
 
   const handleInputChange = (field: string, value: any) => {
+    console.log('handleInputChange调用:', { field, value });
     const keys = field.split('.');
-    const newConfig = { ...config };
+    const newConfig: any = {};
     
-    let current = newConfig as any;
+    let current = newConfig;
     for (let i = 0; i < keys.length - 1; i++) {
-      if (!current[keys[i]]) {
-        current[keys[i]] = {};
-      }
+      current[keys[i]] = {};
       current = current[keys[i]];
     }
     current[keys[keys.length - 1]] = value;
     
+    console.log('准备更新的newConfig:', newConfig);
     updateConfig(newConfig);
+    console.log('updateConfig调用完成');
   };
 
-  const cpuBrandOptions = [
-    { value: 'Intel', label: 'Intel' },
-    { value: 'AMD', label: 'AMD' }
-  ];
+  // 使用JSON配置文件中的数据
+  const cpuBrandOptions = HardwareConfig.getCpuBrands().map(brand => ({
+    value: brand,
+    label: t(`options.cpuBrand.${brand}`)
+  }));
+
+  // 根据CPU品牌获取对应的代数选项
+  const getGenerationOptions = () => {
+    const cpuBrand = config.cpu?.brand;
+    if (!cpuBrand) return [];
+    
+    const generations = HardwareConfig.getCpuGenerations(cpuBrand);
+    return generations.map(gen => ({
+      value: gen,
+      label: gen
+    }));
+  };
 
   // 架构选项已移除，因为项目只支持 x86_64 架构（Intel 和 AMD）
 
-  const memoryTypeOptions = [
-    { value: 'DDR3', label: 'DDR3' },
-    { value: 'DDR4', label: 'DDR4' },
-    { value: 'DDR5', label: 'DDR5' }
-  ];
+  const memoryTypeOptions = HardwareConfig.getMemoryTypes().map(type => ({
+    value: type,
+    label: t(`options.memoryTypes.${type}`, type)
+  }));
 
-  const storageTypeOptions = [
-    { value: 'SATA', label: 'SATA' },
-    { value: 'NVMe', label: 'NVMe' },
-    { value: 'Mixed', label: 'Mixed' }
-  ];
+  const storageTypeOptions = HardwareConfig.getStorageTypes().map(type => ({
+    value: type,
+    label: t(`options.storageTypes.${type}`, type)
+  }));
 
-  const gpuBrandOptions = [
-    { value: 'Intel', label: 'Intel' },
-    { value: 'AMD', label: 'AMD' },
-    { value: 'NVIDIA', label: 'NVIDIA' }
-  ];
+  const gpuBrandOptions = HardwareConfig.getGpuBrands().map(brand => ({
+    value: brand,
+    label: t(`options.gpuBrands.${brand}`, brand)
+  }));
 
   return (
     <ResponsiveContainer size="narrow" className="space-y-6">
@@ -86,9 +98,12 @@ const HardwareConfigPage: React.FC = () => {
                   options={cpuBrandOptions}
                   value={config.cpu?.brand || ''}
                   onChange={(value) => {
+                    console.log('CPU品牌选择变化:', value);
+                    console.log('选择前的config:', config);
                     // 自动设置架构为 x86_64，因为项目只支持此架构
                     handleInputChange('cpu.brand', value);
                     handleInputChange('cpu.architecture', 'x86_64');
+                    console.log('选择后的config:', config);
                   }}
                   error={!!errors.cpu}
                   placeholder="选择 CPU 品牌"
@@ -99,13 +114,30 @@ const HardwareConfigPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <ResponsiveFormGroup
                 label={t('hardware.cpu.generation', 'Generation')}
-                description="例如：12th Gen, Zen 3"
+                description={config.cpu?.brand ? `选择${config.cpu.brand}代数或手动输入` : "请先选择CPU代数"}
               >
-                <ResponsiveInput
-                  value={config.cpu?.generation || ''}
-                  onChange={(e) => handleInputChange('cpu.generation', e.target.value)}
-                  placeholder="e.g., 12th Gen, Zen 3"
-                />
+                {config.cpu?.brand ? (
+                  <div className="space-y-2">
+                    <ResponsiveSelect
+                      options={getGenerationOptions()}
+                      value={config.cpu?.generation || ''}
+                      onChange={(value) => handleInputChange('cpu.generation', value)}
+                      placeholder={`选择${config.cpu.brand}代数`}
+                    />
+                    <ResponsiveInput
+                      value={config.cpu?.generation || ''}
+                      onChange={(e) => handleInputChange('cpu.generation', e.target.value)}
+                      placeholder="或手动输入代数"
+                    />
+                  </div>
+                ) : (
+                  <ResponsiveInput
+                    value={config.cpu?.generation || ''}
+                    onChange={(e) => handleInputChange('cpu.generation', e.target.value)}
+                    placeholder="请先选择CPU品牌"
+                    disabled
+                  />
+                )}
               </ResponsiveFormGroup>
               
               <ResponsiveFormGroup
@@ -448,7 +480,6 @@ const HardwareConfigPage: React.FC = () => {
             onClick={() => {
               if (validateConfig()) {
                 // Navigate to next step
-                console.log('Configuration valid, proceeding to next step');
               }
             }}
           >

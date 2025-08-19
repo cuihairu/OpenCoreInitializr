@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from './components/ui/Toast';
+import { useTranslation } from './hooks/useTranslation';
 
 import HardwareConfigPage from './pages/HardwareConfig';
 import { ResponsiveLayout } from './components/layout/ResponsiveLayout';
@@ -13,6 +14,7 @@ import './App.css';
 // Layout Component
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const mobileNav = useMobileNavigation();
+  const { t } = useTranslation();
 
   return (
     <div className="app-container" style={{ background: 'hsl(var(--background))', color: 'hsl(var(--foreground))' }}>
@@ -36,13 +38,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
              <div className="flex items-center space-x-4">
                <nav className="hidden md:flex space-x-8">
                  <a href="/hardware" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   Hardware
+                   {t('navigation.hardware', 'Hardware Configuration')}
                  </a>
                  <a href="/configuration" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   Configuration
+                   {t('navigation.opencore', 'OpenCore Settings')}
                  </a>
                  <a href="/download" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   Download
+                   {t('navigation.download', 'Download')}
                  </a>
                </nav>
                

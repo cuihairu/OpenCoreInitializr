@@ -1,0 +1,161 @@
+{
+  "ddr5": {
+    "type": "DDR5",
+    "speeds": [
+      {
+        "speed": "DDR5-4800",
+        "frequency": "4800 MHz",
+        "jedec": true,
+        "voltage": "1.1V"
+      },
+      {
+        "speed": "DDR5-5200",
+        "frequency": "5200 MHz",
+        "jedec": true,
+        "voltage": "1.1V"
+      },
+      {
+        "speed": "DDR5-5600",
+        "frequency": "5600 MHz",
+        "jedec": false,
+        "voltage": "1.1V"
+      },
+      {
+        "speed": "DDR5-6000",
+        "frequency": "6000 MHz",
+        "jedec": false,
+        "voltage": "1.35V"
+      },
+      {
+        "speed": "DDR5-6400",
+        "frequency": "6400 MHz",
+        "jedec": false,
+        "voltage": "1.35V"
+      },
+      {
+        "speed": "DDR5-6800",
+        "frequency": "6800 MHz",
+        "jedec": false,
+        "voltage": "1.35V"
+      },
+      {
+        "speed": "DDR5-7200",
+        "frequency": "7200 MHz",
+        "jedec": false,
+        "voltage": "1.4V"
+      },
+      {
+        "speed": "DDR5-7600",
+        "frequency": "7600 MHz",
+        "jedec": false,
+        "voltage": "1.4V"
+      }
+    ],
+    "capacities": ["8GB", "16GB", "32GB", "64GB", "128GB"],
+    "supportedPlatforms": ["Intel 12th Gen+", "AMD Ryzen 7000+"],
+    "openCoreSupport": "Good",
+    "notes": "Supported in macOS Monterey and later"
+  },
+  "ddr4": {
+    "type": "DDR4",
+    "speeds": [
+      {
+        "speed": "DDR4-2133",
+        "frequency": "2133 MHz",
+        "jedec": true,
+        "voltage": "1.2V"
+      },
+      {
+        "speed": "DDR4-2400",
+        "frequency": "2400 MHz",
+        "jedec": true,
+        "voltage": "1.2V"
+      },
+      {
+        "speed": "DDR4-2666",
+        "frequency": "2666 MHz",
+        "jedec": true,
+        "voltage": "1.2V"
+      },
+      {
+        "speed": "DDR4-2933",
+        "frequency": "2933 MHz",
+        "jedec": true,
+        "voltage": "1.2V"
+      },
+      {
+        "speed": "DDR4-3200",
+        "frequency": "3200 MHz",
+        "jedec": true,
+        "voltage": "1.2V"
+      },
+      {
+        "speed": "DDR4-3600",
+        "frequency": "3600 MHz",
+        "jedec": false,
+        "voltage": "1.35V"
+      },
+      {
+        "speed": "DDR4-4000",
+        "frequency": "4000 MHz",
+        "jedec": false,
+        "voltage": "1.35V"
+      },
+      {
+        "speed": "DDR4-4400",
+        "frequency": "4400 MHz",
+        "jedec": false,
+        "voltage": "1.4V"
+      }
+    ],
+    "capacities": ["4GB", "8GB", "16GB", "32GB", "64GB"],
+    "supportedPlatforms": ["Intel 6th Gen+", "AMD Ryzen 1000+"],
+    "openCoreSupport": "Excellent",
+    "notes": "Widely supported across all macOS versions"
+  },
+  "ddr3": {
+    "type": "DDR3",
+    "speeds": [
+      {
+        "speed": "DDR3-1066",
+        "frequency": "1066 MHz",
+        "jedec": true,
+        "voltage": "1.5V"
+      },
+      {
+        "speed": "DDR3-1333",
+        "frequency": "1333 MHz",
+        "jedec": true,
+        "voltage": "1.5V"
+      },
+      {
+        "speed": "DDR3-1600",
+        "frequency": "1600 MHz",
+        "jedec": true,
+        "voltage": "1.5V"
+      },
+      {
+        "speed": "DDR3-1866",
+        "frequency": "1866 MHz",
+        "jedec": true,
+        "voltage": "1.5V"
+      },
+      {
+        "speed": "DDR3-2133",
+        "frequency": "2133 MHz",
+        "jedec": true,
+        "voltage": "1.5V"
+      },
+      {
+        "speed": "DDR3-2400",
+        "frequency": "2400 MHz",
+        "jedec": false,
+        "voltage": "1.65V"
+      }
+    ],
+    "capacities": ["2GB", "4GB", "8GB", "16GB", "32GB"],
+    "supportedPlatforms": ["Intel 1st-5th Gen", "AMD FX Series"],
+    "openCoreSupport": "Excellent",
+    "notes": "Legacy support, widely compatible"
+  }
+}

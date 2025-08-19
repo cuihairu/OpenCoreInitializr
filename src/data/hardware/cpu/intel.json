@@ -1,0 +1,147 @@
+{
+  "brand": "Intel",
+  "generations": [
+    {
+      "name": "14th Gen (Raptor Lake Refresh)",
+      "codename": "Raptor Lake Refresh",
+      "architecture": "Intel 7",
+      "models": [
+        "i9-14900K",
+        "i9-14900KF",
+        "i7-14700K",
+        "i7-14700KF",
+        "i5-14600K",
+        "i5-14600KF",
+        "i5-14400",
+        "i5-14400F",
+        "i3-14100",
+        "i3-14100F"
+      ]
+    },
+    {
+      "name": "13th Gen (Raptor Lake)",
+      "codename": "Raptor Lake",
+      "architecture": "Intel 7",
+      "models": [
+        "i9-13900K",
+        "i9-13900KF",
+        "i7-13700K",
+        "i7-13700KF",
+        "i5-13600K",
+        "i5-13600KF",
+        "i5-13400",
+        "i5-13400F",
+        "i3-13100",
+        "i3-13100F"
+      ]
+    },
+    {
+      "name": "12th Gen (Alder Lake)",
+      "codename": "Alder Lake",
+      "architecture": "Intel 7",
+      "models": [
+        "i9-12900K",
+        "i9-12900KF",
+        "i7-12700K",
+        "i7-12700KF",
+        "i5-12600K",
+        "i5-12600KF",
+        "i5-12400",
+        "i5-12400F",
+        "i3-12100",
+        "i3-12100F"
+      ]
+    },
+    {
+      "name": "11th Gen (Rocket Lake)",
+      "codename": "Rocket Lake",
+      "architecture": "14nm++",
+      "models": [
+        "i9-11900K",
+        "i9-11900KF",
+        "i7-11700K",
+        "i7-11700KF",
+        "i5-11600K",
+        "i5-11600KF",
+        "i5-11400",
+        "i5-11400F"
+      ]
+    },
+    {
+      "name": "10th Gen (Comet Lake)",
+      "codename": "Comet Lake",
+      "architecture": "14nm++",
+      "models": [
+        "i9-10900K",
+        "i9-10900KF",
+        "i7-10700K",
+        "i7-10700KF",
+        "i5-10600K",
+        "i5-10600KF",
+        "i5-10400",
+        "i5-10400F",
+        "i3-10100",
+        "i3-10100F"
+      ]
+    },
+    {
+      "name": "9th Gen (Coffee Lake Refresh)",
+      "codename": "Coffee Lake Refresh",
+      "architecture": "14nm++",
+      "models": [
+        "i9-9900K",
+        "i9-9900KF",
+        "i7-9700K",
+        "i7-9700KF",
+        "i5-9600K",
+        "i5-9600KF",
+        "i5-9400",
+        "i5-9400F",
+        "i3-9100",
+        "i3-9100F"
+      ]
+    },
+    {
+      "name": "8th Gen (Coffee Lake)",
+      "codename": "Coffee Lake",
+      "architecture": "14nm+",
+      "models": [
+        "i7-8700K",
+        "i7-8700",
+        "i5-8600K",
+        "i5-8400",
+        "i3-8350K",
+        "i3-8100"
+      ]
+    },
+    {
+      "name": "7th Gen (Kaby Lake)",
+      "codename": "Kaby Lake",
+      "architecture": "14nm+",
+      "models": [
+        "i7-7700K",
+        "i7-7700",
+        "i5-7600K",
+        "i5-7500",
+        "i5-7400",
+        "i3-7350K",
+        "i3-7320",
+        "i3-7100"
+      ]
+    },
+    {
+      "name": "6th Gen (Skylake)",
+      "codename": "Skylake",
+      "architecture": "14nm",
+      "models": [
+        "i7-6700K",
+        "i7-6700",
+        "i5-6600K",
+        "i5-6500",
+        "i5-6400",
+        "i3-6320",
+        "i3-6100"
+      ]
+    }
+  ]
+}

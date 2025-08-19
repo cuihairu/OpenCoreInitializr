@@ -35,10 +35,19 @@ export const useHardwareStore = create<HardwareStore>()(immer((set, get) => ({
   errors: {},
 
   updateConfig: (newConfig) => set((state) => {
+    console.log('store updateConfig调用:', newConfig);
+    console.log('更新前的state.config:', state.config);
+    // Deep merge for nested objects using immer
     state.config = { ...state.config, ...newConfig };
+    console.log('更新后的state.config:', state.config);
     // Auto-validate after update
-    const isValid = get().validateConfig();
-    state.isValid = isValid;
+    try {
+      const isValid = get().validateConfig();
+      state.isValid = isValid;
+    } catch (error) {
+      console.warn('Validation error:', error);
+      state.isValid = false;
+    }
   }),
 
   resetConfig: () => set((state) => {

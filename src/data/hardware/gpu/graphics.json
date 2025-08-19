@@ -1,0 +1,221 @@
+{
+  "nvidia": {
+    "brand": "NVIDIA",
+    "series": [
+      {
+        "name": "GeForce RTX 40 Series",
+        "generation": "Ada Lovelace",
+        "architecture": "5nm",
+        "models": [
+          "RTX 4090",
+          "RTX 4080 SUPER",
+          "RTX 4080",
+          "RTX 4070 Ti SUPER",
+          "RTX 4070 Ti",
+          "RTX 4070 SUPER",
+          "RTX 4070",
+          "RTX 4060 Ti",
+          "RTX 4060"
+        ],
+        "openCoreSupport": "Limited",
+        "notes": "Requires web drivers or specific patches"
+      },
+      {
+        "name": "GeForce RTX 30 Series",
+        "generation": "Ampere",
+        "architecture": "8nm",
+        "models": [
+          "RTX 3090 Ti",
+          "RTX 3090",
+          "RTX 3080 Ti",
+          "RTX 3080",
+          "RTX 3070 Ti",
+          "RTX 3070",
+          "RTX 3060 Ti",
+          "RTX 3060",
+          "RTX 3050"
+        ],
+        "openCoreSupport": "Limited",
+        "notes": "Requires web drivers or specific patches"
+      },
+      {
+        "name": "GeForce RTX 20 Series",
+        "generation": "Turing",
+        "architecture": "12nm",
+        "models": [
+          "RTX 2080 Ti",
+          "RTX 2080 SUPER",
+          "RTX 2080",
+          "RTX 2070 SUPER",
+          "RTX 2070",
+          "RTX 2060 SUPER",
+          "RTX 2060"
+        ],
+        "openCoreSupport": "Limited",
+        "notes": "Requires web drivers or specific patches"
+      },
+      {
+        "name": "GeForce GTX 16 Series",
+        "generation": "Turing",
+        "architecture": "12nm",
+        "models": [
+          "GTX 1660 Ti",
+          "GTX 1660 SUPER",
+          "GTX 1660",
+          "GTX 1650 SUPER",
+          "GTX 1650"
+        ],
+        "openCoreSupport": "Limited",
+        "notes": "Requires web drivers or specific patches"
+      },
+      {
+        "name": "GeForce GTX 10 Series",
+        "generation": "Pascal",
+        "architecture": "16nm",
+        "models": [
+          "GTX 1080 Ti",
+          "GTX 1080",
+          "GTX 1070 Ti",
+          "GTX 1070",
+          "GTX 1060",
+          "GTX 1050 Ti",
+          "GTX 1050"
+        ],
+        "openCoreSupport": "Good",
+        "notes": "Generally well supported with web drivers"
+      }
+    ]
+  },
+  "amd": {
+    "brand": "AMD",
+    "series": [
+      {
+        "name": "Radeon RX 7000 Series",
+        "generation": "RDNA 3",
+        "architecture": "5nm",
+        "models": [
+          "RX 7900 XTX",
+          "RX 7900 XT",
+          "RX 7800 XT",
+          "RX 7700 XT",
+          "RX 7600 XT",
+          "RX 7600"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS Sonoma and later"
+      },
+      {
+        "name": "Radeon RX 6000 Series",
+        "generation": "RDNA 2",
+        "architecture": "7nm",
+        "models": [
+          "RX 6950 XT",
+          "RX 6900 XT",
+          "RX 6800 XT",
+          "RX 6800",
+          "RX 6750 XT",
+          "RX 6700 XT",
+          "RX 6650 XT",
+          "RX 6600 XT",
+          "RX 6600",
+          "RX 6500 XT",
+          "RX 6400"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS Big Sur and later"
+      },
+      {
+        "name": "Radeon RX 5000 Series",
+        "generation": "RDNA",
+        "architecture": "7nm",
+        "models": [
+          "RX 5700 XT",
+          "RX 5700",
+          "RX 5600 XT",
+          "RX 5500 XT"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS Catalina and later"
+      },
+      {
+        "name": "Radeon RX Vega Series",
+        "generation": "GCN 5.0",
+        "architecture": "14nm",
+        "models": [
+          "RX Vega 64",
+          "RX Vega 56"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS High Sierra and later"
+      },
+      {
+        "name": "Radeon RX 500 Series",
+        "generation": "Polaris",
+        "architecture": "14nm",
+        "models": [
+          "RX 590",
+          "RX 580",
+          "RX 570",
+          "RX 560",
+          "RX 550"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS Sierra and later"
+      },
+      {
+        "name": "Radeon RX 400 Series",
+        "generation": "Polaris",
+        "architecture": "14nm",
+        "models": [
+          "RX 480",
+          "RX 470",
+          "RX 460"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Native support in macOS Sierra and later"
+      }
+    ]
+  },
+  "intel": {
+    "brand": "Intel",
+    "series": [
+      {
+        "name": "Intel Arc A-Series",
+        "generation": "Xe-HPG",
+        "architecture": "6nm",
+        "models": [
+          "Arc A770",
+          "Arc A750",
+          "Arc A580",
+          "Arc A380"
+        ],
+        "openCoreSupport": "None",
+        "notes": "Not supported in macOS"
+      },
+      {
+        "name": "Intel Iris Xe Graphics",
+        "generation": "Xe-LP",
+        "architecture": "10nm",
+        "models": [
+          "Iris Xe Graphics G7",
+          "Iris Xe Graphics G4"
+        ],
+        "openCoreSupport": "Good",
+        "notes": "Integrated graphics with good macOS support"
+      },
+      {
+        "name": "Intel UHD Graphics",
+        "generation": "Gen 9.5/11",
+        "architecture": "14nm",
+        "models": [
+          "UHD Graphics 770",
+          "UHD Graphics 730",
+          "UHD Graphics 630",
+          "UHD Graphics 610"
+        ],
+        "openCoreSupport": "Excellent",
+        "notes": "Integrated graphics with excellent macOS support"
+      }
+    ]
+  }
+}

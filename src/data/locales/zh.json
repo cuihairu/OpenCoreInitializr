@@ -409,5 +409,26 @@
       "vault": "启用保险库以增加安全性",
       "scanPolicy": "配置要扫描启动条目的驱动器"
     }
+  },
+  "options": {
+    "cpuBrands": {
+      "Intel": "英特尔",
+      "AMD": "AMD"
+    },
+    "memoryTypes": {
+      "DDR3": "DDR3",
+      "DDR4": "DDR4",
+      "DDR5": "DDR5"
+    },
+    "storageTypes": {
+      "SATA": "SATA",
+      "NVMe": "NVMe",
+      "Mixed": "混合"
+    },
+    "gpuBrands": {
+      "NVIDIA": "英伟达",
+      "AMD": "AMD",
+      "Intel": "英特尔"
+    }
   }
 }
