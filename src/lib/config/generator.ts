@@ -18,6 +18,7 @@ export class OpenCoreConfigGenerator {
    */
   generateConfig(): OpenCoreConfig {
     return {
+      version: this.openCoreVersion,
       ACPI: this.generateACPIConfig(),
       Booter: this.generateBooterConfig(),
       DeviceProperties: this.generateDevicePropertiesConfig(),
@@ -174,6 +175,7 @@ export class OpenCoreConfigGenerator {
         Comment: 'Lilu - Arbitrary kext and process patching on macOS',
         Enabled: true,
         ExecutablePath: 'Contents/MacOS/Lilu',
+        Arch: 'Any',
         MaxKernel: '',
         MinKernel: '',
         PlistPath: 'Contents/Info.plist'
@@ -183,6 +185,7 @@ export class OpenCoreConfigGenerator {
         Comment: 'VirtualSMC - Advanced Apple SMC emulator in the kernel',
         Enabled: true,
         ExecutablePath: 'Contents/MacOS/VirtualSMC',
+        Arch: 'Any',
         MaxKernel: '',
         MinKernel: '',
         PlistPath: 'Contents/Info.plist'
@@ -194,6 +197,7 @@ export class OpenCoreConfigGenerator {
       const igpuModel = this.hardwareConfig.gpu.integrated.model.toLowerCase();
       if (igpuModel.includes('uhd') || igpuModel.includes('iris')) {
         add.push({
+          Arch: 'Any',
           BundlePath: 'WhateverGreen.kext',
           Comment: 'WhateverGreen - Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs',
           Enabled: true,
@@ -208,6 +212,7 @@ export class OpenCoreConfigGenerator {
     // 音频Kext
     if (this.hardwareConfig.audio.codec) {
       add.push({
+        Arch: 'Any',
         BundlePath: 'AppleALC.kext',
         Comment: 'AppleALC - Native macOS HD audio for not officially supported codecs',
         Enabled: true,
@@ -223,6 +228,7 @@ export class OpenCoreConfigGenerator {
       const ethernetModel = this.hardwareConfig.network.ethernet.model.toLowerCase();
       if (ethernetModel.includes('intel')) {
         add.push({
+          Arch: 'Any',
           BundlePath: 'IntelMausi.kext',
           Comment: 'IntelMausi - Intel onboard LAN driver for macOS',
           Enabled: true,
@@ -233,6 +239,7 @@ export class OpenCoreConfigGenerator {
         });
       } else if (ethernetModel.includes('realtek')) {
         add.push({
+          Arch: 'Any',
           BundlePath: 'RealtekRTL8111.kext',
           Comment: 'RealtekRTL8111 - Realtek RTL8111/8168 family ethernet driver for macOS',
           Enabled: true,
@@ -246,6 +253,7 @@ export class OpenCoreConfigGenerator {
 
     // USB相关Kext
     add.push({
+      Arch: 'Any',
       BundlePath: 'USBMap.kext',
       Comment: 'USBMap - Custom USB port mapping',
       Enabled: true,
@@ -259,9 +267,11 @@ export class OpenCoreConfigGenerator {
       Add: add,
       Block: block,
       Emulate: {
-        Cpuid1Data: new Array(16).fill(0),
-        Cpuid1Mask: new Array(16).fill(0),
-        DummyPowerManagement: false
+        Cpuid1Data: '0x00000000',
+        Cpuid1Mask: '0x00000000',
+        DummyPowerManagement: false,
+        MaxKernel: '',
+        MinKernel: ''
       },
       Force: [],
       Patch: patch,
@@ -270,12 +280,15 @@ export class OpenCoreConfigGenerator {
         AppleXcpmCfgLock: false,
         AppleXcpmExtraMsrs: false,
         AppleXcpmForceBoost: false,
+        CustomPciSerialDevice: false,
         CustomSMBIOSGuid: false,
         DisableIoMapper: true,
+        DisableIoMapperMapping: false,
         DisableLinkeditJettison: true,
         DisableRtcChecksum: false,
         ExtendBTFeatureFlags: false,
         ExternalDiskIcons: false,
+        ForceAquantiaEthernet: false,
         ForceSecureBootScheme: false,
         IncreasePciBarSize: false,
         LapicKernelPanic: false,
@@ -305,6 +318,7 @@ export class OpenCoreConfigGenerator {
         ConsoleAttributes: 0,
         HibernateMode: 'None',
         HibernateSkipsPicker: false,
+        HideAuxiliary: true,
         LauncherOption: 'Disabled',
         LauncherPath: 'Default',
         PickerAttributes: 0,
@@ -337,8 +351,8 @@ export class OpenCoreConfigGenerator {
         EnablePassword: false,
         ExposeSensitiveData: 6,
         HaltLevel: 2147483648,
-        PasswordHash: new Array(64).fill(0),
-        PasswordSalt: new Array(32).fill(0),
+        PasswordHash: '',
+        PasswordSalt: '',
         ScanPolicy: 0,
         SecureBootModel: 'Default',
         Vault: 'Optional'
@@ -350,7 +364,7 @@ export class OpenCoreConfigGenerator {
           DetectCable: false,
           FifoControl: 0,
           LineControl: 0,
-          PciDeviceInfo: 0,
+          PciDeviceInfo: '',
           RegisterAccessWidth: 0,
           RegisterBase: 0,
           RegisterStride: 0,
@@ -397,6 +411,7 @@ export class OpenCoreConfigGenerator {
           'boot-args'
         ]
       },
+      LegacyEnable: false,
       LegacyOverwrite: false,
       LegacySchema: {
         '8BE4DF61-93CA-11D2-AA0D-00E098032B8C': {
@@ -467,9 +482,9 @@ export class OpenCoreConfigGenerator {
         ChassisSerialNumber: '',
         ChassisAssetTag: '',
         PlatformFeature: 0,
-        SmcVersion: new Array(16).fill(0),
-        FirmwareFeatures: new Array(8).fill(0),
-        FirmwareFeaturesMask: new Array(8).fill(0),
+        SmcVersion: '0x00000000',
+        FirmwareFeatures: '0x00000000',
+        FirmwareFeaturesMask: '0x00000000',
         ExtendedFirmwareFeatures: new Array(8).fill(0),
         ExtendedFirmwareFeaturesMask: new Array(8).fill(0),
         ProcessorType: 0,
@@ -563,7 +578,7 @@ export class OpenCoreConfigGenerator {
         GopBurstMode: false,
         GopPassThrough: 'Disabled',
         IgnoreTextInGraphics: false,
-        InitialMode: 3,
+        InitialMode: 'Text',
         ReconnectGraphicsOnConnect: false,
         ReconnectOnResChange: false,
         ReplaceTabWithSpace: false,
@@ -753,13 +768,13 @@ export class OpenCoreConfigGenerator {
   /**
    * 生成ROM
    */
-  private generateROM(): number[] {
+  private generateROM(): string {
     // 简化的ROM生成逻辑
     const rom = [];
     for (let i = 0; i < 6; i++) {
-      rom.push(Math.floor(Math.random() * 256));
+      rom.push(Math.floor(Math.random() * 256).toString(16).padStart(2, '0'));
     }
-    return rom;
+    return rom.join(':').toUpperCase();
   }
 }
 

@@ -99,14 +99,14 @@ export const i18nUtils = {
    */
   getBrowserLanguage(): SupportedLanguage {
     const browserLang = navigator.language.split('-')[0];
-    return this.isLanguageSupported(browserLang) ? browserLang : 'en';
+    return this.isLanguageSupported(browserLang) ? (browserLang as SupportedLanguage) : 'en';
   },
 
   /**
    * Format message with interpolation
    */
   formatMessage(key: string, values?: Record<string, any>): string {
-    return i18n.t(key, values);
+    return i18n.t(key, values) as string;
   },
 
   /**

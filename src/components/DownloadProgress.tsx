@@ -195,7 +195,13 @@ export const DownloadProgress: React.FC<DownloadProgressProps> = ({
         
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
           {downloadItems.map((item) => {
-            const status = downloadStatuses[item.id] || { status: 'pending', progress: 0 };
+            const status = downloadStatuses[item.id] || { 
+              itemId: item.id,
+              status: 'pending', 
+              progress: 0,
+              downloadedBytes: 0,
+              totalBytes: item.size
+            };
             
             return (
               <div key={item.id} className="p-6">

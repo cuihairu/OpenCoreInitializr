@@ -7,10 +7,10 @@ import { generateUUID, generateMacAddress, generateSerialNumber } from '@/lib/ut
 export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
   version: '1.0.2',
   ACPI: {
-    add: [],
-    delete: [],
-    patch: [],
-    quirks: {
+    Add: [],
+    Delete: [],
+    Patch: [],
+    Quirks: {
       FadtEnableReset: false,
       NormalizeHeaders: false,
       RebaseRegions: false,
@@ -19,10 +19,10 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SyncTableIds: false,
     },
   },
-  booter: {
-    mmioWhitelist: [],
-    patch: [],
-    quirks: {
+  Booter: {
+    MmioWhitelist: [],
+    Patch: [],
+     Quirks: {
       AllowRelocationBlock: false,
       AvoidRuntimeDefrag: true,
       DevirtualiseMmio: false,
@@ -45,23 +45,23 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SyncRuntimePermissions: true,
     },
   },
-  deviceProperties: {
-    add: {},
-    delete: {},
+  DeviceProperties: {
+    Add: {},
+    Delete: {},
   },
-  kernel: {
-    add: [],
-    block: [],
-    emulate: {
+  Kernel: {
+    Add: [],
+    Block: [],
+     Emulate: {
       Cpuid1Data: '',
       Cpuid1Mask: '',
       DummyPowerManagement: false,
       MaxKernel: '',
       MinKernel: '',
     },
-    force: [],
-    patch: [],
-    quirks: {
+    Force: [],
+     Patch: [],
+     Quirks: {
       AppleCpuPmCfgLock: false,
       AppleXcpmCfgLock: false,
       AppleXcpmExtraMsrs: false,
@@ -86,15 +86,15 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       ThirdPartyDrives: false,
       XhciPortLimit: false,
     },
-    scheme: {
+    Scheme: {
       FuzzyMatch: true,
       KernelArch: 'Auto',
       KernelCache: 'Auto',
     },
   },
-  misc: {
-    blessOverride: [],
-    boot: {
+  Misc: {
+    BlessOverride: [],
+    Boot: {
       ConsoleAttributes: 0,
       HibernateMode: 'None',
       HibernateSkipsPicker: false,
@@ -110,7 +110,7 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       TakeoffDelay: 0,
       Timeout: 5,
     },
-    debug: {
+    Debug: {
       AppleDebug: false,
       ApplePanic: false,
       DisableWatchDog: false,
@@ -121,8 +121,8 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SysReport: false,
       Target: 3,
     },
-    entries: [],
-    security: {
+    Entries: [],
+    Security: {
       AllowSetDefault: true,
       ApECID: 0,
       AuthRestart: false,
@@ -137,7 +137,7 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SecureBootModel: 'Default',
       Vault: 'Optional',
     },
-    serial: {
+    Serial: {
       Custom: {
         BaudRate: 115200,
         ClockRate: 1843200,
@@ -154,30 +154,30 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       Init: false,
       Override: false,
     },
-    tools: [],
+    Tools: [],
   },
-  nvram: {
-    add: {
+  NVRAM: {
+    Add: {
       '7C436110-AB2A-4BBB-A880-FE41995C9F82': {
         'boot-args': '',
         'csr-active-config': new Uint8Array([0x00, 0x00, 0x00, 0x00]),
         'prev-lang:kbd': new Uint8Array([0x65, 0x6e, 0x2d, 0x55, 0x53, 0x3a, 0x30, 0x00]),
       },
     },
-    delete: {
+    Delete: {
       '7C436110-AB2A-4BBB-A880-FE41995C9F82': [
         'UIScale',
         'DefaultBackgroundColor',
       ],
     },
-    legacyEnable: false,
-    legacyOverwrite: false,
-    writeFlash: true,
+    LegacyEnable: false,
+     LegacyOverwrite: false,
+     WriteFlash: true,
   },
-  platformInfo: {
-    automatic: true,
-    customMemory: false,
-    generic: {
+  PlatformInfo: {
+    Automatic: true,
+    CustomMemory: false,
+    Generic: {
       AdviseFeatures: false,
       MaxBIOSVersion: false,
       MLB: '',
@@ -189,17 +189,17 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SystemSerialNumber: '',
       SystemUUID: '',
     },
-    memory: {
-      dataWidth: 64,
-      devices: [],
-      errorCorrection: 6,
-      formFactor: 13,
-      maxCapacity: 0,
-      totalWidth: 64,
-      type: 24,
-      typeDetail: 2,
-    },
-    smbios: {
+    Memory: {
+       DataWidth: 64,
+       Devices: [],
+       ErrorCorrection: 6,
+       FormFactor: 13,
+       MaxCapacity: 0,
+       TotalWidth: 64,
+       Type: 24,
+       TypeDetail: 2,
+     },
+    SMBIOS: {
       BIOSReleaseDate: '',
       BIOSVendor: '',
       BIOSVersion: '',
@@ -229,13 +229,13 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       SystemUUID: '',
       SystemVersion: '',
     },
-    updateDataHub: true,
-    updateNVRAM: true,
-    updateSMBIOS: true,
-    updateSMBIOSMode: 'Create',
+    UpdateDataHub: true,
+     UpdateNVRAM: true,
+     UpdateSMBIOS: true,
+     UpdateSMBIOSMode: 'Create',
   },
-  uefi: {
-    apfs: {
+  UEFI: {
+    APFS: {
       EnableJumpstart: true,
       GlobalConnect: false,
       HideVerbose: true,
@@ -243,7 +243,7 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       MinDate: 0,
       MinVersion: 0,
     },
-    audio: {
+    Audio: {
       AudioCodec: 0,
       AudioDevice: '',
       AudioOut: 0,
@@ -256,9 +256,9 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       ResetTrafficClass: false,
       SetupDelay: 0,
     },
-    connectDrivers: true,
-    drivers: [],
-    input: {
+    ConnectDrivers: true,
+    Drivers: [],
+    Input: {
       KeyFiltering: false,
       KeyForgetThreshold: 5,
       KeyMergeThreshold: 2,
@@ -269,7 +269,7 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       PointerSupportMode: '',
       TimerResolution: 50000,
     },
-    output: {
+    Output: {
       ClearScreenOnModeSwitch: false,
       ConsoleMode: '',
       DirectGopRendering: false,
@@ -286,7 +286,7 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       TextRenderer: 'BuiltinGraphics',
       UgaPassThrough: false,
     },
-    protocolOverrides: {
+    ProtocolOverrides: {
       AppleAudio: false,
       AppleBootPolicy: false,
       AppleDebugLog: false,
@@ -307,23 +307,23 @@ export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
       PciIo: false,
       UnicodeCollation: false,
     },
-    quirks: {
-      ActivateHpetSupport: false,
-      DisableSecurityPolicy: false,
-      EnableVectorAcceleration: false,
-      EnableVmx: false,
-      ExitBootServicesDelay: 0,
-      ForceOcWriteFlash: false,
-      ForgeUefiSupport: false,
-      IgnoreInvalidFlexRatio: false,
-      ReleaseUsbOwnership: false,
-      ReloadOptionRoms: false,
-      RequestBootVarRouting: true,
-      ResizeGpuBars: -1,
-      TscSyncTimeout: 0,
-      UnblockFsConnect: false,
-    },
-    reservedMemory: [],
+    Quirks: {
+       ActivateHpetSupport: false,
+       DisableSecurityPolicy: false,
+       EnableVectorAcceleration: false,
+       EnableVmx: false,
+       ExitBootServicesDelay: 0,
+       ForceOcWriteFlash: false,
+       ForgeUefiSupport: false,
+       IgnoreInvalidFlexRatio: false,
+       ReleaseUsbOwnership: false,
+       ReloadOptionRoms: false,
+       RequestBootVarRouting: true,
+       ResizeGpuBars: -1,
+       TscSyncTimeout: 0,
+       UnblockFsConnect: false,
+     },
+     ReservedMemory: [],
   },
 };
 
@@ -418,29 +418,29 @@ function applyHardwareSpecificConfig(config: OpenCoreConfig, hardware: HardwareC
   // CPU-specific configurations
   if (hardware.cpu.brand === 'AMD') {
     // AMD-specific settings
-    config.kernel.emulate.DummyPowerManagement = true;
-    config.kernel.quirks.AppleCpuPmCfgLock = true;
-    config.kernel.quirks.AppleXcpmCfgLock = true;
-    config.kernel.quirks.ProvideCurrentCpuInfo = true;
-    
-    // Add AMD CPU patches if needed
-    if (hardware.cpu.generation?.includes('zen')) {
-      config.booter.quirks.SetupVirtualMap = false;
-    }
-  } else {
-    // Intel-specific settings
-    config.kernel.quirks.AppleCpuPmCfgLock = false;
-    config.kernel.quirks.AppleXcpmCfgLock = false;
+  config.Kernel.Emulate.DummyPowerManagement = true;
+  config.Kernel.Quirks.AppleCpuPmCfgLock = true;
+  config.Kernel.Quirks.AppleXcpmCfgLock = true;
+  config.Kernel.Quirks.ProvideCurrentCpuInfo = true;
+  
+  // Add AMD CPU patches if needed
+  if (hardware.cpu.generation?.includes('zen')) {
+    config.Booter.Quirks.SetupVirtualMap = false;
   }
+} else {
+  // Intel-specific settings
+  config.Kernel.Quirks.AppleCpuPmCfgLock = false;
+  config.Kernel.Quirks.AppleXcpmCfgLock = false;
+}
 
   // GPU-specific configurations
   if (hardware.gpu.discrete) {
     if (hardware.gpu.discrete.brand === 'NVIDIA') {
       // NVIDIA-specific settings
-      config.nvram.add['7C436110-AB2A-4BBB-A880-FE41995C9F82']['boot-args'] += ' nvda_drv=1';
+    config.NVRAM.Add['7C436110-AB2A-4BBB-A880-FE41995C9F82']['boot-args'] += ' nvda_drv=1';
     } else if (hardware.gpu.discrete.brand === 'AMD') {
       // AMD GPU-specific settings
-      config.deviceProperties.add['PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)'] = {
+    config.DeviceProperties.Add['PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)'] = {
         'AAPL,slot-name': 'Internal@0,1,0/0,0',
         'device_type': 'VGA compatible controller',
         'model': hardware.gpu.discrete.model,
@@ -450,7 +450,7 @@ function applyHardwareSpecificConfig(config: OpenCoreConfig, hardware: HardwareC
 
   // Audio-specific configurations
   if (hardware.audio.codec) {
-    config.deviceProperties.add['PciRoot(0x0)/Pci(0x1f,0x3)'] = {
+    config.DeviceProperties.Add['PciRoot(0x0)/Pci(0x1f,0x3)'] = {
       'layout-id': hardware.audio.layout || 1,
     };
   }
@@ -462,13 +462,13 @@ function applyHardwareSpecificConfig(config: OpenCoreConfig, hardware: HardwareC
 
   // Storage-specific configurations
   if (hardware.storage.type === 'NVMe') {
-    config.kernel.quirks.ThirdPartyDrives = true;
+    config.Kernel.Quirks.ThirdPartyDrives = true;
   }
 
   // Memory-specific configurations
   if (hardware.memory.size >= 32) {
     // High memory configurations
-    config.booter.quirks.DevirtualiseMmio = true;
+    config.Booter.Quirks.DevirtualiseMmio = true;
   }
 }
 
@@ -492,19 +492,19 @@ function configureSMBIOS(config: OpenCoreConfig, hardware: HardwareConfig): void
   }
 
   // Set SMBIOS model
-  config.platformInfo.generic.SystemProductName = model;
+  config.PlatformInfo.Generic.SystemProductName = model;
   
   // Generate unique identifiers
-  config.platformInfo.generic.SystemSerialNumber = generateSerialNumber(model);
-  config.platformInfo.generic.SystemUUID = generateUUID();
-  config.platformInfo.generic.MLB = generateSerialNumber(model) + 'A1B2C3';
-  config.platformInfo.generic.ROM = generateMacAddress();
+  config.PlatformInfo.Generic.SystemSerialNumber = generateSerialNumber(model);
+  config.PlatformInfo.Generic.SystemUUID = generateUUID();
+  config.PlatformInfo.Generic.MLB = generateSerialNumber(model) + 'A1B2C3';
+  config.PlatformInfo.Generic.ROM = generateMacAddress();
 
   // Set processor type based on CPU
   if (hardware.cpu.brand === 'Intel') {
-    config.platformInfo.generic.ProcessorType = 1537; // Intel
+    config.PlatformInfo.Generic.ProcessorType = 1537; // Intel
   } else {
-    config.platformInfo.generic.ProcessorType = 0; // Auto
+    config.PlatformInfo.Generic.ProcessorType = 0; // Auto
   }
 }
 
@@ -606,12 +606,12 @@ function addToolsToConfig(config: OpenCoreConfig, tools: string[]): void {
     },
   };
 
-  config.misc.tools = [];
+  config.Misc.Tools = [];
   
   for (const tool of tools) {
     const toolConfig = (toolConfigs as Record<string, any>)[tool];
     if (toolConfig) {
-      config.misc.tools.push(toolConfig);
+      config.Misc.Tools.push(toolConfig);
     }
   }
 }
@@ -651,12 +651,12 @@ function addDriversToConfig(config: OpenCoreConfig, drivers: string[]): void {
     },
   };
 
-  config.uefi.drivers = [];
+  config.UEFI.Drivers = [];
   
   for (const driver of drivers) {
     const driverConfig = (driverConfigs as Record<string, any>)[driver];
     if (driverConfig) {
-      config.uefi.drivers.push(driverConfig);
+      config.UEFI.Drivers.push(driverConfig);
     }
   }
 }
@@ -765,21 +765,21 @@ export function validateGeneratedConfig(config: OpenCoreConfig): {
   const warnings: string[] = [];
 
   // Check required fields
-  if (!config.platformInfo.generic.SystemProductName) {
+  if (!config.PlatformInfo.Generic.SystemProductName) {
     errors.push('SystemProductName is required');
   }
   
-  if (!config.platformInfo.generic.SystemSerialNumber) {
+  if (!config.PlatformInfo.Generic.SystemSerialNumber) {
     errors.push('SystemSerialNumber is required');
   }
   
-  if (!config.platformInfo.generic.SystemUUID) {
+  if (!config.PlatformInfo.Generic.SystemUUID) {
     errors.push('SystemUUID is required');
   }
 
   // Check essential kexts
-  const hasLilu = config.kernel.add.some(kext => kext.bundlePath.includes('Lilu'));
-  const hasVirtualSMC = config.kernel.add.some(kext => kext.bundlePath.includes('VirtualSMC'));
+  const hasLilu = config.Kernel.Add.some(kext => kext.BundlePath.includes('Lilu'));
+  const hasVirtualSMC = config.Kernel.Add.some(kext => kext.BundlePath.includes('VirtualSMC'));
   
   if (!hasLilu) {
     errors.push('Lilu.kext is required');
@@ -790,7 +790,7 @@ export function validateGeneratedConfig(config: OpenCoreConfig): {
   }
 
   // Check driver requirements
-  const hasOpenRuntime = config.uefi.drivers.some(driver => driver.path.includes('OpenRuntime'));
+  const hasOpenRuntime = config.UEFI.Drivers.some(driver => driver.Path.includes('OpenRuntime'));
   if (!hasOpenRuntime) {
     warnings.push('OpenRuntime.efi is recommended');
   }

@@ -351,7 +351,7 @@ export const ConfigPreview: React.FC<ConfigPreviewProps> = ({
           ].map((tab) => (
             <Button
               key={tab.id}
-              variant={activeTab === tab.id ? 'primary' : 'ghost'}
+              variant={activeTab === tab.id ? 'default' : 'ghost'}
               onClick={() => setActiveTab(tab.id as any)}
               className={`py-2 px-1 border-b-2 font-medium text-sm ${
                 activeTab === tab.id

@@ -40,7 +40,7 @@ export function ThemeToggle() {
         {themeOptions.map((option) => (
           <Button
             key={option.value}
-            variant={theme === option.value ? 'primary' : 'outline'}
+            variant={theme === option.value ? 'default' : 'outline'}
             size="sm"
             onClick={() => setTheme(option.value)}
             title={option.label}

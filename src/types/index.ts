@@ -599,6 +599,7 @@ export interface KextInfo {
   MaxKernel: string;
   MinKernel: string;
   PlistPath: string;
+  Arch: string;
   name?: string;
   dependencies?: string[];
   conflicts?: string[];
