@@ -1,0 +1,413 @@
+{
+  "common": {
+    "next": "下一步",
+    "previous": "上一步",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "reset": "重置",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告",
+    "info": "信息",
+    "close": "关闭",
+    "download": "下载",
+    "generate": "生成",
+    "optional": "可选",
+    "required": "必需",
+    "recommended": "推荐",
+    "advanced": "高级",
+    "basic": "基础",
+    "yes": "是",
+    "no": "否",
+    "unknown": "未知",
+    "none": "无",
+    "all": "全部",
+    "select": "选择",
+    "clear": "清除",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "view": "查看",
+    "edit": "编辑",
+    "delete": "删除",
+    "copy": "复制",
+    "paste": "粘贴",
+    "cut": "剪切",
+    "undo": "撤销",
+    "redo": "重做",
+    "refresh": "刷新",
+    "retry": "重试",
+    "skip": "跳过",
+    "continue": "继续",
+    "finish": "完成",
+    "back": "返回",
+    "home": "首页",
+    "settings": "设置",
+    "help": "帮助",
+    "about": "关于",
+    "version": "版本",
+    "language": "语言",
+    "theme": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统",
+    "auto": "自动"
+  },
+  "theme": {
+    "title": "主题设置",
+    "light": "浅色主题",
+    "dark": "深色主题",
+    "system": "跟随系统",
+    "current": "当前主题"
+  },
+  "app": {
+    "title": "OpenCore 初始化器",
+    "subtitle": "轻松创建您的黑苹果 EFI 配置",
+    "description": "一个现代化的 Web 应用程序，用于为黑苹果系统生成 OpenCore EFI 配置",
+    "welcome": "欢迎使用 OpenCore 初始化器",
+    "getStarted": "开始使用",
+    "learnMore": "了解更多"
+  },
+  "navigation": {
+    "hardware": "硬件配置",
+    "opencore": "OpenCore 设置",
+    "kexts": "驱动选择",
+    "tools": "工具和实用程序",
+    "drivers": "UEFI 驱动",
+    "confirmation": "配置摘要",
+    "download": "下载和打包",
+    "help": "帮助和文档",
+    "settings": "设置"
+  },
+  "hardware": {
+    "title": "硬件配置",
+    "description": "配置您的系统硬件规格",
+    "cpu": {
+      "title": "CPU 配置",
+      "brand": "CPU 品牌",
+      "model": "CPU 型号",
+      "generation": "代数",
+      "cores": "核心数",
+      "threads": "线程数",
+      "architecture": "架构",
+      "igpu": "集成显卡",
+      "hasIGPU": "有集成显卡",
+      "igpuModel": "集成显卡型号"
+    },
+    "motherboard": {
+      "title": "主板配置",
+      "brand": "主板品牌",
+      "model": "主板型号",
+      "chipset": "芯片组",
+      "biosVersion": "BIOS 版本",
+      "formFactor": "板型"
+    },
+    "gpu": {
+      "title": "显卡配置",
+      "hasDiscreteGPU": "有独立显卡",
+      "brand": "显卡品牌",
+      "model": "显卡型号",
+      "vram": "显存大小",
+      "multiGPU": "多显卡",
+      "gpuCount": "显卡数量"
+    },
+    "audio": {
+      "title": "音频配置",
+      "codec": "音频编解码器",
+      "layout": "布局 ID",
+      "hasBuiltinAudio": "有内置音频"
+    },
+    "network": {
+      "title": "网络配置",
+      "ethernet": {
+        "title": "以太网",
+        "hasEthernet": "有以太网",
+        "brand": "以太网品牌",
+        "model": "以太网型号"
+      },
+      "wifi": {
+        "title": "Wi-Fi",
+        "hasWifi": "有 Wi-Fi",
+        "brand": "Wi-Fi 品牌",
+        "model": "Wi-Fi 型号"
+      },
+      "bluetooth": {
+        "title": "蓝牙",
+        "hasBluetooth": "有蓝牙",
+        "version": "蓝牙版本"
+      }
+    },
+    "storage": {
+      "title": "存储配置",
+      "hasNVMe": "有 NVMe 固态硬盘",
+      "hasSATA": "有 SATA 硬盘",
+      "nvmeCount": "NVMe 硬盘数量",
+      "sataCount": "SATA 硬盘数量"
+    },
+    "other": {
+      "title": "其他硬件",
+      "hasTPM": "有 TPM 模块",
+      "hasSecureBoot": "有安全启动",
+      "hasUSBC": "有 USB-C 接口",
+      "usbPortCount": "USB 接口数量"
+    }
+  },
+  "opencore": {
+    "title": "OpenCore 配置",
+    "description": "配置 OpenCore 引导加载程序设置",
+    "version": "OpenCore 版本",
+    "bootArgs": "启动参数",
+    "smbios": {
+      "title": "SMBIOS 配置",
+      "model": "Mac 型号",
+      "serialNumber": "序列号",
+      "boardSerialNumber": "主板序列号",
+      "systemUUID": "系统 UUID",
+      "mlb": "MLB（主逻辑板）",
+      "rom": "ROM",
+      "generateNew": "生成新的",
+      "autoGenerate": "自动生成"
+    },
+    "security": {
+      "title": "安全设置",
+      "secureBootModel": "安全启动模型",
+      "vault": "保险库",
+      "scanPolicy": "扫描策略",
+      "allowNvramReset": "允许 NVRAM 重置",
+      "allowSetDefault": "允许设置默认值"
+    },
+    "misc": {
+      "title": "其他设置",
+      "showPicker": "显示启动选择器",
+      "timeout": "启动超时",
+      "hideAuxiliary": "隐藏辅助条目",
+      "consoleAttributes": "控制台属性",
+      "resolution": "启动分辨率"
+    }
+  },
+  "kexts": {
+    "title": "驱动选择",
+    "description": "为您的系统选择内核扩展",
+    "categories": {
+      "essential": "必需驱动",
+      "audio": "音频驱动",
+      "network": "网络驱动",
+      "usb": "USB 驱动",
+      "graphics": "显卡驱动",
+      "sensors": "传感器驱动",
+      "other": "其他驱动"
+    },
+    "status": {
+      "required": "必需",
+      "recommended": "推荐",
+      "optional": "可选",
+      "incompatible": "不兼容"
+    },
+    "info": {
+      "version": "版本",
+      "size": "大小",
+      "description": "描述",
+      "compatibility": "兼容性",
+      "dependencies": "依赖项"
+    }
+  },
+  "tools": {
+    "title": "工具和实用程序",
+    "description": "选择 OpenCore 工具和实用程序",
+    "categories": {
+      "bootloader": "引导加载程序工具",
+      "system": "系统工具",
+      "debug": "调试工具",
+      "recovery": "恢复工具"
+    }
+  },
+  "drivers": {
+    "title": "UEFI 驱动",
+    "description": "为您的系统选择 UEFI 驱动",
+    "categories": {
+      "filesystem": "文件系统驱动",
+      "memory": "内存驱动",
+      "other": "其他驱动"
+    }
+  },
+  "confirmation": {
+    "title": "配置摘要",
+    "description": "在生成之前查看您的配置",
+    "hardware": {
+      "title": "硬件摘要",
+      "cpu": "CPU",
+      "motherboard": "主板",
+      "gpu": "显卡",
+      "audio": "音频",
+      "network": "网络",
+      "storage": "存储"
+    },
+    "opencore": {
+      "title": "OpenCore 摘要",
+      "version": "版本",
+      "smbios": "SMBIOS 型号",
+      "bootArgs": "启动参数",
+      "security": "安全级别"
+    },
+    "components": {
+      "title": "选定组件",
+      "kexts": "驱动",
+      "tools": "工具",
+      "drivers": "驱动程序",
+      "count": "已选择 {{count}} 项"
+    },
+    "download": {
+      "title": "下载信息",
+      "totalSize": "总大小",
+      "estimatedTime": "预计时间",
+      "items": "要下载的项目"
+    },
+    "warnings": {
+      "title": "警告和建议",
+      "noWarnings": "没有警告或建议"
+    },
+    "actions": {
+      "generateConfig": "生成配置",
+      "downloadFiles": "下载文件",
+      "backToEdit": "返回编辑"
+    }
+  },
+  "download": {
+    "title": "下载和打包",
+    "description": "下载文件并创建 EFI 包",
+    "status": {
+      "preparing": "准备下载中...",
+      "downloading": "下载文件中...",
+      "verifying": "验证文件中...",
+      "packaging": "创建 EFI 包中...",
+      "completed": "下载完成",
+      "failed": "下载失败"
+    },
+    "progress": {
+      "overall": "总体进度",
+      "current": "当前文件",
+      "remaining": "剩余",
+      "speed": "速度",
+      "eta": "预计完成时间"
+    },
+    "files": {
+      "title": "下载文件",
+      "name": "文件名",
+      "size": "大小",
+      "status": "状态",
+      "progress": "进度"
+    },
+    "package": {
+      "title": "EFI 包",
+      "format": "包格式",
+      "size": "包大小",
+      "includes": "包含内容",
+      "downloadPackage": "下载 EFI 包",
+      "downloadConfig": "仅下载配置"
+    },
+    "actions": {
+      "startDownload": "开始下载",
+      "pauseDownload": "暂停下载",
+      "resumeDownload": "恢复下载",
+      "cancelDownload": "取消下载",
+      "retryDownload": "重试下载",
+      "restartProcess": "重新开始"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "description": "应用程序设置和首选项",
+    "general": {
+      "title": "常规设置",
+      "language": "语言",
+      "theme": "主题",
+      "advancedMode": "高级模式",
+      "autoSave": "自动保存",
+      "notifications": "通知"
+    },
+    "download": {
+      "title": "下载设置",
+      "maxConcurrent": "最大并发下载数",
+      "retryAttempts": "重试次数",
+      "timeout": "超时时间（秒）",
+      "verifyChecksums": "验证校验和"
+    },
+    "advanced": {
+      "title": "高级设置",
+      "debugMode": "调试模式",
+      "verboseLogging": "详细日志",
+      "cacheEnabled": "启用缓存",
+      "clearCache": "清除缓存"
+    }
+  },
+  "help": {
+    "title": "帮助和文档",
+    "description": "获取帮助并了解 OpenCore",
+    "sections": {
+      "gettingStarted": "入门指南",
+      "hardwareGuide": "硬件指南",
+      "troubleshooting": "故障排除",
+      "faq": "常见问题",
+      "resources": "外部资源"
+    },
+    "search": {
+      "placeholder": "搜索文档...",
+      "noResults": "未找到结果",
+      "results": "找到 {{count}} 个结果"
+    }
+  },
+  "errors": {
+    "generic": "发生错误",
+    "network": "网络错误",
+    "timeout": "请求超时",
+    "notFound": "资源未找到",
+    "unauthorized": "未授权访问",
+    "forbidden": "访问被禁止",
+    "serverError": "服务器错误",
+    "validation": "验证错误",
+    "required": "此字段为必填项",
+    "invalid": "无效值",
+    "tooShort": "值太短",
+    "tooLong": "值太长",
+    "invalidFormat": "格式无效",
+    "downloadFailed": "下载失败",
+    "verificationFailed": "文件验证失败",
+    "packagingFailed": "包创建失败",
+    "configGenerationFailed": "配置生成失败"
+  },
+  "notifications": {
+    "configSaved": "配置保存成功",
+    "configLoaded": "配置加载成功",
+    "downloadStarted": "下载已开始",
+    "downloadCompleted": "下载成功完成",
+    "downloadFailed": "下载失败",
+    "packageCreated": "EFI 包创建成功",
+    "settingsUpdated": "设置更新成功",
+    "cacheCleared": "缓存清除成功"
+  },
+  "tooltips": {
+    "cpu": {
+      "brand": "选择您的 CPU 制造商（Intel 或 AMD）",
+      "model": "输入您的具体 CPU 型号",
+      "generation": "选择 CPU 代数以获得最佳兼容性",
+      "igpu": "如果您的 CPU 有集成显卡，请启用"
+    },
+    "motherboard": {
+      "brand": "选择您的主板制造商",
+      "model": "输入您的主板型号以进行特定优化",
+      "chipset": "选择芯片组以正确选择驱动程序"
+    },
+    "smbios": {
+      "model": "选择最匹配您硬件的 Mac 型号",
+      "serialNumber": "生成或输入有效的序列号",
+      "autoGenerate": "自动生成 SMBIOS 值"
+    },
+    "security": {
+      "secureBootModel": "设置安全启动模型以提高安全性",
+      "vault": "启用保险库以增加安全性",
+      "scanPolicy": "配置要扫描启动条目的驱动器"
+    }
+  }
+}

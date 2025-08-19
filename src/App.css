@@ -1,0 +1,61 @@
+/* App specific styles */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo styles for branding */
+.app-logo {
+  height: 2rem;
+  width: auto;
+  transition: filter 300ms ease;
+}
+
+.app-logo:hover {
+  filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.5));
+}
+
+/* Ensure proper text color inheritance */
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Fix any layout issues */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure buttons inherit proper styling */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Fix input and select styling */
+input, select, textarea {
+  font-family: inherit;
+  color: hsl(var(--foreground));
+}
+
+input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Ensure proper spacing */
+.main-content {
+  flex: 1;
+  width: 100%;
+}

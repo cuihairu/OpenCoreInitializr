@@ -1,0 +1,412 @@
+{
+  "common": {
+    "next": "Next",
+    "previous": "Previous",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "reset": "Reset",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "close": "Close",
+    "download": "Download",
+    "generate": "Generate",
+    "optional": "Optional",
+    "required": "Required",
+    "recommended": "Recommended",
+    "advanced": "Advanced",
+    "basic": "Basic",
+    "yes": "Yes",
+    "no": "No",
+    "unknown": "Unknown",
+    "none": "None",
+    "all": "All",
+    "select": "Select",
+    "clear": "Clear",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "undo": "Undo",
+    "redo": "Redo",
+    "refresh": "Refresh",
+    "retry": "Retry",
+    "skip": "Skip",
+    "continue": "Continue",
+    "finish": "Finish",
+    "back": "Back",
+    "home": "Home",
+    "settings": "Settings",
+    "help": "Help",
+    "about": "About",
+    "version": "Version",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "system": "System",
+    "auto": "Auto"
+  },
+  "theme": {
+    "title": "Theme Settings",
+    "light": "Light Theme",
+    "dark": "Dark Theme",
+    "system": "Follow System",
+    "current": "Current Theme"
+  },
+  "app": {
+    "title": "OpenCore Initializr",
+    "subtitle": "Create your Hackintosh EFI configuration with ease",
+    "description": "A modern web application to generate OpenCore EFI configurations for Hackintosh systems",
+    "welcome": "Welcome to OpenCore Initializr",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "navigation": {
+    "hardware": "Hardware Configuration",
+    "opencore": "OpenCore Settings",
+    "kexts": "Kexts Selection",
+    "tools": "Tools & Utilities",
+    "drivers": "UEFI Drivers",
+    "confirmation": "Configuration Summary",
+    "download": "Download & Package",
+    "help": "Help & Documentation",
+    "settings": "Settings"
+  },
+  "hardware": {
+    "title": "Hardware Configuration",
+    "description": "Configure your system hardware specifications",
+    "cpu": {
+      "title": "CPU Configuration",
+      "brand": "CPU Brand",
+      "model": "CPU Model",
+      "generation": "Generation",
+      "cores": "Core Count",
+      "threads": "Thread Count",
+      "architecture": "Architecture",
+      "igpu": "Integrated Graphics",
+      "hasIGPU": "Has Integrated GPU",
+      "igpuModel": "Integrated GPU Model"
+    },
+    "motherboard": {
+      "title": "Motherboard Configuration",
+      "brand": "Motherboard Brand",
+      "model": "Motherboard Model",
+      "chipset": "Chipset",
+      "biosVersion": "BIOS Version",
+      "formFactor": "Form Factor"
+    },
+    "gpu": {
+      "title": "Graphics Configuration",
+      "hasDiscreteGPU": "Has Discrete GPU",
+      "brand": "GPU Brand",
+      "model": "GPU Model",
+      "vram": "VRAM Size",
+      "multiGPU": "Multiple GPUs",
+      "gpuCount": "GPU Count"
+    },
+    "audio": {
+      "title": "Audio Configuration",
+      "codec": "Audio Codec",
+      "layout": "Layout ID",
+      "hasBuiltinAudio": "Has Built-in Audio"
+    },
+    "network": {
+      "title": "Network Configuration",
+      "ethernet": {
+        "title": "Ethernet",
+        "hasEthernet": "Has Ethernet",
+        "brand": "Ethernet Brand",
+        "model": "Ethernet Model"
+      },
+      "wifi": {
+        "title": "Wi-Fi",
+        "hasWifi": "Has Wi-Fi",
+        "brand": "Wi-Fi Brand",
+        "model": "Wi-Fi Model"
+      },
+      "bluetooth": {
+        "title": "Bluetooth",
+        "hasBluetooth": "Has Bluetooth",
+        "version": "Bluetooth Version"
+      }
+    },
+    "storage": {
+      "title": "Storage Configuration",
+      "hasNVMe": "Has NVMe SSD",
+      "hasSATA": "Has SATA Drive",
+      "nvmeCount": "NVMe Drive Count",
+      "sataCount": "SATA Drive Count"
+    },
+    "other": {
+      "title": "Other Hardware",
+      "hasTPM": "Has TPM Module",
+      "hasSecureBoot": "Has Secure Boot",
+      "hasUSBC": "Has USB-C Ports",
+      "usbPortCount": "USB Port Count"
+    }
+  },
+  "opencore": {
+    "title": "OpenCore Configuration",
+    "description": "Configure OpenCore bootloader settings",
+    "version": "OpenCore Version",
+    "bootArgs": "Boot Arguments",
+    "smbios": {
+      "title": "SMBIOS Configuration",
+      "model": "Mac Model",
+      "serialNumber": "Serial Number",
+      "boardSerialNumber": "Board Serial Number",
+      "systemUUID": "System UUID",
+      "mlb": "MLB (Main Logic Board)",
+      "rom": "ROM",
+      "generateNew": "Generate New",
+      "autoGenerate": "Auto Generate"
+    },
+    "security": {
+      "title": "Security Settings",
+      "secureBootModel": "Secure Boot Model",
+      "vault": "Vault",
+      "scanPolicy": "Scan Policy",
+      "allowNvramReset": "Allow NVRAM Reset",
+      "allowSetDefault": "Allow Set Default"
+    },
+    "misc": {
+      "title": "Miscellaneous Settings",
+      "showPicker": "Show Boot Picker",
+      "timeout": "Boot Timeout",
+      "hideAuxiliary": "Hide Auxiliary Entries",
+      "consoleAttributes": "Console Attributes",
+      "resolution": "Boot Resolution"
+    }
+  },
+  "kexts": {
+    "title": "Kexts Selection",
+    "description": "Select kernel extensions for your system",
+    "categories": {
+      "essential": "Essential Kexts",
+      "audio": "Audio Kexts",
+      "network": "Network Kexts",
+      "usb": "USB Kexts",
+      "graphics": "Graphics Kexts",
+      "sensors": "Sensor Kexts",
+      "other": "Other Kexts"
+    },
+    "status": {
+      "required": "Required",
+      "recommended": "Recommended",
+      "optional": "Optional",
+      "incompatible": "Incompatible"
+    },
+    "info": {
+      "version": "Version",
+      "size": "Size",
+      "description": "Description",
+      "compatibility": "Compatibility",
+      "dependencies": "Dependencies"
+    }
+  },
+  "tools": {
+    "title": "Tools & Utilities",
+    "description": "Select OpenCore tools and utilities",
+    "categories": {
+      "bootloader": "Bootloader Tools",
+      "system": "System Tools",
+      "debug": "Debug Tools",
+      "recovery": "Recovery Tools"
+    }
+  },
+  "drivers": {
+    "title": "UEFI Drivers",
+    "description": "Select UEFI drivers for your system",
+    "categories": {
+      "filesystem": "File System Drivers",
+      "memory": "Memory Drivers",
+      "other": "Other Drivers"
+    }
+  },
+  "confirmation": {
+    "title": "Configuration Summary",
+    "description": "Review your configuration before generating",
+    "hardware": {
+      "title": "Hardware Summary",
+      "cpu": "CPU",
+      "motherboard": "Motherboard",
+      "gpu": "Graphics",
+      "audio": "Audio",
+      "network": "Network",
+      "storage": "Storage"
+    },
+    "opencore": {
+      "title": "OpenCore Summary",
+      "version": "Version",
+      "smbios": "SMBIOS Model",
+      "bootArgs": "Boot Arguments",
+      "security": "Security Level"
+    },
+    "components": {
+      "title": "Selected Components",
+      "kexts": "Kexts",
+      "tools": "Tools",
+      "drivers": "Drivers",
+      "count": "{{count}} items selected"
+    },
+    "download": {
+      "title": "Download Information",
+      "totalSize": "Total Size",
+      "estimatedTime": "Estimated Time",
+      "items": "Items to Download"
+    },
+    "warnings": {
+      "title": "Warnings & Recommendations",
+      "noWarnings": "No warnings or recommendations"
+    },
+    "actions": {
+      "generateConfig": "Generate Configuration",
+      "downloadFiles": "Download Files",
+      "backToEdit": "Back to Edit"
+    }
+  },
+  "download": {
+    "title": "Download & Package",
+    "description": "Download files and create EFI package",
+    "status": {
+      "preparing": "Preparing download...",
+      "downloading": "Downloading files...",
+      "verifying": "Verifying files...",
+      "packaging": "Creating EFI package...",
+      "completed": "Download completed",
+      "failed": "Download failed"
+    },
+    "progress": {
+      "overall": "Overall Progress",
+      "current": "Current File",
+      "remaining": "Remaining",
+      "speed": "Speed",
+      "eta": "ETA"
+    },
+    "files": {
+      "title": "Download Files",
+      "name": "File Name",
+      "size": "Size",
+      "status": "Status",
+      "progress": "Progress"
+    },
+    "package": {
+      "title": "EFI Package",
+      "format": "Package Format",
+      "size": "Package Size",
+      "includes": "Package Includes",
+      "downloadPackage": "Download EFI Package",
+      "downloadConfig": "Download Config Only"
+    },
+    "actions": {
+      "startDownload": "Start Download",
+      "pauseDownload": "Pause Download",
+      "resumeDownload": "Resume Download",
+      "cancelDownload": "Cancel Download",
+      "retryDownload": "Retry Download",
+      "restartProcess": "Restart Process"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Application settings and preferences",
+    "general": {
+      "title": "General Settings",
+      "language": "Language",
+      "theme": "Theme",
+      "advancedMode": "Advanced Mode",
+      "autoSave": "Auto Save",
+      "notifications": "Notifications"
+    },
+    "download": {
+      "title": "Download Settings",
+      "maxConcurrent": "Max Concurrent Downloads",
+      "retryAttempts": "Retry Attempts",
+      "timeout": "Timeout (seconds)",
+      "verifyChecksums": "Verify Checksums"
+    },
+    "advanced": {
+      "title": "Advanced Settings",
+      "debugMode": "Debug Mode",
+      "verboseLogging": "Verbose Logging",
+      "cacheEnabled": "Enable Cache",
+      "clearCache": "Clear Cache"
+    }
+  },
+  "help": {
+    "title": "Help & Documentation",
+    "description": "Get help and learn about OpenCore",
+    "sections": {
+      "gettingStarted": "Getting Started",
+      "hardwareGuide": "Hardware Guide",
+      "troubleshooting": "Troubleshooting",
+      "faq": "Frequently Asked Questions",
+      "resources": "External Resources"
+    },
+    "search": {
+      "placeholder": "Search documentation...",
+      "noResults": "No results found",
+      "results": "{{count}} results found"
+    }
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "network": "Network error",
+    "timeout": "Request timeout",
+    "notFound": "Resource not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "serverError": "Server error",
+    "validation": "Validation error",
+    "required": "This field is required",
+    "invalid": "Invalid value",
+    "tooShort": "Value is too short",
+    "tooLong": "Value is too long",
+    "invalidFormat": "Invalid format",
+    "downloadFailed": "Download failed",
+    "verificationFailed": "File verification failed",
+    "packagingFailed": "Package creation failed",
+    "configGenerationFailed": "Configuration generation failed"
+  },
+  "notifications": {
+    "configSaved": "Configuration saved successfully",
+    "configLoaded": "Configuration loaded successfully",
+    "downloadStarted": "Download started",
+    "downloadCompleted": "Download completed successfully",
+    "downloadFailed": "Download failed",
+    "packageCreated": "EFI package created successfully",
+    "settingsUpdated": "Settings updated successfully",
+    "cacheCleared": "Cache cleared successfully"
+  },
+  "tooltips": {
+    "cpu": {
+      "brand": "Select your CPU manufacturer (Intel or AMD)",
+      "model": "Enter your specific CPU model",
+      "generation": "Select the CPU generation for optimal compatibility",
+      "igpu": "Enable if your CPU has integrated graphics"
+    },
+    "motherboard": {
+      "brand": "Select your motherboard manufacturer",
+      "model": "Enter your motherboard model for specific optimizations",
+      "chipset": "Select the chipset for proper driver selection"
+    },
+    "smbios": {
+      "model": "Choose the Mac model that best matches your hardware",
+      "serialNumber": "Generate or enter a valid serial number",
+      "autoGenerate": "Automatically generate SMBIOS values"
+    },
+    "security": {
+      "secureBootModel": "Set the secure boot model for security",
+      "vault": "Enable vault for additional security",
+      "scanPolicy": "Configure which drives to scan for boot entries"
+    }
+  }
+}
