@@ -4,6 +4,7 @@ import { ToastContainer } from './components/ui/Toast';
 import { useTranslation } from './hooks/useTranslation';
 
 import HardwareConfigPage from './pages/HardwareConfig';
+import KextsPage from './pages/KextsPage';
 import { ResponsiveLayout } from './components/layout/ResponsiveLayout';
 import MobileNavigation, { useMobileNavigation } from './components/layout/MobileNavigation';
 import { ThemeToggle } from './components/ui/theme-toggle';
@@ -37,14 +38,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
              
              <div className="flex items-center space-x-4">
                <nav className="hidden md:flex space-x-8">
-                 <a href="/hardware" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   {t('navigation.hardware', 'Hardware Configuration')}
+                 <a href="/hardware" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.hardware', 'Hardware Configuration')}
                  </a>
-                 <a href="/configuration" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   {t('navigation.opencore', 'OpenCore Settings')}
+                 <a href="/kexts" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.kexts', 'Kexts')}
                  </a>
-                 <a href="/download" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>
-                   {t('navigation.download', 'Download')}
+                 <a href="/configuration" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.opencore', 'OpenCore Settings')}
+                 </a>
+                 <a href="/download" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.download', 'Download')}
                  </a>
                </nav>
                
@@ -80,6 +80,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Navigate to="/hardware" replace />} />
             <Route path="/hardware" element={<HardwareConfigPage />} />
+            <Route path="/kexts" element={<KextsPage />} />
             <Route path="/configuration" element={<div className="p-8 text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>Configuration page coming soon...</div>} />
             <Route path="/download" element={<div className="p-8 text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>Download page coming soon...</div>} />
             <Route path="*" element={<Navigate to="/" replace />} />

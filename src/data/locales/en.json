@@ -429,5 +429,46 @@
       "AMD": "AMD",
       "Intel": "Intel"
     }
+  },
+  "nav": {
+    "kexts": "Kexts",
+    "kexts_desc": "View driver version information"
+  },
+  "kexts": {
+    "title": "Kexts Driver Versions",
+    "description": "Recommended driver version information based on your hardware configuration, including system drivers, audio drivers, network drivers, etc.",
+    "categories": {
+      "system": "System Drivers",
+      "audio": "Audio Drivers",
+      "network": "Network Drivers",
+      "usb": "USB & Input Devices"
+    },
+    "priority": {
+      "required": "Required",
+      "recommended": "Recommended",
+      "optional": "Optional"
+    },
+    "compatibility": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "partial": "Partial",
+      "unknown": "Unknown"
+    },
+    "usage_tips": "Usage Tips",
+    "tip_required": "Required Drivers",
+    "tip_required_desc": "These drivers are essential for normal system operation and should all be installed.",
+    "tip_recommended": "Recommended Drivers",
+    "tip_recommended_desc": "Drivers recommended based on your hardware configuration to improve compatibility and functionality.",
+    "tip_optional": "Optional Drivers",
+    "tip_optional_desc": "Optional enhancement drivers, install based on personal needs.",
+    "tip_dependencies": "Dependencies",
+    "tip_dependencies_desc": "Some drivers require other drivers as dependencies, please pay attention to installation order.",
+    "warning_title": "Important Notice",
+    "warning_desc": "Please ensure you download drivers from official sources and backup your system before installation. Incorrect driver configuration may prevent system boot.",
+    "no_hardware_config": "Please configure hardware information first to get relevant driver recommendations.",
+    "no_relevant_kexts": "No relevant driver recommendations based on current hardware configuration.",
+    "download": "Download",
+    "version": "Version",
+    "compatibility_info": "Compatibility Info"
   }
 }

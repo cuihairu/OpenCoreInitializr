@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Home, Settings, History, Download, Info } from 'lucide-react';
+import { Menu, X, Home, Settings, History, Download, Info, Package } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface MobileNavigationProps {
@@ -29,6 +29,12 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
       icon: Settings,
       label: t('nav.hardware', 'Hardware'),
       description: t('nav.hardware_desc', 'Configure hardware')
+    },
+    {
+      path: '/kexts',
+      icon: Package,
+      label: t('nav.kexts'),
+      description: t('nav.kexts_desc')
     },
     {
       path: '/history',

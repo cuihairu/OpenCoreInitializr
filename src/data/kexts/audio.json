@@ -1,0 +1,49 @@
+{
+  "category": "audio",
+  "name": "音频驱动",
+  "description": "音频相关的kext驱动程序",
+  "kexts": [
+    {
+      "name": "AppleALC",
+      "version": "1.8.8",
+      "description": "原生macOS HD音频的开源内核扩展",
+      "compatibility": {
+        "minMacOS": "10.8",
+        "maxMacOS": "14.2",
+        "architectures": ["x86_64", "arm64"]
+      },
+      "hardwareSupport": {
+        "audioCodecs": [
+          "ALC887", "ALC888", "ALC889", "ALC892", "ALC897", "ALC898",
+          "ALC1150", "ALC1200", "ALC1220", "ALC269", "ALC270", "ALC280",
+          "ALC282", "ALC283", "ALC284", "ALC285", "ALC286", "ALC287",
+          "ALC288", "ALC289", "ALC290", "ALC292", "ALC293", "ALC294",
+          "ALC295", "ALC298", "ALC299", "ALC623", "ALC662", "ALC663",
+          "ALC665", "ALC668", "ALC670", "ALC671", "ALC672", "ALC676",
+          "ALC680", "ALC700", "ALC701", "ALC703", "ALC711", "ALC861",
+          "ALC867", "ALC882", "ALC883", "ALC885", "ALC886", "ALC1168"
+        ]
+      },
+      "downloadUrl": "https://github.com/acidanthera/AppleALC/releases",
+      "required": false,
+      "priority": "high"
+    },
+    {
+      "name": "VoodooHDA",
+      "version": "2.9.2",
+      "description": "VoodooHDA是一个开源音频驱动",
+      "compatibility": {
+        "minMacOS": "10.6",
+        "maxMacOS": "13.0",
+        "architectures": ["x86_64"]
+      },
+      "hardwareSupport": {
+        "audioCodecs": ["通用音频编解码器支持"]
+      },
+      "downloadUrl": "https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V15",
+      "required": false,
+      "priority": "medium",
+      "notes": "与AppleALC冲突，二选一使用"
+    }
+  ]
+}

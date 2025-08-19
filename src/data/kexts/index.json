@@ -1,0 +1,41 @@
+{
+  "categories": [
+    {
+      "id": "system",
+      "name": "系统驱动",
+      "description": "系统核心功能相关的驱动",
+      "icon": "⚙️",
+      "priority": 1,
+      "file": "system.json"
+    },
+    {
+      "id": "audio",
+      "name": "音频驱动",
+      "description": "音频设备相关的驱动",
+      "icon": "🔊",
+      "priority": 2,
+      "file": "audio.json"
+    },
+    {
+      "id": "network",
+      "name": "网络驱动",
+      "description": "网络设备相关的驱动",
+      "icon": "🌐",
+      "priority": 3,
+      "file": "network.json"
+    },
+    {
+      "id": "usb",
+      "name": "USB驱动",
+      "description": "USB和输入设备相关的驱动",
+      "icon": "🔌",
+      "priority": 4,
+      "file": "usb.json"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-20",
+    "description": "OpenCore Kexts驱动数据库"
+  }
+}

@@ -430,5 +430,46 @@
       "AMD": "AMD",
       "Intel": "英特尔"
     }
+  },
+  "nav": {
+    "kexts": "驱动版本",
+    "kexts_desc": "查看驱动版本信息"
+  },
+  "kexts": {
+    "title": "Kexts 驱动版本",
+    "description": "根据您的硬件配置推荐的驱动程序版本信息，包括系统驱动、音频驱动、网络驱动等。",
+    "categories": {
+      "system": "系统驱动",
+      "audio": "音频驱动",
+      "network": "网络驱动",
+      "usb": "USB 和输入设备"
+    },
+    "priority": {
+      "required": "必需",
+      "recommended": "推荐",
+      "optional": "可选"
+    },
+    "compatibility": {
+      "excellent": "完美兼容",
+      "good": "良好兼容",
+      "partial": "部分兼容",
+      "unknown": "未知"
+    },
+    "usage_tips": "使用提示",
+    "tip_required": "必需驱动",
+    "tip_required_desc": "这些驱动是系统正常运行所必需的，建议全部安装。",
+    "tip_recommended": "推荐驱动",
+    "tip_recommended_desc": "根据您的硬件配置推荐的驱动，可以提升兼容性和功能。",
+    "tip_optional": "可选驱动",
+    "tip_optional_desc": "可选的增强功能驱动，根据个人需求选择安装。",
+    "tip_dependencies": "依赖关系",
+    "tip_dependencies_desc": "某些驱动需要其他驱动作为依赖，请注意安装顺序。",
+    "warning_title": "重要提醒",
+    "warning_desc": "请确保从官方源下载驱动程序，并在安装前备份您的系统。不正确的驱动配置可能导致系统无法启动。",
+    "no_hardware_config": "请先配置硬件信息以获取相关驱动推荐。",
+    "no_relevant_kexts": "根据当前硬件配置，暂无相关驱动推荐。",
+    "download": "下载",
+    "version": "版本",
+    "compatibility_info": "兼容性信息"
   }
 }
