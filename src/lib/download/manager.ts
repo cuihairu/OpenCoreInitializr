@@ -1,4 +1,4 @@
-import { DownloadItem, DownloadStatus, VersionInfo } from '../../types';
+import { DownloadItem, DownloadStatus } from '../../types';
 
 /**
  * 下载管理器类

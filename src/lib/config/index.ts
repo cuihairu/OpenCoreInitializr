@@ -6,7 +6,7 @@ import { generateUUID, generateMacAddress, generateSerialNumber } from '@/lib/ut
  */
 export const DEFAULT_OPENCORE_CONFIG: OpenCoreConfig = {
   version: '1.0.2',
-  acpi: {
+  ACPI: {
     add: [],
     delete: [],
     patch: [],
@@ -565,12 +565,12 @@ function addKextsToConfig(config: OpenCoreConfig, kexts: string[]): void {
     },
   };
 
-  config.kernel.add = [];
+  config.Kernel.Add = [];
   
   for (const kext of kexts) {
     const kextConfig = (kextConfigs as Record<string, any>)[kext];
     if (kextConfig) {
-      config.kernel.add.push(kextConfig);
+      config.Kernel.Add.push(kextConfig);
     }
   }
 }

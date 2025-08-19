@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { useHardwareStore } from '../store';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui';
 import { 
   ResponsiveForm, 
   ResponsiveFormGroup, 
@@ -12,7 +11,6 @@ import {
 } from '../components/ui/ResponsiveForm';
 import { ResponsiveContainer } from '../components/layout/ResponsiveLayout';
 import HardwareConfig from '../lib/config/hardware';
-import type { HardwareConfig as HardwareConfigType } from '../types';
 
 const HardwareConfigPage: React.FC = () => {
   const { t } = useTranslation();

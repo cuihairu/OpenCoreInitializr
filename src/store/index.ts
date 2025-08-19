@@ -4,7 +4,6 @@ import { immer } from 'zustand/middleware/immer';
 import type {
   HardwareConfig,
   OpenCoreConfig,
-  UserConfigState,
   GenerationState,
   GenerationStep,
   DownloadItem,
@@ -219,7 +218,7 @@ interface GenerationStore {
   reset: () => void;
 }
 
-export const useGenerationStore = create<GenerationStore>()(immer((set, get) => ({
+export const useGenerationStore = create<GenerationStore>()(immer((set) => ({
   state: 'idle',
   steps: [],
   currentStep: 0,

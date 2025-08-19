@@ -1,4 +1,4 @@
-import type { VersionInfo, KextInfo, CompatibilityInfo } from '@/types';
+import type { VersionInfo, KextMetadata } from '@/types';
 
 /**
  * OpenCore version information
@@ -63,7 +63,7 @@ export const OPENCORE_VERSIONS: VersionInfo[] = [
 /**
  * Essential kexts information
  */
-export const ESSENTIAL_KEXTS: KextInfo[] = [
+export const ESSENTIAL_KEXTS: KextMetadata[] = [
   {
     identifier: 'as.vit9696.Lilu',
     name: 'Lilu',
@@ -137,7 +137,7 @@ export const ESSENTIAL_KEXTS: KextInfo[] = [
 /**
  * Graphics kexts information
  */
-export const GRAPHICS_KEXTS: KextInfo[] = [
+export const GRAPHICS_KEXTS: KextMetadata[] = [
   {
     identifier: 'as.vit9696.WhateverGreen',
     name: 'WhateverGreen',
@@ -177,7 +177,7 @@ export const GRAPHICS_KEXTS: KextInfo[] = [
 /**
  * Audio kexts information
  */
-export const AUDIO_KEXTS: KextInfo[] = [
+export const AUDIO_KEXTS: KextMetadata[] = [
   {
     identifier: 'as.vit9696.AppleALC',
     name: 'AppleALC',
@@ -217,7 +217,7 @@ export const AUDIO_KEXTS: KextInfo[] = [
 /**
  * Ethernet kexts information
  */
-export const ETHERNET_KEXTS: KextInfo[] = [
+export const ETHERNET_KEXTS: KextMetadata[] = [
   {
     identifier: 'as.lvs1974.IntelMausi',
     name: 'IntelMausi',
@@ -291,7 +291,7 @@ export const ETHERNET_KEXTS: KextInfo[] = [
 /**
  * USB kexts information
  */
-export const USB_KEXTS: KextInfo[] = [
+export const USB_KEXTS: KextMetadata[] = [
   {
     identifier: 'com.corpnewt.USBMap',
     name: 'USBMap',
@@ -331,7 +331,7 @@ export const USB_KEXTS: KextInfo[] = [
 /**
  * Get all available kexts
  */
-export function getAllKexts(): KextInfo[] {
+export function getAllKexts(): KextMetadata[] {
   return [
     ...ESSENTIAL_KEXTS,
     ...GRAPHICS_KEXTS,
@@ -344,7 +344,7 @@ export function getAllKexts(): KextInfo[] {
 /**
  * Get kexts by category
  */
-export function getKextsByCategory(category: KextInfo['category']): KextInfo[] {
+export function getKextsByCategory(category: KextMetadata['category']): KextMetadata[] {
   return getAllKexts().filter(kext => kext.category === category);
 }
 
@@ -366,17 +366,17 @@ export function getOpenCoreVersion(version: string): VersionInfo | undefined {
  * Check if a kext is compatible with given macOS and OpenCore versions
  */
 export function isKextCompatible(
-  kext: KextInfo,
+  kext: KextMetadata,
   macOSVersion: string,
   openCoreVersion: string
 ): boolean {
-  const macOSCompatible = kext.compatibility.macOSVersions.some(v => 
-    macOSVersion.startsWith(v)
-  );
-  
-  const openCoreCompatible = kext.compatibility.openCoreVersions.some(v => 
+  const macOSCompatible = kext.compatibility?.macOSVersions.some((v: string) =>
+    macOSVersion.includes(v)
+  ) ?? true;
+
+  const openCoreCompatible = kext.compatibility?.openCoreVersions.some((v: string) =>
     openCoreVersion.startsWith(v)
-  );
+  ) ?? true;
   
   return macOSCompatible && openCoreCompatible;
 }
@@ -384,8 +384,8 @@ export function isKextCompatible(
 /**
  * Get recommended kexts based on hardware configuration
  */
-export function getRecommendedKexts(hardware: any): KextInfo[] {
-  const recommended: KextInfo[] = [];
+export function getRecommendedKexts(hardware: any): KextMetadata[] {
+  const recommended: KextMetadata[] = [];
   
   // Always include essential kexts
   recommended.push(...ESSENTIAL_KEXTS);
@@ -423,7 +423,7 @@ export function checkKextConflicts(selectedKexts: string[]): string[] {
   for (const kextName of selectedKexts) {
     const kext = allKexts.find(k => k.name === kextName);
     if (kext) {
-      for (const conflict of kext.conflicts) {
+      for (const conflict of kext.conflicts || []) {
         if (selectedKexts.includes(conflict)) {
           conflicts.push(`${kextName} conflicts with ${conflict}`);
         }
@@ -444,7 +444,7 @@ export function getMissingDependencies(selectedKexts: string[]): string[] {
   for (const kextName of selectedKexts) {
     const kext = allKexts.find(k => k.name === kextName);
     if (kext) {
-      for (const dependency of kext.dependencies) {
+      for (const dependency of kext.dependencies || []) {
         if (!selectedKexts.includes(dependency)) {
           missing.push(dependency);
         }

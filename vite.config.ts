@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  // GitHub Pages 部署时需要设置正确的 base 路径
+  base: mode === 'production' ? '/OpenCoreInitializr/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -33,4 +34,4 @@ export default defineConfig({
     port: 5173,
     host: true,
   },
-})
+}))

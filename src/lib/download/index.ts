@@ -1,5 +1,10 @@
 import { DownloadItem, DownloadStatus, GeneratedFile, PackageOptions, HardwareConfig, OpenCoreConfig } from '../../types';
-import { formatFileSize, formatDuration, calculateETA, generateId } from '../utils';
+// Utility functions
+function calculateETA(downloaded: number, total: number, speed?: number): number {
+  if (!speed || speed === 0) return 0;
+  const remaining = total - downloaded;
+  return remaining / speed;
+}
 
 /**
  * Download Manager for handling file downloads
@@ -143,7 +148,7 @@ export class PackageBuilder {
   /**
    * Build ZIP package
    */
-  async buildZip(name: string): Promise<Blob> {
+  async buildZip(_name: string): Promise<Blob> {
     // In a real implementation, this would use a ZIP library like JSZip
     // For now, we'll create a simple blob
     const content = this.files.map(file => `${file.path}: ${file.content}`).join('\n');

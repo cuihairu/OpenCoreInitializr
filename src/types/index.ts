@@ -599,6 +599,16 @@ export interface KextInfo {
   MaxKernel: string;
   MinKernel: string;
   PlistPath: string;
+  name?: string;
+  dependencies?: string[];
+  conflicts?: string[];
+  identifier?: string;
+  category?: 'essential' | 'audio' | 'ethernet' | 'wifi' | 'bluetooth' | 'usb' | 'graphics' | 'misc';
+  compatibility?: CompatibilityInfo;
+  description?: string;
+  author?: string;
+  repository?: string;
+  latestVersion?: VersionInfo;
 }
 
 export interface KextMetadata {

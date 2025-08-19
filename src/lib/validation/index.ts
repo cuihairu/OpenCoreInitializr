@@ -152,40 +152,40 @@ export function validateOpenCoreConfig(config: Partial<OpenCoreConfig>): Validat
   }
 
   // Platform Info validation
-  if (config.platformInfo) {
-    if (!config.platformInfo.generic?.SystemProductName) {
+  if (config.PlatformInfo) {
+    if (!config.PlatformInfo.Generic?.SystemProductName) {
       errors.push('SMBIOS model (SystemProductName) is required');
     }
     
-    if (config.platformInfo.generic?.SystemSerialNumber) {
-      if (!isValidSerialNumber(config.platformInfo.generic.SystemSerialNumber)) {
+    if (config.PlatformInfo.Generic?.SystemSerialNumber) {
+      if (!isValidSerialNumber(config.PlatformInfo.Generic.SystemSerialNumber)) {
         errors.push('Invalid serial number format');
       }
     }
     
-    if (config.platformInfo.generic?.SystemUUID) {
-      if (!isValidUUID(config.platformInfo.generic.SystemUUID)) {
+    if (config.PlatformInfo.Generic?.SystemUUID) {
+      if (!isValidUUID(config.PlatformInfo.Generic.SystemUUID)) {
         errors.push('Invalid system UUID format');
       }
     }
     
-    if (config.platformInfo.generic?.ROM) {
-      if (!isValidMacAddress(config.platformInfo.generic.ROM)) {
+    if (config.PlatformInfo.Generic?.ROM) {
+      if (!isValidMacAddress(config.PlatformInfo.Generic.ROM)) {
         errors.push('Invalid ROM (MAC address) format');
       }
     }
   }
 
   // Security validation
-  if (config.misc?.security) {
-    if (config.misc.security.Vault === 'Secure' && !config.misc.security.ScanPolicy) {
+  if (config.Misc?.Security) {
+    if (config.Misc.Security.Vault === 'Secure' && !config.Misc.Security.ScanPolicy) {
       warnings.push('Scan policy should be configured when using secure vault');
     }
   }
 
   // Misc validation
-  if (config.misc?.boot) {
-    if (config.misc.boot.Timeout && (config.misc.boot.Timeout < 0 || config.misc.boot.Timeout > 60)) {
+  if (config.Misc?.Boot) {
+    if (config.Misc.Boot.Timeout && (config.Misc.Boot.Timeout < 0 || config.Misc.Boot.Timeout > 60)) {
       warnings.push('Boot timeout should be between 0 and 60 seconds');
     }
   }

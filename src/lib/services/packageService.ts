@@ -1,4 +1,4 @@
-import { HardwareConfig, OpenCoreConfig, DownloadItem, PackageOptions, GeneratedFile } from '../../types';
+import type { HardwareConfig, OpenCoreConfig, DownloadItem, PackageOptions } from '../../types';
 import { configUtils } from '../config/generator';
 import { DownloadManager } from '../download/manager';
 import { FilePackager, createEFIStructure } from '../package/packager';
@@ -218,7 +218,7 @@ export class PackageService {
   /**
    * 获取工具下载链接
    */
-  private getToolDownloadUrl(toolName: string): string {
+  private getToolDownloadUrl(_toolName: string): string {
     return `https://github.com/acidanthera/OpenCorePkg/releases/latest/download/OpenCore-RELEASE.zip`;
   }
 

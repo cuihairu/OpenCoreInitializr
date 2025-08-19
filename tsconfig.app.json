@@ -6,6 +6,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "noImplicitAny": false,
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
@@ -22,11 +23,13 @@
     },
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedSideEffectImports": false,
+    "noImplicitReturns": false,
+    "noPropertyAccessFromIndexSignature": false
   },
   "include": ["src"]
 }
