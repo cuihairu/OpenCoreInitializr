@@ -91,7 +91,12 @@ export const generateConfigPlist = (state: WizardState) => {
   });
 
   // 2. Set SMBIOS based on CPU/GPU combo (simplified)
-  if (state.hardware.platform === 'amd') {
+  // Determine platform from CPU generation or model
+  const isAMD = state.hardware.cpuGeneration?.toLowerCase().includes('amd') || 
+                state.hardware.cpuModel?.toLowerCase().includes('amd') ||
+                state.hardware.cpuGeneration?.toLowerCase().includes('ryzen');
+  
+  if (isAMD) {
     config.PlatformInfo.Generic.SystemProductName = 'iMacPro1,1'; // Common choice for AMD
   } else {
     if (state.hardware.gpuBrand === 'amd') {

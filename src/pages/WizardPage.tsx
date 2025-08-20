@@ -4,7 +4,7 @@ import { Step2_HardwareSelection } from '@/components/wizard/Step2_HardwareSelec
 import { Step3_KextSelection } from '@/components/wizard/Step3_KextSelection';
 import { Step4_Finalize } from '@/components/wizard/Step4_Finalize';
 import { WizardState } from '@/types';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 import { createEfiPackage } from '@/lib/package/packager';
 
 const WizardPage: React.FC = () => {
@@ -63,26 +63,25 @@ const WizardPage: React.FC = () => {
       case 3:
         if (!wizardState.hardware) return <div>请先返回第二步选择硬件</div>;
         return <Step3_KextSelection hardware={wizardState.hardware} onComplete={handleKextComplete} onBack={handleBack} />;
-      // Return null for other steps to isolate the issue
       case 4:
+        return (
+          <Step4_Finalize 
+            wizardState={wizardState}
+            onDownload={handleDownload}
+            onBack={handleBack}
+            isDownloading={isDownloading}
+            progress={progress}
+            progressMessage={progressMessage}
+          />
+        );
       default:
-        return <div>Step 3 is OK. The problem is in the final step.</div>;
+        return <div>未知步骤</div>;
     }
   };
 
   return (
     <div className="container mx-auto py-8 sm:py-12 lg:py-16">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={step}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          {renderStep()}
-        </motion.div>
-      </AnimatePresence>
+      {renderStep()}
     </div>
   );
 };
