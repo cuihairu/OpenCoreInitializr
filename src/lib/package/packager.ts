@@ -57,19 +57,47 @@ export const createEfiPackage = async (state: WizardState, onProgress?: Progress
 
   // --- Step 3: Download files ---
   onProgress?.('正在下载驱动文件...', 40);
-  // A more complex implementation would use the onProgress callback of downloadFiles
-  // to provide more granular progress updates.
-  const downloadedFiles = await downloadFiles(filesToDownload);
+  
+  if (filesToDownload.length === 0) {
+    console.warn('No files to download. Proceeding with config-only package.');
+  } else {
+    console.log(`Attempting to download ${filesToDownload.length} files:`, filesToDownload.map(f => f.name));
+  }
+  
+  let downloadedFiles: any[] = [];
+  
+  try {
+    // A more complex implementation would use the onProgress callback of downloadFiles
+    // to provide more granular progress updates.
+    downloadedFiles = await downloadFiles(filesToDownload);
+  } catch (error) {
+    console.error('Download failed:', error);
+    // For now, continue with config-only package if downloads fail
+    console.warn('Continuing with config-only package due to download failures.');
+    downloadedFiles = [];
+  }
 
   // --- Step 4: Add downloaded files to ZIP ---
   onProgress?.('正在打包文件...', 75);
   const kextsFolder = ocFolder!.folder('Kexts');
   
-  // SIMPLIFICATION: We are currently adding the downloaded ZIPs directly.
-  // A full implementation would unzip these in memory and place the .kext directory.
-  downloadedFiles.forEach(file => {
-    kextsFolder!.file(file.name, file.content);
-  });
+  if (downloadedFiles.length > 0) {
+    // SIMPLIFICATION: We are currently adding the downloaded ZIPs directly.
+    // A full implementation would unzip these in memory and place the .kext directory.
+    downloadedFiles.forEach(file => {
+      kextsFolder!.file(file.name, file.content);
+    });
+    console.log(`Added ${downloadedFiles.length} kext files to package.`);
+  } else {
+    // Add a README file explaining that kexts need to be downloaded manually
+    kextsFolder!.file('README.txt', 
+      'Kext files could not be downloaded automatically.\n' +
+      'Please download the required kexts manually and place them in this folder.\n\n' +
+      'Required kexts for your configuration:\n' +
+      filesToDownload.map(f => `- ${f.name}: ${f.url}`).join('\n')
+    );
+    console.log('Added README with manual download instructions.');
+  }
 
   // TODO: Add ACPI files to an ACPI folder.
 
@@ -77,6 +105,13 @@ export const createEfiPackage = async (state: WizardState, onProgress?: Progress
   onProgress?.('正在完成...', 95);
   const zipBlob = await zip.generateAsync({ type: 'blob' });
   
-  onProgress?.('完成！', 100);
-  saveAs(zipBlob, 'OpenCore-EFI.zip');
+  const packageType = downloadedFiles.length > 0 ? '完整' : '配置';
+  onProgress?.(`${packageType}包创建完成！`, 100);
+  
+  const filename = downloadedFiles.length > 0 ? 'OpenCore-EFI-Complete.zip' : 'OpenCore-EFI-Config.zip';
+  saveAs(zipBlob, filename);
+  
+  if (downloadedFiles.length === 0) {
+    console.log('Package created with config only. Kexts need to be downloaded manually.');
+  }
 };
