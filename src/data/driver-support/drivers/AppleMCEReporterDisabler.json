@@ -1,0 +1,55 @@
+{
+  "id": "AppleMCEReporterDisabler",
+  "name": {
+    "en": "AppleMCEReporterDisabler",
+    "zh": "AppleMCEReporterDisabler"
+  },
+  "category": "system",
+  "description": {
+    "en": "Disables Apple MCE reporter to fix kernel panics on AMD systems.",
+    "zh": "禁用Apple MCE报告，修复AMD系统内核崩溃"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "essential",
+  "version": {
+    "version": "1.2.0",
+    "releaseDate": "2023-06-20",
+    "lastUpdated": "2023-06-20",
+    "downloadUrl": "https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip",
+    "fileSize": "25KB",
+    "changelog": "支持macOS 12.3+，修复AMD系统MCE错误",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "AMD",
+      "models": [
+        "Ryzen系列",
+        "Threadripper系列",
+        "所有AMD处理器"
+      ],
+      "macosVersions": [
+        "12.3+"
+      ],
+      "notes": "Essential for AMD systems to fix kernel panics"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/AMD-OSX/AMD_Vanilla",
+  "githubRepo": "https://github.com/AMD-OSX/AMD_Vanilla",
+  "maintainer": "AMD-OSX",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "System", "zh": "系统" },
+    "AMD",
+    "MCE",
+    { "en": "Kernel Panic", "zh": "内核崩溃" },
+    { "en": "Fix", "zh": "修复" }
+  ],
+  "links": {
+    "website": "https://github.com/AMD-OSX/AMD_Vanilla",
+    "github": "https://github.com/AMD-OSX/AMD_Vanilla",
+    "download": "https://files.amd-osx.com/"
+  }
+}

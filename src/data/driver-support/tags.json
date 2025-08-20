@@ -1,0 +1,28 @@
+{
+  "tags": {
+    "audio": { "en": "audio", "zh": "音频" },
+    "kext": { "en": "kext", "zh": "内核扩展" },
+    "acidanthera": { "en": "acidanthera", "zh": "acidanthera" },
+    "network": { "en": "network", "zh": "网络" },
+    "wifi": { "en": "wifi", "zh": "无线网络" },
+    "ethernet": { "en": "ethernet", "zh": "有线网络" },
+    "intel": { "en": "intel", "zh": "英特尔" },
+    "amd": { "en": "amd", "zh": "AMD" },
+    "nvidia": { "en": "nvidia", "zh": "英伟达" },
+    "realtek": { "en": "realtek", "zh": "瑞昱" },
+    "broadcom": { "en": "broadcom", "zh": "博通" },
+    "bluetooth": { "en": "bluetooth", "zh": "蓝牙" },
+    "usb": { "en": "usb", "zh": "USB" },
+    "graphics": { "en": "graphics", "zh": "显卡" },
+    "sensors": { "en": "sensors", "zh": "传感器" },
+    "input": { "en": "input", "zh": "输入设备" },
+    "trackpad": { "en": "trackpad", "zh": "触控板" },
+    "keyboard": { "en": "keyboard", "zh": "键盘" },
+    "system": { "en": "system", "zh": "系统" },
+    "feature": { "en": "feature", "zh": "特性" },
+    "storage": { "en": "storage", "zh": "存储" },
+    "nvme": { "en": "nvme", "zh": "NVMe" },
+    "cpu": { "en": "cpu", "zh": "CPU" },
+    "smbios": { "en": "smbios", "zh": "SMBIOS" }
+  }
+}

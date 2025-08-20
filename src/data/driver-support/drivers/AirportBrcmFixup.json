@@ -1,0 +1,58 @@
+{
+  "id": "airportbrcmfixup",
+  "name": {
+    "en": "AirportBrcmFixup",
+    "zh": "AirportBrcmFixup"
+  },
+  "category": "network",
+  "description": {
+    "en": "Broadcom wireless network card driver for enabling native WiFi functionality",
+    "zh": "Broadcom无线网卡修复驱动，启用原生WiFi功能"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "2.2.0",
+    "releaseDate": "2024-05-10",
+    "lastUpdated": "2024-05-10",
+    "downloadUrl": "https://github.com/acidanthera/AirportBrcmFixup/releases/tag/2.2.0",
+    "fileSize": "0.5 MB",
+    "changelog": "Enhanced compatibility with newer Broadcom chipsets",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Broadcom",
+      "models": [
+        "BCM4360",
+        "BCM4350",
+        "BCM4331",
+        "BCM43224",
+        "BCM43225"
+      ],
+      "macosVersions": [
+        "10.10+"
+      ],
+      "notes": "支持Handoff、AirDrop等连续互通功能"
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/AirportBrcmFixup",
+  "githubRepo": "https://github.com/acidanthera/AirportBrcmFixup",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "WiFi", "zh": "WiFi" },
+    { "en": "Wireless Network", "zh": "无线网络" },
+    { "en": "Broadcom", "zh": "博通" },
+    { "en": "Continuity", "zh": "连续互通" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/AirportBrcmFixup",
+    "github": "https://github.com/acidanthera/AirportBrcmFixup",
+    "download": "https://github.com/acidanthera/AirportBrcmFixup/releases"
+  }
+}

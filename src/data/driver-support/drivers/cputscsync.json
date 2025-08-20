@@ -1,0 +1,62 @@
+{
+  "id": "CpuTscSync",
+  "name": {
+    "en": "CpuTscSync",
+    "zh": "CpuTscSync"
+  },
+  "category": "system",
+  "description": {
+    "en": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "zh": "同步多核CPU的TSC时钟，解决时间相关问题"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "optional",
+  "version": {
+    "version": "1.1.2",
+    "releaseDate": "2024-02-28",
+    "lastUpdated": "2024-02-28",
+    "downloadUrl": "https://github.com/acidanthera/CpuTscSync/releases/tag/1.1.2",
+    "fileSize": "0.1 MB",
+    "changelog": "Improved TSC synchronization for multi-core systems",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "多核处理器"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Primarily used to resolve clock synchronization issues on multi-core systems."
+    },
+    {
+      "brand": "AMD",
+      "models": [
+        "多核处理器"
+      ],
+      "macosVersions": [
+        "10.13+"
+      ],
+      "notes": "TSC synchronization support for AMD multi-core processors."
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/acidanthera/CpuTscSync",
+  "githubRepo": "https://github.com/acidanthera/CpuTscSync",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    "CPU",
+    { "en": "Clock Sync", "zh": "时钟同步" },
+    "TSC",
+    { "en": "Multi-core", "zh": "多核" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/CpuTscSync",
+    "github": "https://github.com/acidanthera/CpuTscSync",
+    "download": "https://github.com/acidanthera/CpuTscSync/releases"
+  }
+}

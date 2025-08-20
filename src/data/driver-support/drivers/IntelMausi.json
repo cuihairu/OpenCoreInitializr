@@ -1,0 +1,53 @@
+{
+  "id": "IntelMausi",
+  "name": {
+    "en": "IntelMausi",
+    "zh": "IntelMausi"
+  },
+  "category": "network",
+  "description": {
+    "en": "Intel Ethernet driver, supports most Intel network cards.",
+    "zh": "Intel以太网驱动，支持大多数Intel网卡"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.0.7",
+    "releaseDate": "2023-09-04",
+    "lastUpdated": "2023-09-04",
+    "downloadUrl": "https://github.com/acidanthera/IntelMausi/releases/download/1.0.7/IntelMausi-1.0.7-RELEASE.zip",
+    "fileSize": "85KB",
+    "changelog": "支持更多Intel以太网控制器，修复连接稳定性问题",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "82578, 82579系列",
+        "I217, I218, I219系列",
+        "I225-V, I226-V系列"
+      ],
+      "macosVersions": [
+        "10.9+"
+      ],
+      "notes": "Supports most Intel Ethernet controllers"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/acidanthera/IntelMausi",
+  "githubRepo": "https://github.com/acidanthera/IntelMausi",
+  "maintainer": "Acidanthera",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Network", "zh": "网络" },
+    { "en": "Ethernet", "zh": "以太网" },
+    "Intel"
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/IntelMausi",
+    "github": "https://github.com/acidanthera/IntelMausi",
+    "download": "https://github.com/acidanthera/IntelMausi/releases"
+  }
+}

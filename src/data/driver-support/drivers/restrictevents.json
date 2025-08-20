@@ -1,0 +1,51 @@
+{
+  "id": "RestrictEvents",
+  "name": {
+    "en": "RestrictEvents",
+    "zh": "RestrictEvents"
+  },
+  "category": "system",
+  "description": {
+    "en": "Prevents certain processes and events to improve system stability.",
+    "zh": "阻止某些进程和事件，提高系统稳定性"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.1.6",
+    "releaseDate": "2024-08-15",
+    "lastUpdated": "2024-08-15",
+    "downloadUrl": "https://github.com/acidanthera/RestrictEvents/releases/tag/1.1.6",
+    "fileSize": "0.2 MB",
+    "changelog": "Improved event filtering and system stability",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "所有支持的硬件"
+      ],
+      "macosVersions": [
+        "10.10+"
+      ],
+      "notes": "Blocks certain processes and events that may cause system instability."
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/acidanthera/RestrictEvents",
+  "githubRepo": "https://github.com/acidanthera/RestrictEvents",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "System Stability", "zh": "系统稳定性" },
+    { "en": "Event Filtering", "zh": "事件过滤" },
+    { "en": "Process Management", "zh": "进程管理" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/RestrictEvents",
+    "github": "https://github.com/acidanthera/RestrictEvents",
+    "download": "https://github.com/acidanthera/RestrictEvents/releases"
+  }
+}

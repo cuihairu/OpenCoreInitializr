@@ -1,0 +1,55 @@
+{
+  "id": "ECEnabler",
+  "name": {
+    "en": "ECEnabler",
+    "zh": "ECEnabler"
+  },
+  "category": "system",
+  "description": {
+    "en": "Embedded Controller driver, fixes battery status reading.",
+    "zh": "嵌入式控制器驱动，修复电池状态读取"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "recommended",
+  "version": {
+    "version": "1.0.4",
+    "releaseDate": "2023-12-01",
+    "lastUpdated": "2023-12-01",
+    "downloadUrl": "https://github.com/1Revenger1/ECEnabler/releases/download/1.0.4/ECEnabler-1.0.4-RELEASE.zip",
+    "fileSize": "45KB",
+    "changelog": "改进EC读取稳定性，支持更多笔记本型号",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Generic",
+      "models": [
+        "大多数笔记本电脑",
+        "嵌入式控制器",
+        "电池管理系统"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Fixes battery status reading on laptops"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/1Revenger1/ECEnabler",
+  "githubRepo": "https://github.com/1Revenger1/ECEnabler",
+  "maintainer": "1Revenger1",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "System", "zh": "系统" },
+    "EC",
+    { "en": "Battery", "zh": "电池" },
+    { "en": "Laptop", "zh": "笔记本" },
+    { "en": "Embedded Controller", "zh": "嵌入式控制器" }
+  ],
+  "links": {
+    "website": "https://github.com/1Revenger1/ECEnabler",
+    "github": "https://github.com/1Revenger1/ECEnabler",
+    "download": "https://github.com/1Revenger1/ECEnabler/releases"
+  }
+}

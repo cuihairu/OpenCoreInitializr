@@ -1,0 +1,69 @@
+{
+  "id": "WhateverGreen",
+  "name": {
+    "en": "WhateverGreen",
+    "zh": "WhateverGreen"
+  },
+  "category": "graphics",
+  "description": {
+    "en": "Universal graphics driver, supports various fixes for Intel integrated graphics, AMD and NVIDIA discrete graphics cards.",
+    "zh": "通用显卡驱动，支持Intel集成显卡、AMD和NVIDIA独立显卡的各种修复"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.6.8",
+    "releaseDate": "2024-12-10",
+    "lastUpdated": "2024-12-10",
+    "downloadUrl": "https://github.com/acidanthera/WhateverGreen/releases/download/1.6.8/WhateverGreen-1.6.8-RELEASE.zip",
+    "fileSize": "2.8MB",
+    "changelog": "修复Intel显卡帧缓冲区问题，改进AMD显卡DRM支持",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "HD 3000+",
+        "UHD系列",
+        "Iris系列"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Intel integrated graphics"
+    },
+    {
+      "brand": "AMD",
+      "models": [
+        "HD 7000+",
+        "RX系列",
+        "Vega系列"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports AMD discrete graphics cards"
+    }
+  ],
+  "dependencies": [
+    "Lilu.kext"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/WhateverGreen",
+  "githubRepo": "https://github.com/acidanthera/WhateverGreen",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "Graphics", "zh": "显卡" },
+    "Intel",
+    "AMD",
+    "NVIDIA",
+    { "en": "DRM", "zh": "DRM" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/WhateverGreen",
+    "github": "https://github.com/acidanthera/WhateverGreen",
+    "download": "https://github.com/acidanthera/WhateverGreen/releases"
+  }
+}

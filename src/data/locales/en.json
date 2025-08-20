@@ -469,6 +469,53 @@
     "no_relevant_kexts": "No relevant driver recommendations based on current hardware configuration.",
     "download": "Download",
     "version": "Version",
-    "compatibility_info": "Compatibility Info"
+    "last_updated": "Last Updated",
+    "stars": "Stars",
+    "last_commit": "Last Commit",
+    "added_to_cart": "Added to cart",
+    "add_to_cart": "Add to cart",
+    "compatibility_info": "Compatibility Info",
+    "status": "Status",
+    "title": "Driver Support",
+    "subtitle": "Find the right macOS drivers for your hardware",
+    "search_placeholder": "Search driver name, description, or tags...",
+    "select_category": "Select Category",
+    "all_categories": "All Categories",
+    "priority": "Priority",
+    "all_priorities": "All Priorities",
+    "essential": "Essential",
+    "recommended": "Recommended",
+    "optional": "Optional",
+    "all_drivers": "All Drivers",
+    "recommended_drivers": "Recommended Drivers",
+    "recent_updates": "Recent Updates",
+    "loading": "Loading...",
+    "previous_page": "Previous Page",
+    "next_page": "Next Page",
+    "page_info": "Page {{currentPage}} of {{totalPages}}",
+    "open_project_page": "Open project page",
+    "no_link_available": "No link available",
+    "collapse_tags": "Collapse tags",
+    "expand_tags": "Expand tags",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "development_status": {
+      "stable": "Stable",
+      "beta": "Beta",
+      "alpha": "Alpha",
+      "experimental": "Experimental",
+      "deprecated": "Deprecated"
+    },
+    "compatibility": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "fair": "Fair",
+      "poor": "Poor",
+      "unknown": "Unknown"
+    }
+  },
+  "navigation": {
+    "docs": "Documentation",
+    "kexts": "Driver Support"
   }
 }

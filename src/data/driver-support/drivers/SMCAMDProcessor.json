@@ -1,0 +1,58 @@
+{
+  "id": "SMCAMDProcessor",
+  "name": {
+    "en": "SMCAMDProcessor",
+    "zh": "SMCAMDProcessor"
+  },
+  "category": "sensors",
+  "description": {
+    "en": "AMD processor temperature monitoring driver, supports Ryzen series.",
+    "zh": "AMD处理器温度监控驱动，支持Ryzen系列"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "0.7.0",
+    "releaseDate": "2023-10-15",
+    "lastUpdated": "2023-10-15",
+    "downloadUrl": "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/0.7.0/SMCAMDProcessor-0.7.0-RELEASE.zip",
+    "fileSize": "120KB",
+    "changelog": "支持更多Ryzen处理器型号，改进温度读取精度",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "AMD",
+      "models": [
+        "Ryzen 1000-7000系列",
+        "Threadripper系列",
+        "EPYC系列"
+      ],
+      "macosVersions": [
+        "10.13+"
+      ],
+      "notes": "Required for AMD processor temperature monitoring"
+    }
+  ],
+  "dependencies": [
+    "VirtualSMC",
+    "AMDRyzenCPUPowerManagement"
+  ],
+  "officialWebsite": "https://github.com/trulyspinach/SMCAMDProcessor",
+  "githubRepo": "https://github.com/trulyspinach/SMCAMDProcessor",
+  "maintainer": "trulyspinach",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Sensors", "zh": "传感器" },
+    "AMD",
+    "CPU",
+    { "en": "Temperature", "zh": "温度" },
+    "Ryzen"
+  ],
+  "links": {
+    "website": "https://github.com/trulyspinach/SMCAMDProcessor",
+    "github": "https://github.com/trulyspinach/SMCAMDProcessor",
+    "download": "https://github.com/trulyspinach/SMCAMDProcessor/releases"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "VoodooRMI",
+  "name": {
+    "en": "VoodooRMI",
+    "zh": "VoodooRMI"
+  },
+  "category": "input",
+  "description": {
+    "en": "Synaptics RMI trackpad driver, designed specifically for ThinkPad.",
+    "zh": "Synaptics RMI触控板驱动，专为ThinkPad设计"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "1.3.4",
+    "releaseDate": "2024-08-10",
+    "lastUpdated": "2024-08-10",
+    "downloadUrl": "https://github.com/VoodooSMBus/VoodooRMI/releases/download/1.3.4/VoodooRMI-1.3.4.zip",
+    "fileSize": "600KB",
+    "changelog": "改进ThinkPad触控板支持，修复手势识别",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Lenovo",
+      "models": [
+        "ThinkPad触控板",
+        "Synaptics RMI触控板"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Designed specifically for ThinkPad series"
+    },
+    {
+      "brand": "Dell",
+      "models": [
+        "部分Synaptics RMI触控板"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Supports some Dell laptops"
+    },
+    {
+      "brand": "HP",
+      "models": [
+        "部分Synaptics RMI触控板"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Supports some HP laptops"
+    }
+  ],
+  "dependencies": [
+    "VoodooSMBus"
+  ],
+  "officialWebsite": "https://github.com/VoodooSMBus/VoodooRMI",
+  "githubRepo": "https://github.com/VoodooSMBus/VoodooRMI",
+  "maintainer": "VoodooSMBus",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Trackpad", "zh": "触控板" },
+    "Synaptics",
+    "RMI",
+    "ThinkPad",
+    { "en": "Input Device", "zh": "输入设备" }
+  ],
+  "links": {
+    "website": "https://github.com/VoodooSMBus/VoodooRMI",
+    "github": "https://github.com/VoodooSMBus/VoodooRMI",
+    "download": "https://github.com/VoodooSMBus/VoodooRMI/releases"
+  }
+}

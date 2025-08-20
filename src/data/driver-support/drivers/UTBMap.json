@@ -1,0 +1,56 @@
+{
+  "id": "UTBMap",
+  "name": {
+    "en": "UTBMap",
+    "zh": "UTBMap"
+  },
+  "category": "input",
+  "description": {
+    "en": "USB port mapping configuration file, defining the specific USB port layout.",
+    "zh": "USB端口映射配置文件，定义具体的USB端口布局"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.1.1",
+    "releaseDate": "2023-12-15",
+    "lastUpdated": "2023-12-15",
+    "downloadUrl": "https://github.com/USBToolBox/tool",
+    "fileSize": "0.1 MB",
+    "changelog": "Generated using USBToolBox mapping tool",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "用户特定硬件配置"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": {
+        "en": "Needs to be generated for specific hardware using the USBToolBox tool.",
+        "zh": "需要为特定硬件使用USBToolBox工具生成"
+      }
+    }
+  ],
+  "dependencies": [
+    "USBToolBox"
+  ],
+  "officialWebsite": "https://github.com/USBToolBox/tool",
+  "githubRepo": "https://github.com/USBToolBox/tool",
+  "maintainer": "USBToolBox Team",
+  "license": "GPL v3",
+  "tags": [
+    { "en": "USB", "zh": "USB" },
+    { "en": "Port Mapping", "zh": "端口映射" },
+    { "en": "Configuration File", "zh": "配置文件" }
+  ],
+  "links": {
+    "website": "https://github.com/USBToolBox/tool",
+    "github": "https://github.com/USBToolBox/tool",
+    "download": "https://github.com/USBToolBox/tool"
+  }
+}

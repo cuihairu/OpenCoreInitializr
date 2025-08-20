@@ -1,0 +1,56 @@
+{
+  "id": "HibernationFixup",
+  "name": {
+    "en": "HibernationFixup",
+    "zh": "HibernationFixup"
+  },
+  "category": "features",
+  "description": {
+    "en": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "zh": "修复休眠功能，支持原生的macOS休眠"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "1.5.4",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/acidanthera/HibernationFixup/releases/tag/1.5.4",
+    "fileSize": "0.0 MB",
+    "changelog": "#### v1.5.4\r\n- - Added constants for macOS 26 support",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "支持休眠的硬件"
+      ],
+      "macosVersions": [
+        "10.10+"
+      ],
+      "notes": {
+        "en": "Requires correct NVRAM and power management configuration.",
+        "zh": "需要正确配置NVRAM和电源管理"
+      }
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/HibernationFixup",
+  "githubRepo": "https://github.com/acidanthera/HibernationFixup",
+  "maintainer": "Acidanthera",
+  "license": "BSD 3-Clause",
+  "tags": [
+    { "en": "Hibernation", "zh": "休眠" },
+    { "en": "Sleep", "zh": "睡眠" },
+    { "en": "Power Management", "zh": "电源管理" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/HibernationFixup",
+    "github": "https://github.com/acidanthera/HibernationFixup",
+    "download": "https://github.com/acidanthera/HibernationFixup/releases"
+  }
+}

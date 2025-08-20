@@ -1,0 +1,56 @@
+{
+  "id": "NootRX",
+  "name": {
+    "en": "NootRX",
+    "zh": "NootRX"
+  },
+  "category": "graphics",
+  "description": {
+    "en": "AMD RDNA 2 graphics driver, supports RX 6000 series graphics cards.",
+    "zh": "AMD RDNA 2显卡驱动，支持RX 6000系列显卡"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "recommended",
+  "version": {
+    "version": "1.2.0",
+    "releaseDate": "2024-11-20",
+    "lastUpdated": "2024-11-20",
+    "downloadUrl": "https://github.com/ChefKissInc/NootRX/releases/download/1.2.0/NootRX-1.2.0-RELEASE.zip",
+    "fileSize": "1.5MB",
+    "changelog": "支持更多RDNA 2显卡型号，修复显示问题",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "AMD",
+      "models": [
+        "RX 6000系列 (RDNA 2)",
+        "RX 7000系列 (RDNA 3)"
+      ],
+      "macosVersions": [
+        "11.0+"
+      ],
+      "notes": "Supports RDNA 2/3 architecture graphics cards"
+    }
+  ],
+  "dependencies": [
+    "Lilu.kext"
+  ],
+  "officialWebsite": "https://github.com/ChefKissInc/NootRX",
+  "githubRepo": "https://github.com/ChefKissInc/NootRX",
+  "maintainer": "ChefKissInc",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Graphics", "zh": "显卡" },
+    "AMD",
+    "RDNA",
+    "RX 6000",
+    "RX 7000"
+  ],
+  "links": {
+    "website": "https://github.com/ChefKissInc/NootRX",
+    "github": "https://github.com/ChefKissInc/NootRX",
+    "download": "https://github.com/ChefKissInc/NootRX/releases"
+  }
+}

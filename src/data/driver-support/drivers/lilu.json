@@ -1,0 +1,54 @@
+{
+  "id": "Lilu",
+  "name": {
+    "en": "Lilu",
+    "zh": "Lilu"
+  },
+  "category": "essential",
+  "description": {
+    "en": "A framework for patching and extending the macOS kernel.",
+    "zh": "驱动平台基础，为其他驱动提供运行时修补功能"
+  },
+  "developmentStatus": "active",
+  "compatibility": "excellent",
+  "priority": "essential",
+  "version": {
+    "version": "1.7.1",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/acidanthera/Lilu/releases/tag/1.7.1",
+    "fileSize": "0.4 MB",
+    "changelog": "#### v1.7.1\r\n- Allow loading on macOS 26 without `-lilubetaall`, thanks @AlfCraft07",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "所有支持的硬件"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": {
+        "en": "Essential for all Hackintosh systems.",
+        "zh": "所有Hackintosh系统的基础驱动"
+      }
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/acidanthera/Lilu",
+  "githubRepo": "https://github.com/acidanthera/Lilu",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "Core", "zh": "核心" },
+    { "en": "Essential", "zh": "必需" },
+    { "en": "Patching", "zh": "修补" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/Lilu",
+    "github": "https://github.com/acidanthera/Lilu",
+    "download": "https://github.com/acidanthera/Lilu/releases"
+  }
+}

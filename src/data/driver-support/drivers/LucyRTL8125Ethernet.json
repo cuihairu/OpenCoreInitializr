@@ -1,0 +1,54 @@
+{
+  "id": "LucyRTL8125Ethernet",
+  "name": {
+    "en": "LucyRTL8125Ethernet",
+    "zh": "LucyRTL8125Ethernet"
+  },
+  "category": "network",
+  "description": {
+    "en": "Realtek RTL8125 2.5Gb Ethernet controller driver.",
+    "zh": "Realtek RTL8125 2.5Gb以太网控制器驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.2.2",
+    "releaseDate": "2024-06-20",
+    "lastUpdated": "2024-06-20",
+    "downloadUrl": "https://github.com/Mieze/LucyRTL8125Ethernet/releases/tag/1.2.2",
+    "fileSize": "0.8 MB",
+    "changelog": "Bug fixes and performance improvements for RTL8125 controllers",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Realtek",
+      "models": [
+        "RTL8125",
+        "RTL8125B",
+        "RTL8125BG"
+      ],
+      "macosVersions": [
+        "10.14+"
+      ],
+      "notes": "Supports 2.5Gb Ethernet, backward compatible with 1Gb networks"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/Mieze/LucyRTL8125Ethernet",
+  "githubRepo": "https://github.com/Mieze/LucyRTL8125Ethernet",
+  "maintainer": "Mieze",
+  "license": "GPL v2",
+  "tags": [
+    { "en": "Ethernet", "zh": "以太网" },
+    { "en": "Wired Network", "zh": "有线网络" },
+    "Realtek",
+    "2.5Gb"
+  ],
+  "links": {
+    "website": "https://github.com/Mieze/LucyRTL8125Ethernet",
+    "github": "https://github.com/Mieze/LucyRTL8125Ethernet",
+    "download": "https://github.com/Mieze/LucyRTL8125Ethernet/releases"
+  }
+}

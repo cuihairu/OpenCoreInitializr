@@ -1,0 +1,57 @@
+{
+  "id": "SMCRadeonSensors",
+  "name": {
+    "en": "SMCRadeonSensors",
+    "zh": "SMCRadeonSensors"
+  },
+  "category": "sensors",
+  "description": {
+    "en": "AMD Radeon graphics card temperature monitoring driver.",
+    "zh": "AMD Radeon显卡温度监控驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "optional",
+  "version": {
+    "version": "1.0.0",
+    "releaseDate": "2023-08-10",
+    "lastUpdated": "2023-08-10",
+    "downloadUrl": "https://github.com/ChefKissInc/RadeonSensor/releases/download/1.0.0/SMCRadeonSensors-1.0.0-RELEASE.zip",
+    "fileSize": "80KB",
+    "changelog": "支持AMD Radeon RX系列显卡温度监控",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "AMD",
+      "models": [
+        "Radeon RX 400-7000系列",
+        "Radeon Pro系列",
+        "Radeon Vega系列"
+      ],
+      "macosVersions": [
+        "10.15+"
+      ],
+      "notes": "AMD graphics card temperature monitoring"
+    }
+  ],
+  "dependencies": [
+    "VirtualSMC"
+  ],
+  "officialWebsite": "https://github.com/ChefKissInc/RadeonSensor",
+  "githubRepo": "https://github.com/ChefKissInc/RadeonSensor",
+  "maintainer": "ChefKissInc",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Sensors", "zh": "传感器" },
+    "AMD",
+    { "en": "Graphics Card", "zh": "显卡" },
+    { "en": "Temperature", "zh": "温度" },
+    "Radeon"
+  ],
+  "links": {
+    "website": "https://github.com/ChefKissInc/RadeonSensor",
+    "github": "https://github.com/ChefKissInc/RadeonSensor",
+    "download": "https://github.com/ChefKissInc/RadeonSensor/releases"
+  }
+}

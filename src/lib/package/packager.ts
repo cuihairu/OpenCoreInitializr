@@ -3,19 +3,7 @@ import { saveAs } from 'file-saver';
 import { WizardState } from '../../types';
 import { downloadAndCustomizeConfigPlist } from '@/lib/config';
 import { downloadFiles, DownloadableFile } from '@/lib/download/manager';
-
-// Import Kexts data to find asset URLs
-import systemKexts from '@/data/kexts/system.json';
-import audioKexts from '@/data/kexts/audio.json';
-import networkKexts from '@/data/kexts/network.json';
-import usbKexts from '@/data/kexts/usb.json';
-
-const allKexts = [
-  ...systemKexts.kexts,
-  ...audioKexts.kexts,
-  ...networkKexts.kexts,
-  ...usbKexts.kexts,
-];
+import { DriverSupportService } from '@/lib/services/driver-support';
 
 export type ProgressCallback = (message: string, percentage: number) => void;
 
@@ -59,13 +47,17 @@ export const createEfiPackage = async (
   // --- Step 2: Determine files to download ---
   onProgress?.('正在准备下载文件...', 25);
   const filesToDownload: DownloadableFile[] = [];
-  state.kexts.forEach(kextName => {
-    const kextData = allKexts.find(k => k.name === kextName) as any;
-    // We are prioritizing the new assetUrl field.
-    if (kextData && kextData.assetUrl) {
-      filesToDownload.push({ name: `${kextName}.zip`, url: kextData.assetUrl });
+  const driverSupportService = DriverSupportService.getInstance();
+  const allKexts = driverSupportService.searchDrivers({}).drivers;
+
+  state.kexts.forEach(kextId => {
+    const kextData = allKexts.find(k => k.id === kextId);
+    // FIXME: The `downloadUrl` is not available on `kextData`. This needs to be resolved.
+    const downloadUrl = (kextData as any).downloadUrl || (kextData as any).assetUrl; // Temporary fix
+    if (kextData && downloadUrl) {
+      filesToDownload.push({ name: `${kextData.id}.zip`, url: downloadUrl });
     } else {
-        console.warn(`No direct assetUrl found for ${kextName}. Skipping.`);
+        console.warn(`No assetUrl found for ${kextId}. Skipping.`);
     }
   });
   

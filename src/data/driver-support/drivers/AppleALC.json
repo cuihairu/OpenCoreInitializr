@@ -1,0 +1,79 @@
+{
+  "id": "AppleALC",
+  "name": {
+    "en": "AppleALC",
+    "zh": "AppleALC"
+  },
+  "category": "audio",
+  "description": {
+    "en": "Universal audio driver, enabling native audio for most audio codecs.",
+    "zh": "通用音频驱动，支持大多数音频编解码器的原生音频功能"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.9.5",
+    "releaseDate": "2024-12-15",
+    "lastUpdated": "2024-12-15",
+    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/tag/1.9.5",
+    "fileSize": "1.2 MB",
+    "changelog": "Latest stable release with improved codec support",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Realtek",
+      "models": [
+        "ALC887",
+        "ALC892",
+        "ALC897",
+        "ALC1220",
+        "ALC1150"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports most Realtek audio codecs"
+    },
+    {
+      "brand": "Creative",
+      "models": [
+        "CA0132"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Creative Sound Blaster series"
+    },
+    {
+      "brand": "Conexant",
+      "models": [
+        "CX20590",
+        "CX20722"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Conexant audio codecs"
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/AppleALC",
+  "githubRepo": "https://github.com/acidanthera/AppleALC",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "Audio", "zh": "音频" },
+    { "en": "Sound", "zh": "声音" },
+    { "en": "Realtek", "zh": "瑞昱" },
+    "ALC"
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/AppleALC",
+    "github": "https://github.com/acidanthera/AppleALC",
+    "download": "https://github.com/acidanthera/AppleALC/releases"
+  }
+}

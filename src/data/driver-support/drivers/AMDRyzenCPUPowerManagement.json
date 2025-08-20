@@ -1,0 +1,58 @@
+{
+  "id": "AMDRyzenCPUPowerManagement",
+  "name": {
+    "en": "AMD Ryzen CPU Power Management",
+    "zh": "AMD Ryzen CPU 电源管理"
+  },
+  "category": "system",
+  "description": {
+    "en": "Power management driver for AMD Ryzen CPUs.",
+    "zh": "AMD Ryzen CPU电源管理驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "recommended",
+  "version": {
+    "version": "0.7.0",
+    "releaseDate": "2023-10-15",
+    "lastUpdated": "2023-10-15",
+    "downloadUrl": "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/0.7.0/AMDRyzenCPUPowerManagement-0.7.0-RELEASE.zip",
+    "fileSize": "150KB",
+    "changelog": "改进Ryzen CPU功耗控制，支持更多型号",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "AMD",
+      "models": [
+        "Ryzen 1000-7000系列",
+        "Threadripper系列",
+        "EPYC系列"
+      ],
+      "macosVersions": [
+        "10.13+"
+      ],
+      "notes": {
+        "en": "Supports power management for AMD Ryzen processors.",
+        "zh": "支持AMD Ryzen处理器电源管理"
+      }
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/trulyspinach/SMCAMDProcessor",
+  "githubRepo": "https://github.com/trulyspinach/SMCAMDProcessor",
+  "maintainer": "trulyspinach",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "System", "zh": "系统" },
+    { "en": "AMD", "zh": "AMD" },
+    { "en": "CPU", "zh": "CPU" },
+    { "en": "Power Management", "zh": "电源管理" },
+    { "en": "Ryzen", "zh": "锐龙" }
+  ],
+  "links": {
+    "website": "https://github.com/trulyspinach/SMCAMDProcessor",
+    "github": "https://github.com/trulyspinach/SMCAMDProcessor",
+    "download": "https://github.com/trulyspinach/SMCAMDProcessor/releases"
+  }
+}

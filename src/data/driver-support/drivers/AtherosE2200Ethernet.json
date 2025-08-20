@@ -1,0 +1,62 @@
+{
+  "id": "AtherosE2200Ethernet",
+  "name": {
+    "en": "AtherosE2200Ethernet",
+    "zh": "AtherosE2200Ethernet"
+  },
+  "category": "network",
+  "description": {
+    "en": "Atheros/Killer Ethernet driver.",
+    "zh": "Atheros/Killer以太网驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "recommended",
+  "version": {
+    "version": "2.2.2",
+    "releaseDate": "2018-12-08",
+    "lastUpdated": "2018-12-08",
+    "downloadUrl": "https://github.com/Mieze/AtherosE2200Ethernet/releases/download/2.2.2/AtherosE2200Ethernet-V2.2.2.zip",
+    "fileSize": "65KB",
+    "changelog": "支持Atheros AR816x, AR817x和Killer E220x, E2400, E2500系列网卡",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Atheros",
+      "models": [
+        "AR8161/AR8162/AR8171/AR8172"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Atheros Ethernet controllers"
+    },
+    {
+      "brand": "Killer",
+      "models": [
+        "E2200/E2400/E2500"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Killer network cards"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/Mieze/AtherosE2200Ethernet",
+  "githubRepo": "https://github.com/Mieze/AtherosE2200Ethernet",
+  "maintainer": "Mieze",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Network", "zh": "网络" },
+    { "en": "Ethernet", "zh": "以太网" },
+    "Atheros",
+    "Killer"
+  ],
+  "links": {
+    "website": "https://github.com/Mieze/AtherosE2200Ethernet",
+    "github": "https://github.com/Mieze/AtherosE2200Ethernet",
+    "download": "https://github.com/Mieze/AtherosE2200Ethernet/releases"
+  }
+}

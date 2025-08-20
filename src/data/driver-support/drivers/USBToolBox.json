@@ -1,0 +1,51 @@
+{
+  "id": "USBToolBox",
+  "name": {
+    "en": "USBToolBox",
+    "zh": "USBToolBox"
+  },
+  "category": "input",
+  "description": {
+    "en": "Runtime driver for USB port mapping tool, used with UTBMap.",
+    "zh": "USB端口映射工具的运行时驱动，配合UTBMap使用"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.1.1",
+    "releaseDate": "2023-12-15",
+    "lastUpdated": "2023-12-15",
+    "downloadUrl": "https://github.com/USBToolBox/kext/releases/tag/1.1.1",
+    "fileSize": "0.2 MB",
+    "changelog": "Improved compatibility and bug fixes for USB port mapping",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "所有USB控制器"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Requires UTBMap.kext to provide USB port mapping functionality"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/USBToolBox/kext",
+  "githubRepo": "https://github.com/USBToolBox/kext",
+  "maintainer": "USBToolBox Team",
+  "license": "GPL v3",
+  "tags": [
+    "USB",
+    { "en": "Port Mapping", "zh": "端口映射" },
+    { "en": "Input Devices", "zh": "输入设备" }
+  ],
+  "links": {
+    "website": "https://github.com/USBToolBox/kext",
+    "github": "https://github.com/USBToolBox/kext",
+    "download": "https://github.com/USBToolBox/kext/releases"
+  }
+}

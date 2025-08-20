@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Step1_PlatformChoice } from '@/components/wizard/Step1_PlatformChoice';
 import { Step2_HardwareSelection } from '@/components/wizard/Step2_HardwareSelection';
-import { Step3_KextSelection } from '@/components/wizard/Step3_KextSelection';
+import Step3 from '@/components/wizard/Step3_KextSelection';
 import { Step4_Finalize } from '@/components/wizard/Step4_Finalize';
 import { WizardState } from '@/types';
 // import { motion, AnimatePresence } from 'framer-motion';
@@ -131,7 +131,7 @@ const WizardPage: React.FC = () => {
         return <Step2_HardwareSelection platform={wizardState.platform} onComplete={handleHardwareComplete} onBack={handleBack} />;
       case 3:
         if (!wizardState.hardware) return <div>请先返回第二步选择硬件</div>;
-        return <Step3_KextSelection hardware={wizardState.hardware} onComplete={handleKextComplete} onBack={handleBack} />;
+        return <Step3 hardware={wizardState.hardware} onComplete={handleKextComplete} onBack={handleBack} />;
       case 4:
         return (
           <Step4_Finalize 

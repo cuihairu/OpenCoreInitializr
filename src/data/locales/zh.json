@@ -432,12 +432,12 @@
     }
   },
   "nav": {
-    "kexts": "驱动版本",
-    "kexts_desc": "查看驱动版本信息"
+    "kexts": "驱动支持",
+    "kexts_desc": "查看驱动支持信息"
   },
   "kexts": {
-    "title": "Kexts 驱动版本",
-    "description": "根据您的硬件配置推荐的驱动程序版本信息，包括系统驱动、音频驱动、网络驱动等。",
+    "title": "驱动支持",
+    "description": "查看各类硬件的驱动支持情况，包括开发状态、版本信息、兼容性等详细信息。",
     "categories": {
       "system": "系统驱动",
       "audio": "音频驱动",
@@ -470,6 +470,53 @@
     "no_relevant_kexts": "根据当前硬件配置，暂无相关驱动推荐。",
     "download": "下载",
     "version": "版本",
-    "compatibility_info": "兼容性信息"
+    "last_updated": "最后更新",
+    "stars": "星标数",
+    "last_commit": "最后提交",
+    "added_to_cart": "已添加到购物车",
+    "add_to_cart": "添加到购物车",
+    "compatibility_info": "兼容性信息",
+    "status": "状态",
+    "title": "驱动支持",
+    "subtitle": "查找适合您硬件的 macOS 驱动程序",
+    "search_placeholder": "搜索驱动名称、描述或标签...",
+    "select_category": "选择分类",
+    "all_categories": "所有分类",
+    "priority": "优先级",
+    "all_priorities": "所有优先级",
+    "essential": "必需",
+    "recommended": "推荐",
+    "optional": "可选",
+    "all_drivers": "全部驱动",
+    "recommended_drivers": "推荐驱动",
+    "recent_updates": "最近更新",
+    "loading": "加载中...",
+    "previous_page": "上一页",
+    "next_page": "下一页",
+    "page_info": "第 {{currentPage}} 页，共 {{totalPages}} 页",
+    "open_project_page": "打开项目页面",
+    "no_link_available": "无可用链接",
+    "collapse_tags": "收起标签",
+    "expand_tags": "展开标签",
+    "collapse": "收起",
+    "expand": "展开",
+    "development_status": {
+      "stable": "稳定版",
+      "beta": "测试版",
+      "alpha": "先行版",
+      "experimental": "实验版",
+      "deprecated": "已弃用"
+    },
+    "compatibility": {
+      "excellent": "完美兼容",
+      "good": "良好兼容",
+      "fair": "部分兼容",
+      "poor": "较差兼容",
+      "unknown": "未知"
+    }
+  },
+  "navigation": {
+    "docs": "配置文档",
+    "kexts": "驱动支持"
   }
 }

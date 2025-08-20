@@ -1,0 +1,59 @@
+{
+  "id": "IntelBluetoothFirmware",
+  "name": {
+    "en": "IntelBluetoothFirmware",
+    "zh": "Intel蓝牙固件"
+  },
+  "category": "bluetooth",
+  "description": {
+    "en": "Firmware driver for Intel Bluetooth devices.",
+    "zh": "Intel蓝牙设备的固件驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "essential",
+  "version": {
+    "version": "2.4.0",
+    "releaseDate": "2024-06-20",
+    "lastUpdated": "2024-06-20",
+    "downloadUrl": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/2.4.0",
+    "fileSize": "1.2 MB",
+    "changelog": "Updated firmware support for newer Intel Bluetooth controllers",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "AX200",
+        "AX201",
+        "AX210",
+        "AX211",
+        "AC7260",
+        "AC8260",
+        "AC9260",
+        "AC9560"
+      ],
+      "macosVersions": [
+        "10.13+"
+      ],
+      "notes": "Provides firmware support for Intel Bluetooth controllers"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",
+  "githubRepo": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",
+  "maintainer": "OpenIntelWireless",
+  "license": "GPL v2",
+  "tags": [
+    { "en": "Bluetooth", "zh": "蓝牙" },
+    "Intel",
+    { "en": "Firmware", "zh": "固件" },
+    { "en": "Wireless", "zh": "无线" }
+  ],
+  "links": {
+    "website": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",
+    "github": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",
+    "download": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases"
+  }
+}

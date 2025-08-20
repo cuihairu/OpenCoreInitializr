@@ -1,0 +1,56 @@
+{
+  "id": "AppleALCU",
+  "name": {
+    "en": "AppleALCU",
+    "zh": "AppleALCU"
+  },
+  "category": "audio",
+  "description": {
+    "en": "A minimal version of AppleALC, supporting only digital audio output. Suitable for systems that only require digital audio.",
+    "zh": "精简版AppleALC，仅支持数字音频输出，适用于只需要数字音频的系统"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "1.9.2",
+    "releaseDate": "2024-12-15",
+    "lastUpdated": "2024-12-15",
+    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/download/1.9.2/AppleALC-1.9.2-RELEASE.zip",
+    "fileSize": "2.1MB",
+    "changelog": "精简版AppleALC，移除模拟音频支持，专注于数字音频",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Generic",
+      "models": [
+        "数字音频输出设备",
+        "HDMI音频",
+        "DisplayPort音频"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Only supports digital audio output"
+    }
+  ],
+  "dependencies": [
+    "Lilu.kext"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/AppleALC",
+  "githubRepo": "https://github.com/acidanthera/AppleALC",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "Audio", "zh": "音频" },
+    { "en": "Digital Audio", "zh": "数字音频" },
+    "HDMI",
+    "DisplayPort"
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/AppleALC",
+    "github": "https://github.com/acidanthera/AppleALC",
+    "download": "https://github.com/acidanthera/AppleALC/releases"
+  }
+}

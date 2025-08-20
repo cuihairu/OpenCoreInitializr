@@ -1,0 +1,53 @@
+{
+  "id": "AppleIGC",
+  "name": {
+    "en": "AppleIGC",
+    "zh": "AppleIGC"
+  },
+  "category": "network",
+  "description": {
+    "en": "Intel I225-V/I226-V 2.5G Ethernet driver.",
+    "zh": "Intel I225-V/I226-V 2.5G以太网驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "recommended",
+  "version": {
+    "version": "1.4.0",
+    "releaseDate": "2024-08-15",
+    "lastUpdated": "2024-08-15",
+    "downloadUrl": "https://github.com/SongXiaoXi/AppleIGC/releases/download/1.4.0/AppleIGC-1.4.0-RELEASE.zip",
+    "fileSize": "120KB",
+    "changelog": "支持Intel I225-V和I226-V 2.5G网卡，从Linux移植",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "I225-V (2.5G)",
+        "I226-V (2.5G)"
+      ],
+      "macosVersions": [
+        "10.15+"
+      ],
+      "notes": "Supports Intel 2.5G Ethernet controllers"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/SongXiaoXi/AppleIGC",
+  "githubRepo": "https://github.com/SongXiaoXi/AppleIGC",
+  "maintainer": "SongXiaoXi",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Network", "zh": "网络" },
+    { "en": "Ethernet", "zh": "以太网" },
+    "Intel",
+    "2.5G"
+  ],
+  "links": {
+    "website": "https://github.com/SongXiaoXi/AppleIGC",
+    "github": "https://github.com/SongXiaoXi/AppleIGC",
+    "download": "https://github.com/SongXiaoXi/AppleIGC/releases"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "id": "audio",
+      "name": {
+        "en": "Audio",
+        "zh": "音频驱动"
+      },
+      "description": {
+        "en": "Drivers for audio devices and sound cards.",
+        "zh": "音频设备和声卡相关的驱动。"
+      }
+    },
+    {
+      "id": "network",
+      "name": {
+        "en": "Network",
+        "zh": "网络驱动"
+      },
+      "description": {
+        "en": "Drivers for wired and wireless network adapters.",
+        "zh": "有线网络和无线网络相关的驱动。"
+      }
+    },
+    {
+      "id": "bluetooth",
+      "name": {
+        "en": "Bluetooth",
+        "zh": "蓝牙驱动"
+      },
+      "description": {
+        "en": "Drivers for Bluetooth devices and wireless connectivity.",
+        "zh": "蓝牙设备和无线连接相关的驱动。"
+      }
+    },
+    {
+      "id": "usb",
+      "name": {
+        "en": "USB",
+        "zh": "USB驱动"
+      },
+      "description": {
+        "en": "Drivers for USB port mapping and controllers.",
+        "zh": "USB端口映射和控制器相关的驱动。"
+      }
+    },
+    {
+      "id": "graphics",
+      "name": {
+        "en": "Graphics",
+        "zh": "显卡驱动"
+      },
+      "description": {
+        "en": "Drivers for integrated and discrete graphics cards.",
+        "zh": "集成显卡和独立显卡相关的驱动。"
+      }
+    },
+    {
+      "id": "sensors",
+      "name": {
+        "en": "Sensors",
+        "zh": "传感器驱动"
+      },
+      "description": {
+        "en": "Drivers for monitoring hardware sensors like temperature and fan speed.",
+        "zh": "用于监控硬件传感器（如温度、风扇转速）的驱动。"
+      }
+    },
+    {
+      "id": "input-devices",
+      "name": {
+        "en": "Input Devices",
+        "zh": "输入设备驱动"
+      },
+      "description": {
+        "en": "Drivers for keyboards, trackpads, and other input devices.",
+        "zh": "键盘、触控板等输入设备相关的驱动。"
+      }
+    },
+    {
+      "id": "system",
+      "name": {
+        "en": "System",
+        "zh": "系统驱动"
+      },
+      "description": {
+        "en": "Essential drivers for system stability and core functionality.",
+        "zh": "维持系统稳定和核心功能所必需的驱动。"
+      }
+    },
+    {
+      "id": "features",
+      "name": {
+        "en": "macOS Features",
+        "zh": "macOS特性"
+      },
+      "description": {
+        "en": "Drivers that enable or enhance specific macOS features.",
+        "zh": "启用或增强特定macOS功能的驱动。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "VirtualSMC",
+  "name": {
+    "en": "VirtualSMC",
+    "zh": "VirtualSMC"
+  },
+  "category": "essential",
+  "description": {
+    "en": "Emulates the System Management Controller (SMC) for hardware monitoring and system stability.",
+    "zh": "系统管理控制器模拟，提供硬件监控和系统稳定性"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "essential",
+  "version": {
+    "version": "1.3.7",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.7",
+    "fileSize": "0.3 MB",
+    "changelog": "#### v1.3.7\r\n- Added constants for macOS 26 support",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "所有支持的硬件"
+      ],
+      "macosVersions": [
+        "10.6+"
+      ],
+      "notes": {
+        "en": "A modern SMC implementation that replaces FakeSMC.",
+        "zh": "替代FakeSMC的现代化SMC实现"
+      }
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/VirtualSMC",
+  "githubRepo": "https://github.com/acidanthera/VirtualSMC",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "SMC", "zh": "SMC" },
+    { "en": "Essential", "zh": "必需" },
+    { "en": "Hardware Monitoring", "zh": "硬件监控" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/VirtualSMC",
+    "github": "https://github.com/acidanthera/VirtualSMC",
+    "download": "https://github.com/acidanthera/VirtualSMC/releases"
+  }
+}

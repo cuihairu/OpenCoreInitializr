@@ -1,0 +1,57 @@
+{
+  "id": "SMCLightSensor",
+  "name": {
+    "en": "SMCLightSensor",
+    "zh": "SMCLightSensor"
+  },
+  "category": "sensors",
+  "description": {
+    "en": "Ambient light sensor driver, supports automatic brightness adjustment.",
+    "zh": "环境光传感器驱动，支持自动亮度调节"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "optional",
+  "version": {
+    "version": "1.3.2",
+    "releaseDate": "2024-01-20",
+    "lastUpdated": "2024-01-20",
+    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.2/VirtualSMC-1.3.2-RELEASE.zip",
+    "fileSize": "45KB",
+    "changelog": "改进光线传感器检测，支持更多设备",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Generic",
+      "models": [
+        "内置光线传感器",
+        "笔记本电脑",
+        "一体机"
+      ],
+      "macosVersions": [
+        "10.6+"
+      ],
+      "notes": "Ambient light sensor support"
+    }
+  ],
+  "dependencies": [
+    "VirtualSMC"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/VirtualSMC",
+  "githubRepo": "https://github.com/acidanthera/VirtualSMC",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    { "en": "Sensors", "zh": "传感器" },
+    { "en": "Light", "zh": "光线" },
+    { "en": "Auto Brightness", "zh": "自动亮度" },
+    { "en": "Laptop", "zh": "笔记本" },
+    { "en": "Ambient Light", "zh": "环境光" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/VirtualSMC",
+    "github": "https://github.com/acidanthera/VirtualSMC",
+    "download": "https://github.com/acidanthera/VirtualSMC/releases"
+  }
+}

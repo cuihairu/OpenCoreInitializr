@@ -1,0 +1,60 @@
+{
+  "id": "airportitlwm",
+  "name": {
+    "en": "AirportItlwm",
+    "zh": "AirportItlwm"
+  },
+  "category": "network",
+  "description": {
+    "en": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 driver for macOS, enabling native Wi-Fi features.",
+    "zh": "适用于 macOS 的 Intel 无线网卡驱动，旨在提供原生 Wi-Fi 功能。"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "2.3.0",
+    "releaseDate": "2024-08-15",
+    "lastUpdated": "2024-08-15",
+    "downloadUrl": "https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0",
+    "fileSize": "2.1 MB",
+    "changelog": "Improved stability and compatibility with latest macOS versions",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "AC 7260",
+        "AC 7265",
+        "AC 8260",
+        "AC 8265",
+        "AC 9260",
+        "AC 9560",
+        "AX200",
+        "AX201",
+        "AX210"
+      ],
+      "macosVersions": [
+        "10.13+"
+      ],
+      "notes": "支持大多数Intel无线网卡，提供原生WiFi体验"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/OpenIntelWireless/itlwm",
+  "githubRepo": "https://github.com/OpenIntelWireless/itlwm",
+  "maintainer": "OpenIntelWireless",
+  "license": "GPL v2",
+  "tags": [
+    { "en": "WiFi", "zh": "无线网络" },
+    { "en": "Intel", "zh": "英特尔" },
+    { "en": "Native", "zh": "原生" },
+    "Airport"
+  ],
+  "links": {
+    "website": "https://github.com/OpenIntelWireless/itlwm",
+    "github": "https://github.com/OpenIntelWireless/itlwm",
+    "download": "https://github.com/OpenIntelWireless/itlwm/releases"
+  }
+}

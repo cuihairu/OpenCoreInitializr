@@ -1,0 +1,54 @@
+{
+  "id": "FeatureUnlock",
+  "name": {
+    "en": "FeatureUnlock",
+    "zh": "FeatureUnlock"
+  },
+  "category": "features",
+  "description": {
+    "en": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "zh": "解锁macOS的各种功能限制，如AirPlay、SideCar等"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "1.1.8",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/acidanthera/FeatureUnlock/releases/tag/1.1.8",
+    "fileSize": "0.0 MB",
+    "changelog": "### v1.1.8\r\n- Added constants for macOS 26 support",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "支持的Mac机型"
+      ],
+      "macosVersions": [
+        "11.0+"
+      ],
+      "notes": "Requires correct SMBIOS for full functionality."
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/FeatureUnlock",
+  "githubRepo": "https://github.com/acidanthera/FeatureUnlock",
+  "maintainer": "Acidanthera",
+  "license": "BSD 3-Clause",
+  "tags": [
+    { "en": "Feature Unlock", "zh": "功能解锁" },
+    "Sidecar",
+    "AirPlay",
+    "Universal Control"
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/FeatureUnlock",
+    "github": "https://github.com/acidanthera/FeatureUnlock",
+    "download": "https://github.com/acidanthera/FeatureUnlock/releases"
+  }
+}

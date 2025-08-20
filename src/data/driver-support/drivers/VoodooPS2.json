@@ -1,0 +1,55 @@
+{
+  "id": "VoodooPS2Controller",
+  "name": {
+    "en": "VoodooPS2Controller",
+    "zh": "VoodooPS2Controller"
+  },
+  "category": "input",
+  "description": {
+    "en": "PS/2 keyboard and trackpad driver, supports most laptop keyboards and trackpads.",
+    "zh": "PS/2键盘和触控板驱动，支持大多数笔记本电脑的键盘和触控板"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "2.3.6",
+    "releaseDate": "2024-11-25",
+    "lastUpdated": "2024-11-25",
+    "downloadUrl": "https://github.com/acidanthera/VoodooPS2/releases/download/2.3.6/VoodooPS2-2.3.6-RELEASE.zip",
+    "fileSize": "1.8MB",
+    "changelog": "改进触控板手势支持，修复键盘映射问题",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Generic",
+      "models": [
+        "PS/2键盘",
+        "PS/2触控板",
+        "Synaptics触控板",
+        "ELAN触控板"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports most PS/2 input devices"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/acidanthera/VoodooPS2",
+  "githubRepo": "https://github.com/acidanthera/VoodooPS2",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    "PS/2",
+    { "en": "Keyboard", "zh": "键盘" },
+    { "en": "Trackpad", "zh": "触控板" },
+    { "en": "Input Devices", "zh": "输入设备" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/VoodooPS2",
+    "github": "https://github.com/acidanthera/VoodooPS2",
+    "download": "https://github.com/acidanthera/VoodooPS2/releases"
+  }
+}

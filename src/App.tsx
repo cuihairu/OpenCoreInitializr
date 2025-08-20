@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggleCompact } from '@/components/ui/ThemeToggle';
 import { LanguageToggleCompact } from '@/components/ui/LanguageToggle';
 import WizardPage from '@/pages/WizardPage';
+import DriverSupportPage from '@/components/driver-support/DriverSupportPage';
 import { GearIcon } from '@radix-ui/react-icons';
 import '@/App.css';
 
@@ -28,13 +29,13 @@ const ModernLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
               to="/docs"
               className="text-muted-foreground/70 transition-colors hover:text-muted-foreground"
             >
-              {t('navigation.docs', '配置文档')}
+              {t('navigation.docs')}
             </Link>
             <Link
               to="/kexts"
               className="text-muted-foreground/70 transition-colors hover:text-muted-foreground"
             >
-              {t('navigation.kexts', '驱动查询')}
+              {t('navigation.kexts')}
             </Link>
           </nav>
           <div className="flex flex-1 items-center justify-end space-x-2">
@@ -61,13 +62,13 @@ const ModernLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 const App: React.FC = () => {
   return (
     <ThemeProvider defaultTheme="system" storageKey="opencore-ui-theme">
-      <Router>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ModernLayout>
           <Routes>
             <Route path="/" element={<WizardPage />} />
             {/* Placeholder routes for the new pages */}
             <Route path="/docs" element={<div className="container p-8 text-center text-muted-foreground">文档页面即将推出...</div>} />
-            <Route path="/kexts" element={<div className="container p-8 text-center text-muted-foreground">驱动查询页面即将推出...</div>} />
+            <Route path="/kexts" element={<DriverSupportPage />} />
             {/* Redirect any other path to the main wizard page */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

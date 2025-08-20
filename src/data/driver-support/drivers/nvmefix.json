@@ -1,0 +1,57 @@
+{
+  "id": "NVMeFix",
+  "name": {
+    "en": "NVMeFix",
+    "zh": "NVMeFix"
+  },
+  "category": "system",
+  "description": {
+    "en": "Fixes power management and performance issues for NVMe SSDs.",
+    "zh": "修复NVMe SSD的电源管理和性能问题"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.1.3",
+    "releaseDate": "2024-05-10",
+    "lastUpdated": "2024-05-10",
+    "downloadUrl": "https://github.com/acidanthera/NVMeFix/releases/tag/1.1.3",
+    "fileSize": "0.1 MB",
+    "changelog": "Enhanced NVMe power management and compatibility",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "通用",
+      "models": [
+        "NVMe SSD"
+      ],
+      "macosVersions": [
+        "10.14+"
+      ],
+      "notes": {
+        "en": "Improves power management for NVMe SSDs, reducing heat and improving performance.",
+        "zh": "改善NVMe SSD的电源管理，减少发热和提高性能"
+      }
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/NVMeFix",
+  "githubRepo": "https://github.com/acidanthera/NVMeFix",
+  "maintainer": "Acidanthera",
+  "license": "BSD-3-Clause",
+  "tags": [
+    "NVMe",
+    { "en": "Storage", "zh": "存储" },
+    { "en": "Power Management", "zh": "电源管理" },
+    { "en": "Performance", "zh": "性能优化" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/NVMeFix",
+    "github": "https://github.com/acidanthera/NVMeFix",
+    "download": "https://github.com/acidanthera/NVMeFix/releases"
+  }
+}

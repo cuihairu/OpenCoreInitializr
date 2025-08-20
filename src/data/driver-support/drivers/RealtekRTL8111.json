@@ -1,0 +1,54 @@
+{
+  "id": "RealtekRTL8111",
+  "name": {
+    "en": "RealtekRTL8111",
+    "zh": "RealtekRTL8111"
+  },
+  "category": "network",
+  "description": {
+    "en": "Realtek RTL8111 series Gigabit Ethernet driver.",
+    "zh": "Realtek RTL8111系列千兆以太网驱动"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "2.4.2",
+    "releaseDate": "2021-12-07",
+    "lastUpdated": "2021-12-07",
+    "downloadUrl": "https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/download/2.4.2/RealtekRTL8111-V2.4.2.zip",
+    "fileSize": "75KB",
+    "changelog": "支持RTL8111B/C/D/E/F/G/H系列网卡，改进网络性能",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Realtek",
+      "models": [
+        "RTL8111B/C/D/E",
+        "RTL8111F/G/H",
+        "RTL8168系列"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": "Supports Realtek Gigabit Ethernet controllers"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/Mieze/RTL8111_driver_for_OS_X",
+  "githubRepo": "https://github.com/Mieze/RTL8111_driver_for_OS_X",
+  "maintainer": "Mieze",
+  "license": "GPL-2.0",
+  "tags": [
+    { "en": "Network", "zh": "网络" },
+    { "en": "Ethernet", "zh": "以太网" },
+    "Realtek",
+    { "en": "Gigabit", "zh": "千兆" }
+  ],
+  "links": {
+    "website": "https://github.com/Mieze/RTL8111_driver_for_OS_X",
+    "github": "https://github.com/Mieze/RTL8111_driver_for_OS_X",
+    "download": "https://github.com/Mieze/RTL8111_driver_for_OS_X/releases"
+  }
+}

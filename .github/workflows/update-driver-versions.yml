@@ -1,0 +1,86 @@
+name: Update Driver Versions
+
+on:
+  schedule:
+    # 每天UTC时间02:00运行 (北京时间10:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Update driver versions
+        id: update-versions
+        run: |
+          node scripts/update-driver-versions.cjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '🤖 自动更新驱动版本信息'
+          title: '🤖 驱动版本自动更新'
+          body: |
+            ## 🤖 自动更新驱动版本信息
+            
+            此PR由GitHub Actions自动创建，包含以下更新：
+            
+            ### 更新内容
+            - 检查了所有驱动的GitHub仓库
+            - 自动更新了有新版本的驱动信息
+            - 更新了版本号、发布日期、下载链接等信息
+            
+            ### 更新统计
+            - 更新文件数量: ${{ steps.update-versions.outputs.update_count || '未知' }}
+            - 检查时间: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+            
+            ### 注意事项
+            - 请仔细检查更新的版本信息是否正确
+            - 确认新版本与现有配置的兼容性
+            - 如有问题请及时修正或关闭此PR
+            
+            ---
+            *此PR由 [update-driver-versions.yml](.github/workflows/update-driver-versions.yml) 工作流自动创建*
+          branch: auto-update-driver-versions
+          delete-branch: true
+          labels: |
+            automated
+            driver-update
+            dependencies
+
+      - name: Summary
+        run: |
+          echo "## 🤖 驱动版本检查完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 检查时间: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+          echo "- 是否有更新: ${{ steps.changes.outputs.has_changes }}" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.changes.outputs.has_changes }}" = "true" ]; then
+            echo "- 已创建PR进行版本更新" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- 所有驱动均为最新版本" >> $GITHUB_STEP_SUMMARY
+          fi

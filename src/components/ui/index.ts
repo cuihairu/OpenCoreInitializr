@@ -32,3 +32,12 @@ export {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './dropdown-menu';
+export {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from './tabs';
+export { Separator } from './separator';
+export { Badge } from './badge';
+export { Checkbox } from './checkbox';

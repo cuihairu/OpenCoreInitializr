@@ -1,0 +1,56 @@
+{
+  "id": "CPUFriend",
+  "name": {
+    "en": "CPUFriend",
+    "zh": "CPUFriend"
+  },
+  "category": "features",
+  "description": {
+    "en": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "zh": "动态电源管理，优化CPU频率和功耗"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "excellent",
+  "priority": "recommended",
+  "version": {
+    "version": "1.3.0",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/acidanthera/CPUFriend/releases/tag/1.3.0",
+    "fileSize": "0.0 MB",
+    "changelog": "#### v1.3.0\r\n- Added constants for macOS 26 support",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "Core系列处理器"
+      ],
+      "macosVersions": [
+        "10.8+"
+      ],
+      "notes": {
+        "en": "Requires CPUFriendDataProvider for full functionality.",
+        "zh": "需要配合CPUFriendDataProvider使用"
+      }
+    }
+  ],
+  "dependencies": [
+    "Lilu"
+  ],
+  "officialWebsite": "https://github.com/acidanthera/CPUFriend",
+  "githubRepo": "https://github.com/acidanthera/CPUFriend",
+  "maintainer": "Acidanthera",
+  "license": "BSD 3-Clause",
+  "tags": [
+    { "en": "CPU", "zh": "CPU" },
+    { "en": "Power Management", "zh": "电源管理" },
+    { "en": "Performance Tuning", "zh": "性能优化" }
+  ],
+  "links": {
+    "website": "https://github.com/acidanthera/CPUFriend",
+    "github": "https://github.com/acidanthera/CPUFriend",
+    "download": "https://github.com/acidanthera/CPUFriend/releases"
+  }
+}

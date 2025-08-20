@@ -1,0 +1,62 @@
+{
+  "id": "VoodooSMBus",
+  "name": {
+    "en": "VoodooSMBus",
+    "zh": "VoodooSMBus"
+  },
+  "category": "input",
+  "description": {
+    "en": "SMBus trackpad driver, supports some Synaptics and ELAN trackpads.",
+    "zh": "SMBus触控板驱动，支持部分Synaptics和ELAN触控板"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "3.0.0",
+    "releaseDate": "2024-09-15",
+    "lastUpdated": "2024-09-15",
+    "downloadUrl": "https://github.com/VoodooSMBus/VoodooSMBus/releases/download/3.0.0/VoodooSMBus-3.0.0.zip",
+    "fileSize": "800KB",
+    "changelog": "重构驱动架构，改进兼容性",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Synaptics",
+      "models": [
+        "SMBus触控板"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Supports some Synaptics SMBus trackpads"
+    },
+    {
+      "brand": "ELAN",
+      "models": [
+        "SMBus触控板"
+      ],
+      "macosVersions": [
+        "10.11+"
+      ],
+      "notes": "Supports some ELAN SMBus trackpads"
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/VoodooSMBus/VoodooSMBus",
+  "githubRepo": "https://github.com/VoodooSMBus/VoodooSMBus",
+  "maintainer": "VoodooSMBus Team",
+  "license": "GPL-2.0",
+  "tags": [
+    "SMBus",
+    { "en": "Trackpad", "zh": "触控板" },
+    "Synaptics",
+    "ELAN"
+  ],
+  "links": {
+    "website": "https://github.com/VoodooSMBus/VoodooSMBus",
+    "github": "https://github.com/VoodooSMBus/VoodooSMBus",
+    "download": "https://github.com/VoodooSMBus/VoodooSMBus/releases"
+  }
+}

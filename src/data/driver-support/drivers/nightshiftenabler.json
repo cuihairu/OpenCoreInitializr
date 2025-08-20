@@ -1,0 +1,51 @@
+{
+  "id": "NightShiftEnabler",
+  "name": {
+    "en": "NightShiftEnabler",
+    "zh": "NightShiftEnabler"
+  },
+  "category": "features",
+  "description": {
+    "en": "Enables Night Shift mode on unsupported hardware.",
+    "zh": "在不支持的硬件上启用夜览模式功能"
+  },
+  "developmentStatus": "stable",
+  "compatibility": "good",
+  "priority": "optional",
+  "version": {
+    "version": "1.1.1",
+    "releaseDate": "2021-10-20",
+    "lastUpdated": "2025-08-20",
+    "downloadUrl": "https://github.com/cdf/NightShiftEnabler/releases/tag/1.1.1",
+    "fileSize": "0.0 MB",
+    "changelog": "#### v1.1.1\r\n- Fix Monterey compatibility",
+    "isLatest": true
+  },
+  "hardwareSupport": [
+    {
+      "brand": "Intel",
+      "models": [
+        "较老的Intel显卡"
+      ],
+      "macosVersions": [
+        "10.12+"
+      ],
+      "notes": "Primarily for Intel graphics cards that do not natively support Night Shift."
+    }
+  ],
+  "dependencies": [],
+  "officialWebsite": "https://github.com/cdf/NightShiftEnabler",
+  "githubRepo": "https://github.com/cdf/NightShiftEnabler",
+  "maintainer": "cdf",
+  "license": "MIT",
+  "tags": [
+    { "en": "Night Shift", "zh": "夜览" },
+    { "en": "Blue Light Filter", "zh": "蓝光过滤" },
+    { "en": "Display", "zh": "显示" }
+  ],
+  "links": {
+    "website": "https://github.com/cdf/NightShiftEnabler",
+    "github": "https://github.com/cdf/NightShiftEnabler",
+    "download": "https://github.com/cdf/NightShiftEnabler/releases"
+  }
+}
