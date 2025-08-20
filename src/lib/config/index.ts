@@ -681,9 +681,70 @@ function mergeConfigurations(target: OpenCoreConfig, source: Partial<OpenCoreCon
 }
 
 /**
- * Generate config.plist content
+ * Download and customize OpenCore Sample.plist from official repository
  */
-export function generateConfigPlist(config: OpenCoreConfig): string {
+export async function downloadAndCustomizeConfigPlist(config: OpenCoreConfig): Promise<string> {
+  try {
+    // Download Sample.plist from OpenCore official repository
+    const samplePlistUrl = 'https://raw.githubusercontent.com/acidanthera/OpenCorePkg/master/Docs/Sample.plist';
+    const response = await fetch(samplePlistUrl);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to download Sample.plist: ${response.statusText}`);
+    }
+    
+    let plistContent = await response.text();
+    
+    // Apply basic customizations to the downloaded plist
+    // This is a simplified approach - in a production environment,
+    // you would use a proper plist parser/editor
+    
+    // Customize boot-args if specified
+    if (config.NVRAM?.Add?.['7C436110-AB2A-4BBB-A880-FE41995C9F82']?.['boot-args']) {
+      const bootArgs = config.NVRAM.Add['7C436110-AB2A-4BBB-A880-FE41995C9F82']['boot-args'];
+      plistContent = plistContent.replace(
+        /<key>boot-args<\/key>\s*<string><\/string>/,
+        `<key>boot-args</key>\n\t\t\t<string>${bootArgs}</string>`
+      );
+    }
+    
+    // Customize SMBIOS if specified
+    if (config.PlatformInfo?.Generic?.SystemProductName) {
+      const productName = config.PlatformInfo.Generic.SystemProductName;
+      plistContent = plistContent.replace(
+        /<key>SystemProductName<\/key>\s*<string><\/string>/,
+        `<key>SystemProductName</key>\n\t\t\t<string>${productName}</string>`
+      );
+    }
+    
+    if (config.PlatformInfo?.Generic?.SystemSerialNumber) {
+      const serialNumber = config.PlatformInfo.Generic.SystemSerialNumber;
+      plistContent = plistContent.replace(
+        /<key>SystemSerialNumber<\/key>\s*<string><\/string>/,
+        `<key>SystemSerialNumber</key>\n\t\t\t<string>${serialNumber}</string>`
+      );
+    }
+    
+    if (config.PlatformInfo?.Generic?.SystemUUID) {
+      const systemUUID = config.PlatformInfo.Generic.SystemUUID;
+      plistContent = plistContent.replace(
+        /<key>SystemUUID<\/key>\s*<string><\/string>/,
+        `<key>SystemUUID</key>\n\t\t\t<string>${systemUUID}</string>`
+      );
+    }
+    
+    return plistContent;
+  } catch (error) {
+    console.error('Failed to download Sample.plist, falling back to generated config:', error);
+    // Fallback to the original generation method if download fails
+    return generateConfigPlistFallback(config);
+  }
+}
+
+/**
+ * Fallback method to generate config.plist content (original implementation)
+ */
+function generateConfigPlistFallback(config: OpenCoreConfig): string {
   // Convert the configuration to plist format
   // This is a simplified version - in a real implementation,
   // you would use a proper plist library
@@ -751,6 +812,13 @@ export function generateConfigPlist(config: OpenCoreConfig): string {
   const plistBody = objectToPlist(config);
   
   return `${plistHeader}\n${plistBody}\n${plistFooter}`;
+}
+
+/**
+ * Generate config.plist content (legacy function for backward compatibility)
+ */
+export function generateConfigPlist(config: OpenCoreConfig): string {
+  return generateConfigPlistFallback(config);
 }
 
 /**
