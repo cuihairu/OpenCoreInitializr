@@ -44,7 +44,7 @@ export const createEfiPackage = async (state: WizardState, onProgress?: Progress
   onProgress?.('正在准备下载文件...', 25);
   const filesToDownload: DownloadableFile[] = [];
   state.kexts.forEach(kextName => {
-    const kextData = allKexts.find(k => k.name === kextName);
+    const kextData = allKexts.find(k => k.name === kextName) as any;
     // We are prioritizing the new assetUrl field.
     if (kextData && kextData.assetUrl) {
       filesToDownload.push({ name: `${kextName}.zip`, url: kextData.assetUrl });

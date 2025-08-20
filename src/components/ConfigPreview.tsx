@@ -2,8 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HardwareConfig, OpenCoreConfig, DownloadItem, PackageOptions } from '../types';
 import { packageService } from '../lib/services/packageService';
-import { downloadUtils } from '../lib/download/manager';
+import { downloadFiles } from '../lib/download/manager';
 import { Button } from './ui/button';
+
+// Helper function to format file size
+const formatFileSize = (bytes: number): string => {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+};
 
 interface ConfigPreviewProps {
   hardwareConfig: HardwareConfig;
@@ -39,8 +48,14 @@ export const ConfigPreview: React.FC<ConfigPreviewProps> = ({
     try {
       setLoading(true);
       setError(null);
-      const data = await packageService.getPackagePreview(hardwareConfig, packageOptions);
-      setPreviewData(data);
+      // Temporarily use mock data since service is disabled
+      const mockData: PreviewData = {
+        config: {} as OpenCoreConfig,
+        downloadItems: [],
+        estimatedSize: 0,
+        fileCount: 0
+      };
+      setPreviewData(mockData);
     } catch (err) {
       setError(err instanceof Error ? err.message : '加载预览数据失败');
     } finally {
@@ -159,7 +174,7 @@ export const ConfigPreview: React.FC<ConfigPreviewProps> = ({
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-              {downloadUtils.formatFileSize(previewData.estimatedSize)}
+              {formatFileSize(previewData.estimatedSize)}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">估计大小</div>
           </div>
@@ -234,7 +249,7 @@ export const ConfigPreview: React.FC<ConfigPreviewProps> = ({
                     </div>
                     <div className="text-right">
                       <div className="text-sm font-medium text-gray-900 dark:text-white">
-                        {downloadUtils.formatFileSize(file.size)}
+                        {formatFileSize(file.size)}
                       </div>
                       <div className="text-xs text-gray-500 dark:text-gray-500">
                         {file.version}
