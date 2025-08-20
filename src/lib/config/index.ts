@@ -683,61 +683,117 @@ function mergeConfigurations(target: OpenCoreConfig, source: Partial<OpenCoreCon
 /**
  * Download and customize OpenCore Sample.plist from official repository
  */
-export async function downloadAndCustomizeConfigPlist(config: OpenCoreConfig): Promise<string> {
+export async function downloadAndCustomizeConfigPlist(state: any): Promise<string> {
   try {
     // Download Sample.plist from OpenCore official repository
     const samplePlistUrl = 'https://raw.githubusercontent.com/acidanthera/OpenCorePkg/master/Docs/Sample.plist';
     const response = await fetch(samplePlistUrl);
     
     if (!response.ok) {
-      throw new Error(`Failed to download Sample.plist: ${response.statusText}`);
+      console.warn('Failed to download Sample.plist from OpenCore repository, using fallback');
+      // Generate a basic config for fallback
+      const fallbackConfig = {
+        ...DEFAULT_OPENCORE_CONFIG,
+        PlatformInfo: {
+          ...DEFAULT_OPENCORE_CONFIG.PlatformInfo,
+          Generic: {
+            ...DEFAULT_OPENCORE_CONFIG.PlatformInfo.Generic,
+            SystemProductName: 'iMac19,1',
+            SystemSerialNumber: generateSerialNumber('iMac19,1'),
+            SystemUUID: generateUUID(),
+            MLB: generateSerialNumber('iMac19,1') + 'A1B2C3',
+            ROM: generateMacAddress(),
+          }
+        }
+      };
+      return generateConfigPlistFallback(fallbackConfig);
     }
     
     let plistContent = await response.text();
     
-    // Apply basic customizations to the downloaded plist
+    // Apply basic customizations based on the wizard state
     // This is a simplified approach - in a production environment,
     // you would use a proper plist parser/editor
     
-    // Customize boot-args if specified
-    if (config.NVRAM?.Add?.['7C436110-AB2A-4BBB-A880-FE41995C9F82']?.['boot-args']) {
-      const bootArgs = config.NVRAM.Add['7C436110-AB2A-4BBB-A880-FE41995C9F82']['boot-args'];
-      plistContent = plistContent.replace(
-        /<key>boot-args<\/key>\s*<string><\/string>/,
-        `<key>boot-args</key>\n\t\t\t<string>${bootArgs}</string>`
-      );
+    // Generate basic boot args based on hardware selection
+    let bootArgs = '-v debug=0x100 keepsyms=1';
+    
+    // Add hardware-specific boot args
+    if (state.hardware?.cpu?.brand === 'AMD') {
+      bootArgs += ' npci=0x2000';
     }
     
-    // Customize SMBIOS if specified
-    if (config.PlatformInfo?.Generic?.SystemProductName) {
-      const productName = config.PlatformInfo.Generic.SystemProductName;
-      plistContent = plistContent.replace(
-        /<key>SystemProductName<\/key>\s*<string><\/string>/,
-        `<key>SystemProductName</key>\n\t\t\t<string>${productName}</string>`
-      );
+    // Customize boot-args
+    plistContent = plistContent.replace(
+      /<key>boot-args<\/key>\s*<string>.*?<\/string>/,
+      `<key>boot-args</key>\n\t\t\t<string>${bootArgs}</string>`
+    );
+    
+    // Generate SMBIOS based on hardware
+    let systemProductName = 'iMac19,1'; // Default
+    
+    if (state.hardware?.cpu?.brand === 'AMD') {
+      systemProductName = 'iMacPro1,1';
+    } else if (state.hardware?.cpu?.brand === 'Intel') {
+      // Use generation-specific model if available
+      const generation = state.hardware.cpu.generation?.toLowerCase();
+      if (generation) {
+        const intelModels = SMBIOS_MODELS.intel.desktop as Record<string, string>;
+        systemProductName = intelModels[generation] || intelModels.default;
+      }
     }
     
-    if (config.PlatformInfo?.Generic?.SystemSerialNumber) {
-      const serialNumber = config.PlatformInfo.Generic.SystemSerialNumber;
-      plistContent = plistContent.replace(
-        /<key>SystemSerialNumber<\/key>\s*<string><\/string>/,
-        `<key>SystemSerialNumber</key>\n\t\t\t<string>${serialNumber}</string>`
-      );
-    }
+    // Generate unique identifiers
+    const systemSerialNumber = generateSerialNumber(systemProductName);
+    const systemUUID = generateUUID();
+    const mlb = systemSerialNumber + 'A1B2C3';
+    const rom = generateMacAddress();
     
-    if (config.PlatformInfo?.Generic?.SystemUUID) {
-      const systemUUID = config.PlatformInfo.Generic.SystemUUID;
-      plistContent = plistContent.replace(
-        /<key>SystemUUID<\/key>\s*<string><\/string>/,
-        `<key>SystemUUID</key>\n\t\t\t<string>${systemUUID}</string>`
-      );
-    }
+    // Customize SMBIOS
+    plistContent = plistContent.replace(
+      /<key>SystemProductName<\/key>\s*<string>.*?<\/string>/,
+      `<key>SystemProductName</key>\n\t\t\t\t<string>${systemProductName}</string>`
+    );
+    
+    plistContent = plistContent.replace(
+      /<key>SystemSerialNumber<\/key>\s*<string>.*?<\/string>/,
+      `<key>SystemSerialNumber</key>\n\t\t\t\t<string>${systemSerialNumber}</string>`
+    );
+    
+    plistContent = plistContent.replace(
+      /<key>SystemUUID<\/key>\s*<string>.*?<\/string>/,
+      `<key>SystemUUID</key>\n\t\t\t\t<string>${systemUUID}</string>`
+    );
+    
+    plistContent = plistContent.replace(
+      /<key>MLB<\/key>\s*<string>.*?<\/string>/,
+      `<key>MLB</key>\n\t\t\t\t<string>${mlb}</string>`
+    );
+    
+    plistContent = plistContent.replace(
+      /<key>ROM<\/key>\s*<data>.*?<\/data>/,
+      `<key>ROM</key>\n\t\t\t\t<data>${Buffer.from(rom.replace(/:/g, ''), 'hex').toString('base64')}</data>`
+    );
     
     return plistContent;
   } catch (error) {
     console.error('Failed to download Sample.plist, falling back to generated config:', error);
-    // Fallback to the original generation method if download fails
-    return generateConfigPlistFallback(config);
+    // Generate a basic config for fallback
+    const fallbackConfig = {
+      ...DEFAULT_OPENCORE_CONFIG,
+      PlatformInfo: {
+        ...DEFAULT_OPENCORE_CONFIG.PlatformInfo,
+        Generic: {
+          ...DEFAULT_OPENCORE_CONFIG.PlatformInfo.Generic,
+          SystemProductName: 'iMac19,1',
+          SystemSerialNumber: generateSerialNumber('iMac19,1'),
+          SystemUUID: generateUUID(),
+          MLB: generateSerialNumber('iMac19,1') + 'A1B2C3',
+          ROM: generateMacAddress(),
+        }
+      }
+    };
+    return generateConfigPlistFallback(fallbackConfig);
   }
 }
 

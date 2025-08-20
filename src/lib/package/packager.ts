@@ -1,7 +1,7 @@
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { WizardState } from '../../types';
-import { downloadAndCustomizeConfigPlist, generateOpenCoreConfig } from '@/lib/config';
+import { downloadAndCustomizeConfigPlist } from '@/lib/config';
 import { downloadFiles, DownloadableFile } from '@/lib/download/manager';
 
 // Import Kexts data to find asset URLs
@@ -52,19 +52,8 @@ export const createEfiPackage = async (
   // --- Step 1: Generate and download config.plist ---
   onProgress?.('正在从 OpenCore 官方仓库下载配置模板...', 10);
   
-  // Generate OpenCore configuration based on user's hardware and selections
-  // Note: For now, we pass null for hardware config as the wizard uses a different structure
-  // The downloadAndCustomizeConfigPlist function will handle the actual customization
-  const openCoreConfig = generateOpenCoreConfig(
-    null as any, // TODO: Convert WizardState.hardware to HardwareConfig
-    state.kexts || [],
-    [], // tools
-    [], // drivers
-    {} // custom options
-  );
-  
-  // Download and customize the official Sample.plist
-  const configPlistContent = await downloadAndCustomizeConfigPlist(openCoreConfig);
+  // Download and customize the official Sample.plist based on wizard state
+  const configPlistContent = await downloadAndCustomizeConfigPlist(state);
   ocFolder!.file('config.plist', configPlistContent);
 
   // --- Step 2: Determine files to download ---
