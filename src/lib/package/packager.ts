@@ -19,13 +19,28 @@ const allKexts = [
 
 export type ProgressCallback = (message: string, percentage: number) => void;
 
+export interface FileProgressInfo {
+  name: string;
+  loaded: number;
+  total: number | null;
+  status: 'pending' | 'downloading' | 'completed' | 'error';
+  error?: string;
+}
+
+export type DetailedProgressCallback = (files: FileProgressInfo[], overallMessage: string, overallPercentage: number) => void;
+
 /**
  * Creates the complete EFI package as a ZIP file.
  * 
  * @param state The final state from the wizard.
  * @param onProgress Optional callback to report overall progress.
+ * @param onDetailedProgress Optional callback to report detailed file progress.
  */
-export const createEfiPackage = async (state: WizardState, onProgress?: ProgressCallback) => {
+export const createEfiPackage = async (
+  state: WizardState, 
+  onProgress?: ProgressCallback,
+  onDetailedProgress?: DetailedProgressCallback
+) => {
   if (!state.kexts) {
     throw new Error('Kext selection is missing.');
   }
@@ -66,12 +81,79 @@ export const createEfiPackage = async (state: WizardState, onProgress?: Progress
   
   let downloadedFiles: any[] = [];
   
+  // Initialize file progress tracking
+  const fileProgressMap = new Map<string, FileProgressInfo>();
+  filesToDownload.forEach(file => {
+    fileProgressMap.set(file.name, {
+      name: file.name,
+      loaded: 0,
+      total: null,
+      status: 'pending'
+    });
+  });
+  
+  const updateDetailedProgress = (message: string, percentage: number) => {
+    if (onDetailedProgress) {
+      const fileProgressArray = Array.from(fileProgressMap.values());
+      onDetailedProgress(fileProgressArray, message, percentage);
+    }
+  };
+  
+  // Initial progress update
+  updateDetailedProgress('正在准备下载...', 40);
+  
   try {
-    // A more complex implementation would use the onProgress callback of downloadFiles
-    // to provide more granular progress updates.
-    downloadedFiles = await downloadFiles(filesToDownload);
+    downloadedFiles = await downloadFiles(filesToDownload, (progress) => {
+      // Update individual file progress
+      const fileProgress = fileProgressMap.get(progress.file);
+      if (fileProgress) {
+        fileProgress.loaded = progress.loaded;
+        fileProgress.total = progress.total;
+        fileProgress.status = 'downloading';
+        fileProgressMap.set(progress.file, fileProgress);
+        
+        // Calculate overall download progress
+        const completedFiles = Array.from(fileProgressMap.values()).filter(f => f.status === 'completed').length;
+        const downloadingFiles = Array.from(fileProgressMap.values()).filter(f => f.status === 'downloading').length;
+        const totalFiles = filesToDownload.length;
+        
+        let overallProgress = 40; // Base progress
+        if (totalFiles > 0) {
+          const fileProgress = (completedFiles + downloadingFiles * 0.5) / totalFiles;
+          overallProgress = 40 + (fileProgress * 35); // 40-75% range for downloads
+        }
+        
+        onProgress?.(`正在下载 ${progress.file}...`, overallProgress);
+        updateDetailedProgress(`正在下载 ${progress.file}...`, overallProgress);
+      }
+    });
+    
+    // Mark all files as completed
+    filesToDownload.forEach(file => {
+      const fileProgress = fileProgressMap.get(file.name);
+      if (fileProgress) {
+        fileProgress.status = 'completed';
+        fileProgressMap.set(file.name, fileProgress);
+      }
+    });
+    
+    updateDetailedProgress('下载完成', 75);
+    
   } catch (error) {
     console.error('Download failed:', error);
+    
+    // Mark failed files
+    filesToDownload.forEach(file => {
+      const fileProgress = fileProgressMap.get(file.name);
+      if (fileProgress && fileProgress.status !== 'completed') {
+        fileProgress.status = 'error';
+        fileProgress.error = error instanceof Error ? error.message : 'Download failed';
+        fileProgressMap.set(file.name, fileProgress);
+      }
+    });
+    
+    updateDetailedProgress('部分下载失败，继续创建配置包...', 75);
+    
     // For now, continue with config-only package if downloads fail
     console.warn('Continuing with config-only package due to download failures.');
     downloadedFiles = [];

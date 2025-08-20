@@ -5,7 +5,8 @@ import { Step3_KextSelection } from '@/components/wizard/Step3_KextSelection';
 import { Step4_Finalize } from '@/components/wizard/Step4_Finalize';
 import { WizardState } from '@/types';
 // import { motion, AnimatePresence } from 'framer-motion';
-import { createEfiPackage } from '@/lib/package/packager';
+import { createEfiPackage, FileProgressInfo } from '@/lib/package/packager';
+import DownloadProgressModal from '@/components/DownloadProgressModal';
 
 const WizardPage: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -14,6 +15,8 @@ const WizardPage: React.FC = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [progressMessage, setProgressMessage] = useState('');
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [fileProgress, setFileProgress] = useState<FileProgressInfo[]>([]);
 
   const handlePlatformSelect = (platform: 'intel' | 'amd') => {
     setWizardState({ platform });
@@ -34,18 +37,39 @@ const WizardPage: React.FC = () => {
     setIsDownloading(true);
     setProgressMessage('正在开始...');
     setProgress(0);
+    setFileProgress([]);
+    setShowDownloadModal(true);
 
     try {
-      await createEfiPackage(wizardState, (message, percentage) => {
-        setProgressMessage(message);
-        setProgress(percentage);
-      });
+      await createEfiPackage(
+        wizardState, 
+        (message, percentage) => {
+          setProgressMessage(message);
+          setProgress(percentage);
+        },
+        (files, overallMessage, overallPercentage) => {
+          setFileProgress([...files]);
+          setProgressMessage(overallMessage);
+          setProgress(overallPercentage);
+        }
+      );
+      
+      // Keep modal open for a moment to show completion
+      setTimeout(() => {
+        setShowDownloadModal(false);
+        setIsDownloading(false);
+      }, 2000);
+      
     } catch (error) {
       console.error('Failed to create EFI package:', error);
       setProgressMessage(`错误: ${error instanceof Error ? error.message : '未知错误'}`);
       setProgress(100);
       alert(`生成失败: ${error instanceof Error ? error.message : '未知错误'}`);
-      setIsDownloading(false);
+      
+      setTimeout(() => {
+        setShowDownloadModal(false);
+        setIsDownloading(false);
+      }, 3000);
     }
   };
 
@@ -82,6 +106,17 @@ const WizardPage: React.FC = () => {
   return (
     <div className="container mx-auto py-8 sm:py-12 lg:py-16">
       {renderStep()}
+      
+      <DownloadProgressModal
+        isOpen={showDownloadModal}
+        files={fileProgress}
+        title="EFI 包生成进度"
+        onClose={() => {
+          if (!isDownloading) {
+            setShowDownloadModal(false);
+          }
+        }}
+      />
     </div>
   );
 };
