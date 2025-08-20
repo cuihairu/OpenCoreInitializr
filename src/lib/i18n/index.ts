@@ -43,7 +43,21 @@ i18n
     react: {
       useSuspense: false,
     },
+  })
+  .then(() => {
+    // 初始化时设置正确的 HTML lang 属性
+    if (typeof document !== 'undefined') {
+      const currentLang = i18n.language;
+      document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : currentLang;
+    }
   });
+
+// 监听语言变化事件，自动更新 HTML lang 属性
+i18n.on('languageChanged', (lng: string) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lng === 'zh' ? 'zh-CN' : lng;
+  }
+});
 
 export default i18n;
 
@@ -78,6 +92,10 @@ export const i18nUtils = {
    */
   async changeLanguage(language: SupportedLanguage): Promise<void> {
     await i18n.changeLanguage(language);
+    // 同时更新 HTML 文档的 lang 属性
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
+    }
   },
 
   /**
