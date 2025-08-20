@@ -752,3 +752,22 @@ export interface Theme {
     lg: string;
   };
 }
+
+// --- Wizard Flow State ---
+
+export interface HardwareSelection {
+  cpuGeneration: string;
+  cpuModel: string;
+  chipset: string;
+  gpuBrand: string;
+  gpuSeries: string;
+  gpuModel: string;
+}
+
+export type KextSelection = string[];
+
+export interface WizardState {
+  platform?: 'intel' | 'amd';
+  hardware?: HardwareSelection;
+  kexts?: KextSelection;
+}

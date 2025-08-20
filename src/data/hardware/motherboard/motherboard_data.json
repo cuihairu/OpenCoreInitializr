@@ -1,0 +1,71 @@
+[
+  {
+    "chipset": "Z490",
+    "cpu_generation": "Comet Lake",
+    "bios_settings": [
+      {
+        "setting": "Secure Boot",
+        "value": "Disabled",
+        "path": "Boot -> Secure Boot",
+        "reason": "macOS does not support Secure Boot."
+      },
+      {
+        "setting": "CFG Lock",
+        "value": "Disabled",
+        "path": "Advanced -> CPU Configuration",
+        "reason": "Required for macOS power management. If you can't disable it, the 'AppleCpuPmCfgLock' quirk will be enabled automatically."
+      },
+      {
+        "setting": "VT-d",
+        "value": "Disabled",
+        "path": "Advanced -> System Agent (SA) Configuration",
+        "reason": "Disable unless you need it for other OSes and have configured `DisableIoMapper` quirk."
+      },
+      {
+        "setting": "Above 4G Decoding",
+        "value": "Enabled",
+        "path": "Advanced -> System Agent (SA) Configuration",
+        "reason": "Required for modern GPUs and some hardware."
+      }
+    ],
+    "acpi_patches": [
+      {
+        "name": "SSDT-PLUG-COMETLAKE",
+        "description": "Sets CPU power management plugin-type for Comet Lake CPUs.",
+        "source_file": "prebuilt/SSDT-PLUG-COMETLAKE.aml",
+        "enabled": true
+      },
+      {
+        "name": "SSDT-EC-USBX-DESKTOP",
+        "description": "Fixes embedded controller and USB power on desktop systems.",
+        "source_file": "prebuilt/SSDT-EC-USBX-DESKTOP.aml",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "chipset": "B550",
+    "cpu_generation": "Zen 3",
+    "bios_settings": [
+      {
+        "setting": "Secure Boot",
+        "value": "Disabled",
+        "path": "Boot -> Secure Boot",
+        "reason": "macOS does not support Secure Boot."
+      },
+      {
+        "setting": "Above 4G Decoding",
+        "value": "Enabled",
+        "path": "Advanced -> PCI Subsystem Settings",
+        "reason": "Required for modern GPUs and Resizable BAR."
+      },
+      {
+        "setting": "Re-Size BAR Support",
+        "value": "Disabled",
+        "path": "Advanced -> PCI Subsystem Settings",
+        "reason": "macOS does not support Resizable BAR. Disable it for compatibility."
+      }
+    ],
+    "acpi_patches": []
+  }
+]

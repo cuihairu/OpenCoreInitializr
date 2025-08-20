@@ -1,91 +1,77 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ToastContainer } from './components/ui/Toast';
-import { useTranslation } from './hooks/useTranslation';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { ToastContainer } from '@/components/ui/Toast';
+import { useTranslation } from '@/hooks/useTranslation';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeToggleCompact } from '@/components/ui/ThemeToggle';
+import { LanguageToggleCompact } from '@/components/ui/LanguageToggle';
+import WizardPage from '@/pages/WizardPage';
+import { GearIcon } from '@radix-ui/react-icons';
+import '@/App.css';
 
-import HardwareConfigPage from './pages/HardwareConfig';
-import KextsPage from './pages/KextsPage';
-import { ResponsiveLayout } from './components/layout/ResponsiveLayout';
-import MobileNavigation, { useMobileNavigation } from './components/layout/MobileNavigation';
-import { ThemeToggle } from './components/ui/theme-toggle';
-import { LanguageToggleCompact } from './components/ui/LanguageToggle';
-import { ThemeProvider } from './components/theme-provider';
-import './App.css';
-
-// Layout Component
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const mobileNav = useMobileNavigation();
+// A more modern and cleaner layout component
+const ModernLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="app-container" style={{ background: 'hsl(var(--background))', color: 'hsl(var(--foreground))' }}>
-      {/* Mobile Navigation */}
-      <MobileNavigation
-        isOpen={mobileNav.isOpen}
-        onToggle={mobileNav.toggle}
-        onClose={mobileNav.close}
-      />
-
-      {/* Responsive Layout */}
-       <ResponsiveLayout
-         header={
-           <div className="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8" style={{ borderBottom: '1px solid hsl(var(--border))' }}>
-             <div className="flex items-center ml-12 md:ml-0">
-               <h1 className="text-xl font-semibold" style={{ color: 'hsl(var(--foreground))' }}>
-                 OpenCore Initializr
-               </h1>
-             </div>
-             
-             <div className="flex items-center space-x-4">
-               <nav className="hidden md:flex space-x-8">
-                 <a href="/hardware" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.hardware', 'Hardware Configuration')}
-                 </a>
-                 <a href="/kexts" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.kexts', 'Kexts')}
-                 </a>
-                 <a href="/configuration" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.opencore', 'OpenCore Settings')}
-                 </a>
-                 <a href="/download" className="px-3 py-2 rounded-md text-sm font-medium transition-colors" style={{ color: 'hsl(var(--muted-foreground))' }} onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--foreground))'} onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--muted-foreground))'}>                   {t('navigation.download', 'Download')}
-                 </a>
-               </nav>
-               
-               {/* 主题和语言切换器 */}
-               <div className="flex items-center space-x-2">
-                 <LanguageToggleCompact />
-                 <ThemeToggle />
-               </div>
-             </div>
-           </div>
-         }
-         footer={
-           <div className="text-center py-4 text-sm" style={{ color: 'hsl(var(--muted-foreground))', borderTop: '1px solid hsl(var(--border))' }}>
-             <p>© 2024 OpenCore Initializr. Built with ❤️ for the Hackintosh community.</p>
-           </div>
-         }
-       >
-         {children}
-       </ResponsiveLayout>
-      
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-14 max-w-screen-2xl items-center">
+          <Link to="/" className="mr-6 flex items-center space-x-2">
+            <GearIcon className="h-6 w-6" />
+            <span className="font-bold sm:inline-block">
+              OpenCore Initializr
+            </span>
+          </Link>
+          <nav className="flex items-center gap-4 text-sm lg:gap-6">
+            <Link
+              to="/docs"
+              className="text-muted-foreground/70 transition-colors hover:text-muted-foreground"
+            >
+              {t('navigation.docs', '配置文档')}
+            </Link>
+            <Link
+              to="/kexts"
+              className="text-muted-foreground/70 transition-colors hover:text-muted-foreground"
+            >
+              {t('navigation.kexts', '驱动查询')}
+            </Link>
+          </nav>
+          <div className="flex flex-1 items-center justify-end space-x-2">
+            <LanguageToggleCompact />
+            <ThemeToggleCompact />
+          </div>
+        </div>
+      </header>
+      <main className="flex-1">
+        {children}
+      </main>
+      <footer className="py-6 md:px-8 md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+          <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
+            Built with ❤️ for the Hackintosh community.
+          </p>
+        </div>
+      </footer>
       <ToastContainer />
     </div>
   );
 };
 
-// Main App Component
 const App: React.FC = () => {
-
   return (
     <ThemeProvider defaultTheme="system" storageKey="opencore-ui-theme">
       <Router>
-        <Layout>
+        <ModernLayout>
           <Routes>
-            <Route path="/" element={<Navigate to="/hardware" replace />} />
-            <Route path="/hardware" element={<HardwareConfigPage />} />
-            <Route path="/kexts" element={<KextsPage />} />
-            <Route path="/configuration" element={<div className="p-8 text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>Configuration page coming soon...</div>} />
-            <Route path="/download" element={<div className="p-8 text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>Download page coming soon...</div>} />
+            <Route path="/" element={<WizardPage />} />
+            {/* Placeholder routes for the new pages */}
+            <Route path="/docs" element={<div className="container p-8 text-center text-muted-foreground">文档页面即将推出...</div>} />
+            <Route path="/kexts" element={<div className="container p-8 text-center text-muted-foreground">驱动查询页面即将推出...</div>} />
+            {/* Redirect any other path to the main wizard page */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </Layout>
+        </ModernLayout>
       </Router>
     </ThemeProvider>
   );
