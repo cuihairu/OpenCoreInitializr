@@ -1,13 +1,18 @@
 {
   "id": "SMCBatteryManager",
-  "name": {
-    "en": "SMCBatteryManager",
-    "zh": "SMCBatteryManager"
-  },
+  "name": "SMCBatteryManager",
   "category": "sensors",
   "description": {
-    "en": "Battery status monitoring driver, displays battery health and charging status.",
-    "zh": "电池状态监控驱动，显示电池健康度和充电状态"
+    "zh-CN": "电池状态监控驱动，显示电池健康度和充电状态",
+    "zh-TW": "電池状态監控驅動程式，显示電池健康度和充电状态",
+    "zh-HK": "電池状态監控驅動程式，显示電池健康度和充电状态",
+    "ja": "Battery status monitoring ドライバー, displays battery health and charging status.",
+    "ko": "Battery status monitoring 드라이버, displays battery health and charging status.",
+    "es": "Battery status monitoring controlador, displays battery health and charging status.",
+    "fr": "Battery status monitoring pilote, displays battery health and charging status.",
+    "de": "Battery status monitoring Treiber, displays battery health and charging status.",
+    "ru": "Battery status monitoring драйвер, displays battery health and charging status.",
+    "en": "Battery status monitoring driver, displays battery health and charging status."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -43,11 +48,26 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
-    { "en": "Battery", "zh": "电池" },
-    { "en": "Laptop", "zh": "笔记本" },
-    { "en": "Health", "zh": "健康度" },
-    { "en": "Charging", "zh": "充电" }
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器"
+    },
+    {
+      "en": "Battery",
+      "zh-CN": "电池"
+    },
+    {
+      "en": "Laptop",
+      "zh-CN": "笔记本"
+    },
+    {
+      "en": "Health",
+      "zh-CN": "健康度"
+    },
+    {
+      "en": "Charging",
+      "zh-CN": "充电"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/VirtualSMC",

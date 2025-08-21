@@ -1,13 +1,18 @@
 {
   "id": "AppleALC",
-  "name": {
-    "en": "AppleALC",
-    "zh": "AppleALC"
-  },
+  "name": "AppleALC",
   "category": "audio",
   "description": {
-    "en": "Universal audio driver, enabling native audio for most audio codecs.",
-    "zh": "通用音频驱动，支持大多数音频编解码器的原生音频功能"
+    "zh-CN": "通用音频驱动，支持大多数音频编解码器的原生音频功能",
+    "zh-TW": "通用音訊驅動程式，支援大多數音訊編解碼器的原生音訊功能",
+    "ja": "ほとんどのオーディオコーデックでネイティブオーディオを有効にする汎用オーディオドライバー",
+    "de": "Universeller Audio-Treiber, der natives Audio für die meisten Audio-Codecs ermöglicht",
+    "ru": "Универсальный аудиодрайвер, обеспечивающий нативное аудио для большинства аудиокодеков",
+    "zh-HK": "通用音訊驅動程式，支援大多數音訊編解碼器的原生音訊功能",
+    "ko": "Universal 오디오 드라이버, enabling native 오디오 for most 오디오 codecs.",
+    "es": "Universal audio controlador, enabling native audio for most audio codecs.",
+    "fr": "Universal audio pilote, enabling native audio for most audio codecs.",
+    "en": "Universal audio driver, enabling native audio for most audio codecs."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -66,9 +71,30 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Audio", "zh": "音频" },
-    { "en": "Sound", "zh": "声音" },
-    { "en": "Realtek", "zh": "瑞昱" },
+    {
+      "en": "Audio",
+      "zh-CN": "音频",
+      "zh-TW": "音訊",
+      "ja": "オーディオ",
+      "de": "Audio",
+      "ru": "Аудио"
+    },
+    {
+      "en": "Sound",
+      "zh-CN": "声音",
+      "zh-TW": "聲音",
+      "ja": "サウンド",
+      "de": "Sound",
+      "ru": "Звук"
+    },
+    {
+      "en": "Realtek",
+      "zh-CN": "瑞昱",
+      "zh-TW": "瑞昱",
+      "ja": "Realtek",
+      "de": "Realtek",
+      "ru": "Realtek"
+    },
     "ALC"
   ],
   "links": {

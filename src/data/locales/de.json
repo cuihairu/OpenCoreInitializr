@@ -72,6 +72,25 @@
     "confirmation": "Konfigurationsübersicht",
     "download": "Download und Verpackung",
     "help": "Hilfe und Dokumentation",
-    "settings": "Einstellungen"
+    "settings": "Einstellungen",
+    "docs": "Dokumentation"
+  },
+  "kexts": {
+    "title": "Kext-Auswahl",
+    "search": "Kexts suchen",
+    "search_placeholder": "Nach Kexts suchen...",
+    "priority": "Priorität",
+    "select_priority": "Priorität auswählen",
+    "all_priorities": "Alle Prioritäten",
+    "essential": "Wesentlich",
+    "recommended": "Empfohlen",
+    "optional": "Optional",
+    "category": "Kategorie",
+    "all_drivers": "Alle Treiber",
+    "recommended_drivers": "Empfohlene Treiber",
+    "recent_updates": "Neueste Updates",
+    "loading": "Laden...",
+    "essential_drivers": "Wesentliche Treiber",
+    "optional_drivers": "Optionale Treiber"
   }
 }

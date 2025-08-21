@@ -1,13 +1,18 @@
 {
   "id": "IntelMausi",
-  "name": {
-    "en": "IntelMausi",
-    "zh": "IntelMausi"
-  },
+  "name": "IntelMausi",
   "category": "network",
   "description": {
-    "en": "Intel Ethernet driver, supports most Intel network cards.",
-    "zh": "Intel以太网驱动，支持大多数Intel网卡"
+    "zh-CN": "Intel以太网驱动，支持大多数Intel网卡",
+    "zh-TW": "Intel以太网驅動程式，支援大多数Intel網卡",
+    "zh-HK": "Intel以太网驅動程式，支援大多数Intel網卡",
+    "ja": "Intel Ethernet ドライバー, サポートs most Intel ネットワーク cards.",
+    "ko": "Intel Ethernet 드라이버, 지원s most Intel 네트워크 cards.",
+    "es": "Intel Ethernet controlador, soportes most Intel red cards.",
+    "fr": "Intel Ethernet pilote, supports most Intel réseau cards.",
+    "de": "Intel Ethernet Treiber, Unterstützungs most Intel Netzwerk cards.",
+    "ru": "Intel Ethernet драйвер, поддержкаs most Intel сеть cards.",
+    "en": "Intel Ethernet driver, supports most Intel network cards."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -41,8 +46,14 @@
   "maintainer": "Acidanthera",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Network", "zh": "网络" },
-    { "en": "Ethernet", "zh": "以太网" },
+    {
+      "en": "Network",
+      "zh-CN": "网络"
+    },
+    {
+      "en": "Ethernet",
+      "zh-CN": "以太网"
+    },
     "Intel"
   ],
   "links": {

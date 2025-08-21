@@ -1,13 +1,18 @@
 {
   "id": "NootRX",
-  "name": {
-    "en": "NootRX",
-    "zh": "NootRX"
-  },
+  "name": "NootRX",
   "category": "graphics",
   "description": {
-    "en": "AMD RDNA 2 graphics driver, supports RX 6000 series graphics cards.",
-    "zh": "AMD RDNA 2显卡驱动，支持RX 6000系列显卡"
+    "zh-CN": "AMD RDNA 2显卡驱动，支持RX 6000系列显卡",
+    "zh-TW": "AMD RDNA 2顯示卡驅動程式，支援RX 6000系列顯示卡",
+    "zh-HK": "AMD RDNA 2顯示卡驅動程式，支援RX 6000系列顯示卡",
+    "ja": "AMD RDNA 2 グラフィックス ドライバー, サポートs RX 6000 series グラフィックス cards.",
+    "ko": "AMD RDNA 2 그래픽 드라이버, 지원s RX 6000 series 그래픽 cards.",
+    "es": "AMD RDNA 2 gráficos controlador, soportes RX 6000 series gráficos cards.",
+    "fr": "AMD RDNA 2 graphiques pilote, supports RX 6000 series graphiques cards.",
+    "de": "AMD RDNA 2 Grafik Treiber, Unterstützungs RX 6000 series Grafik cards.",
+    "ru": "AMD RDNA 2 графика драйвер, поддержкаs RX 6000 series графика cards.",
+    "en": "AMD RDNA 2 graphics driver, supports RX 6000 series graphics cards."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -42,7 +47,10 @@
   "maintainer": "ChefKissInc",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Graphics", "zh": "显卡" },
+    {
+      "en": "Graphics",
+      "zh-CN": "显卡"
+    },
     "AMD",
     "RDNA",
     "RX 6000",

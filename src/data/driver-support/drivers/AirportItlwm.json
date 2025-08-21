@@ -1,13 +1,18 @@
 {
   "id": "airportitlwm",
-  "name": {
-    "en": "AirportItlwm",
-    "zh": "AirportItlwm"
-  },
+  "name": "AirportItlwm",
   "category": "network",
   "description": {
-    "en": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 driver for macOS, enabling native Wi-Fi features.",
-    "zh": "适用于 macOS 的 Intel 无线网卡驱动，旨在提供原生 Wi-Fi 功能。"
+    "zh-CN": "适用于 macOS 的 Intel 无线网卡驱动，旨在提供原生 Wi-Fi 功能。",
+    "zh-TW": "適用於 macOS 的 Intel 無線網卡驅動程式，旨在提供原生 Wi-Fi 功能。",
+    "zh-HK": "適用於 macOS 的 Intel 無線網卡驅動程式，旨在提供原生 Wi-Fi 功能。",
+    "ja": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 ドライバー for macOS, enabling native Wi-Fi features.",
+    "ko": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 드라이버 for macOS, enabling native Wi-Fi features.",
+    "es": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 controlador for macOS, enabling native Wi-Fi features.",
+    "fr": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 pilote for macOS, enabling native Wi-Fi features.",
+    "de": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 Treiber for macOS, enabling native Wi-Fi features.",
+    "ru": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 драйвер for macOS, enabling native Wi-Fi features.",
+    "en": "Intel Wi-Fi Adapter BCM94360CS2/BCM943224PCIEBT2 driver for macOS, enabling native Wi-Fi features."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -47,9 +52,30 @@
   "maintainer": "OpenIntelWireless",
   "license": "GPL v2",
   "tags": [
-    { "en": "WiFi", "zh": "无线网络" },
-    { "en": "Intel", "zh": "英特尔" },
-    { "en": "Native", "zh": "原生" },
+    {
+      "en": "WiFi",
+      "zh-CN": "无线网络",
+      "zh-TW": "無線網路",
+      "ja": "WiFi",
+      "de": "WiFi",
+      "ru": "WiFi"
+    },
+    {
+      "en": "Intel",
+      "zh-CN": "英特尔",
+      "zh-TW": "英特爾",
+      "ja": "Intel",
+      "de": "Intel",
+      "ru": "Intel"
+    },
+    {
+      "en": "Native",
+      "zh-CN": "原生",
+      "zh-TW": "原生",
+      "ja": "Native",
+      "de": "Native",
+      "ru": "Native"
+    },
     "Airport"
   ],
   "links": {

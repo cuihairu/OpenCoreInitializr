@@ -48,20 +48,7 @@
     "help": "도움말",
     "about": "정보",
     "version": "버전",
-    "language": "언어",
-    "theme": "테마",
-    "light": "밝음",
-    "dark": "어둠",
-    "system": "시스템",
-    "auto": "자동"
-  },
-  "app": {
-    "title": "OpenCore Initializr",
-    "subtitle": "해킨토시 EFI 구성을 쉽게 생성",
-    "description": "해킨토시 시스템용 OpenCore EFI 구성을 생성하는 현대적인 웹 애플리케이션",
-    "welcome": "OpenCore Initializr에 오신 것을 환영합니다",
-    "getStarted": "시작하기",
-    "learnMore": "더 알아보기"
+    "language": "언어"
   },
   "navigation": {
     "hardware": "하드웨어 구성",
@@ -70,8 +57,27 @@
     "tools": "도구 및 유틸리티",
     "drivers": "UEFI 드라이버",
     "confirmation": "구성 요약",
-    "download": "다운로드 및 패키징",
+    "download": "다운로드 및 패키지",
     "help": "도움말 및 문서",
-    "settings": "설정"
+    "settings": "설정",
+    "docs": "문서"
+  },
+  "kexts": {
+    "title": "Kext 선택",
+    "search": "Kext 검색",
+    "search_placeholder": "Kext 검색...",
+    "priority": "우선순위",
+    "select_priority": "우선순위 선택",
+    "all_priorities": "모든 우선순위",
+    "essential": "필수",
+    "recommended": "권장",
+    "optional": "선택사항",
+    "category": "카테고리",
+    "all_drivers": "모든 드라이버",
+    "recommended_drivers": "권장 드라이버",
+    "recent_updates": "최근 업데이트",
+    "loading": "로딩 중...",
+    "essential_drivers": "필수 드라이버",
+    "optional_drivers": "선택적 드라이버"
   }
 }

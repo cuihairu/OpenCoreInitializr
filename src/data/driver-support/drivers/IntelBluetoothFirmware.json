@@ -1,13 +1,18 @@
 {
   "id": "IntelBluetoothFirmware",
-  "name": {
-    "en": "IntelBluetoothFirmware",
-    "zh": "Intel蓝牙固件"
-  },
+  "name": "IntelBluetoothFirmware",
   "category": "bluetooth",
   "description": {
-    "en": "Firmware driver for Intel Bluetooth devices.",
-    "zh": "Intel蓝牙设备的固件驱动"
+    "zh-CN": "Intel蓝牙设备的固件驱动",
+    "zh-TW": "Intel蓝牙设备的固件驅動程式",
+    "zh-HK": "Intel蓝牙设备的固件驅動程式",
+    "ja": "Firmware ドライバー for Intel Bluetooth デバイスs.",
+    "ko": "Firmware 드라이버 for Intel Bluetooth 장치s.",
+    "es": "Firmware controlador for Intel Bluetooth dispositivos.",
+    "fr": "Firmware pilote for Intel Bluetooth appareils.",
+    "de": "Firmware Treiber for Intel Bluetooth Geräts.",
+    "ru": "Firmware драйвер for Intel Bluetooth устройствоs.",
+    "en": "Firmware driver for Intel Bluetooth devices."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -46,10 +51,19 @@
   "maintainer": "OpenIntelWireless",
   "license": "GPL v2",
   "tags": [
-    { "en": "Bluetooth", "zh": "蓝牙" },
+    {
+      "en": "Bluetooth",
+      "zh-CN": "蓝牙"
+    },
     "Intel",
-    { "en": "Firmware", "zh": "固件" },
-    { "en": "Wireless", "zh": "无线" }
+    {
+      "en": "Firmware",
+      "zh-CN": "固件"
+    },
+    {
+      "en": "Wireless",
+      "zh-CN": "无线"
+    }
   ],
   "links": {
     "website": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",

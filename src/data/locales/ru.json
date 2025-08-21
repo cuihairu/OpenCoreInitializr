@@ -72,6 +72,25 @@
     "confirmation": "Сводка конфигурации",
     "download": "Загрузка и упаковка",
     "help": "Помощь и документация",
-    "settings": "Настройки"
+    "settings": "Настройки",
+    "docs": "Документация"
+  },
+  "kexts": {
+    "title": "Выбор Kext",
+    "search": "Поиск Kexts",
+    "search_placeholder": "Поиск kexts...",
+    "priority": "Приоритет",
+    "select_priority": "Выберите приоритет",
+    "all_priorities": "Все приоритеты",
+    "essential": "Обязательный",
+    "recommended": "Рекомендуемый",
+    "optional": "Дополнительный",
+    "category": "Категория",
+    "all_drivers": "Все Драйверы",
+    "recommended_drivers": "Рекомендуемые Драйверы",
+    "recent_updates": "Последние Обновления",
+    "loading": "Загрузка...",
+    "essential_drivers": "Основные Драйверы",
+    "optional_drivers": "Дополнительные Драйверы"
   }
 }

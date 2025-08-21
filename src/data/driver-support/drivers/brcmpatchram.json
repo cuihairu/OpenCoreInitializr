@@ -1,13 +1,18 @@
 {
   "id": "brcmpatchram",
-  "name": {
-    "en": "BrcmPatchRAM",
-    "zh": "BrcmPatchRAM"
-  },
+  "name": "BrcmPatchRAM",
   "category": "features",
   "description": {
-    "en": "Firmware upload and feature enhancement for Broadcom Bluetooth devices.",
-    "zh": "Broadcom蓝牙设备的固件上传和功能增强"
+    "zh-CN": "Broadcom蓝牙设备的固件上传和功能增强",
+    "zh-TW": "Broadcom蓝牙设备的固件上传和功能增強",
+    "zh-HK": "Broadcom蓝牙设备的固件上传和功能增強",
+    "ja": "Firmware upload and feature enhancement for Broadcom Bluetooth デバイスs.",
+    "ko": "Firmware upload and feature enhancement for Broadcom Bluetooth 장치s.",
+    "es": "Firmware upload and feature enhancement for Broadcom Bluetooth dispositivos.",
+    "fr": "Firmware upload and feature enhancement for Broadcom Bluetooth appareils.",
+    "de": "Firmware upload and feature enhancement for Broadcom Bluetooth Geräts.",
+    "ru": "Firmware upload and feature enhancement for Broadcom Bluetooth устройствоs.",
+    "en": "Firmware upload and feature enhancement for Broadcom Bluetooth devices."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -42,9 +47,15 @@
   "maintainer": "Acidanthera",
   "license": "GPL v2",
   "tags": [
-    { "en": "Bluetooth", "zh": "蓝牙" },
+    {
+      "en": "Bluetooth",
+      "zh-CN": "蓝牙"
+    },
     "Broadcom",
-    { "en": "Firmware", "zh": "固件" }
+    {
+      "en": "Firmware",
+      "zh-CN": "固件"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/BrcmPatchRAM",

@@ -1,13 +1,18 @@
 {
   "id": "AppleIGC",
-  "name": {
-    "en": "AppleIGC",
-    "zh": "AppleIGC"
-  },
+  "name": "AppleIGC",
   "category": "network",
   "description": {
-    "en": "Intel I225-V/I226-V 2.5G Ethernet driver.",
-    "zh": "Intel I225-V/I226-V 2.5G以太网驱动"
+    "zh-CN": "Intel I225-V/I226-V 2.5G以太网驱动",
+    "zh-TW": "Intel I225-V/I226-V 2.5G乙太網路驅動",
+    "zh-HK": "Intel I225-V/I226-V 2.5G乙太網路驅動",
+    "ja": "Intel I225-V/I226-V 2.5G Ethernet ドライバー.",
+    "ko": "Intel I225-V/I226-V 2.5G Ethernet 드라이버.",
+    "es": "Intel I225-V/I226-V 2.5G Ethernet controlador.",
+    "fr": "Intel I225-V/I226-V 2.5G Ethernet pilote.",
+    "de": "Intel I225-V/I226-V 2.5G Ethernet Treiber.",
+    "ru": "Intel I225-V/I226-V 2.5G Ethernet драйвер.",
+    "en": "Intel I225-V/I226-V 2.5G Ethernet driver."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -40,8 +45,22 @@
   "maintainer": "SongXiaoXi",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Network", "zh": "网络" },
-    { "en": "Ethernet", "zh": "以太网" },
+    {
+      "en": "Network",
+      "zh-CN": "网络",
+      "zh-TW": "網路",
+      "ja": "Network",
+      "de": "Network",
+      "ru": "Network"
+    },
+    {
+      "en": "Ethernet",
+      "zh-CN": "以太网",
+      "zh-TW": "乙太網路",
+      "ja": "Ethernet",
+      "de": "Ethernet",
+      "ru": "Ethernet"
+    },
     "Intel",
     "2.5G"
   ],

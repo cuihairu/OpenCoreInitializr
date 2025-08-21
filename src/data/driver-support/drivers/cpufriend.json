@@ -1,13 +1,18 @@
 {
   "id": "CPUFriend",
-  "name": {
-    "en": "CPUFriend",
-    "zh": "CPUFriend"
-  },
+  "name": "CPUFriend",
   "category": "features",
   "description": {
+    "zh-CN": "动态电源管理，优化CPU频率和功耗",
+    "zh-TW": "動態電源管理，最佳化CPU頻率和功耗",
+    "zh-HK": "動態電源管理，最佳化CPU頻率和功耗",
     "en": "Dynamic power management for optimizing CPU frequency and power consumption.",
-    "zh": "动态电源管理，优化CPU频率和功耗"
+    "ja": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "ko": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "es": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "fr": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "de": "Dynamic power management for optimizing CPU frequency and power consumption.",
+    "ru": "Dynamic power management for optimizing CPU frequency and power consumption."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -31,8 +36,16 @@
         "10.8+"
       ],
       "notes": {
+        "zh-CN": "需要配合CPUFriendDataProvider使用",
+        "zh-TW": "需要配合CPUFriendDataProvider使用",
+        "zh-HK": "需要配合CPUFriendDataProvider使用",
         "en": "Requires CPUFriendDataProvider for full functionality.",
-        "zh": "需要配合CPUFriendDataProvider使用"
+        "ja": "Requires CPUFriendDataProvider for full functionality.",
+        "ko": "Requires CPUFriendDataProvider for full functionality.",
+        "es": "Requires CPUFriendDataProvider for full functionality.",
+        "fr": "Requires CPUFriendDataProvider for full functionality.",
+        "de": "Requires CPUFriendDataProvider for full functionality.",
+        "ru": "Requires CPUFriendDataProvider for full functionality."
       }
     }
   ],
@@ -44,9 +57,30 @@
   "maintainer": "Acidanthera",
   "license": "BSD 3-Clause",
   "tags": [
-    { "en": "CPU", "zh": "CPU" },
-    { "en": "Power Management", "zh": "电源管理" },
-    { "en": "Performance Tuning", "zh": "性能优化" }
+    {
+      "en": "CPU",
+      "zh-CN": "CPU",
+      "zh-TW": "CPU",
+      "ja": "CPU",
+      "de": "CPU",
+      "ru": "CPU"
+    },
+    {
+      "en": "Power Management",
+      "zh-CN": "电源管理",
+      "zh-TW": "電源管理",
+      "ja": "Power Management",
+      "de": "Power Management",
+      "ru": "Power Management"
+    },
+    {
+      "en": "Performance Tuning",
+      "zh-CN": "性能优化",
+      "zh-TW": "效能最佳化",
+      "ja": "Performance Tuning",
+      "de": "Performance Tuning",
+      "ru": "Performance Tuning"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/CPUFriend",

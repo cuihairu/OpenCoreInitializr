@@ -1,13 +1,18 @@
 {
   "id": "VoodooRMI",
-  "name": {
-    "en": "VoodooRMI",
-    "zh": "VoodooRMI"
-  },
+  "name": "VoodooRMI",
   "category": "input",
   "description": {
-    "en": "Synaptics RMI trackpad driver, designed specifically for ThinkPad.",
-    "zh": "Synaptics RMI触控板驱动，专为ThinkPad设计"
+    "zh-CN": "Synaptics RMI触控板驱动，专为ThinkPad设计",
+    "zh-TW": "Synaptics RMI触控板驅動程式，专为ThinkPad设计",
+    "zh-HK": "Synaptics RMI触控板驅動程式，专为ThinkPad设计",
+    "ja": "Synaptics RMI trackpad ドライバー, designed specifically for ThinkPad.",
+    "ko": "Synaptics RMI trackpad 드라이버, designed specifically for ThinkPad.",
+    "es": "Synaptics RMI trackpad controlador, designed specifically for ThinkPad.",
+    "fr": "Synaptics RMI trackpad pilote, designed specifically for ThinkPad.",
+    "de": "Synaptics RMI trackpad Treiber, designed specifically for ThinkPad.",
+    "ru": "Synaptics RMI trackpad драйвер, designed specifically for ThinkPad.",
+    "en": "Synaptics RMI trackpad driver, designed specifically for ThinkPad."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -62,11 +67,17 @@
   "maintainer": "VoodooSMBus",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Trackpad", "zh": "触控板" },
+    {
+      "en": "Trackpad",
+      "zh-CN": "触控板"
+    },
     "Synaptics",
     "RMI",
     "ThinkPad",
-    { "en": "Input Device", "zh": "输入设备" }
+    {
+      "en": "Input Device",
+      "zh-CN": "输入设备"
+    }
   ],
   "links": {
     "website": "https://github.com/VoodooSMBus/VoodooRMI",

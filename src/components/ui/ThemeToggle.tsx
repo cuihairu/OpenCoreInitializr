@@ -4,6 +4,7 @@ import { Theme } from '../../lib/theme/themes';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Button } from './button';
 import { cn } from '../../lib/utils';
+import { Moon, Sun, Monitor } from 'lucide-react';
 
 interface ThemeOption {
   value: Theme;
@@ -73,19 +74,6 @@ export function ThemeToggleCompact() {
     }
   };
 
-  const getCurrentIcon = () => {
-    switch (theme) {
-      case 'light':
-        return '☀️';
-      case 'dark':
-        return '🌙';
-      case 'system':
-        return actualTheme === 'dark' ? '🌙💻' : '☀️💻';
-      default:
-        return '☀️';
-    }
-  };
-
   const getCurrentLabel = () => {
     switch (theme) {
       case 'light':
@@ -105,10 +93,15 @@ export function ThemeToggleCompact() {
       size="sm"
       onClick={() => setTheme(getNextTheme())}
       title={`${t('theme.current', '当前主题')}: ${getCurrentLabel()}`}
-      className="flex items-center space-x-2"
+      className="relative flex items-center justify-center w-9 h-9 p-0"
     >
-      <span>{getCurrentIcon()}</span>
-      <span className="hidden sm:inline">{getCurrentLabel()}</span>
+      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <Monitor className={cn(
+        "absolute h-[1.2rem] w-[1.2rem] transition-all",
+        theme === 'system' ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+      )} />
+      <span className="sr-only">{getCurrentLabel()}</span>
     </Button>
   );
 }

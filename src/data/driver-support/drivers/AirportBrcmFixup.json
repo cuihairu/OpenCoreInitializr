@@ -1,13 +1,18 @@
 {
   "id": "airportbrcmfixup",
-  "name": {
-    "en": "AirportBrcmFixup",
-    "zh": "AirportBrcmFixup"
-  },
+  "name": "AirportBrcmFixup",
   "category": "network",
   "description": {
-    "en": "Broadcom wireless network card driver for enabling native WiFi functionality",
-    "zh": "Broadcom无线网卡修复驱动，启用原生WiFi功能"
+    "zh-CN": "Broadcom无线网卡修复驱动，启用原生WiFi功能",
+    "zh-TW": "Broadcom無線網卡修復驅動程式，啟用原生WiFi功能",
+    "ja": "ネイティブWiFi機能を有効にするBroadcomワイヤレスネットワークカードドライバー",
+    "de": "Broadcom WLAN-Kartentreiber zur Aktivierung nativer WiFi-Funktionalität",
+    "ru": "Драйвер беспроводной сетевой карты Broadcom для включения нативной функциональности WiFi",
+    "zh-HK": "Broadcom無線網卡修復驅動程式，啟用原生WiFi功能",
+    "ko": "Broadcom wireless 네트워크 card 드라이버 for enabling native WiFi functionality",
+    "es": "Broadcom wireless red card controlador for enabling native WiFi functionality",
+    "fr": "Broadcom wireless réseau card pilote for enabling native WiFi functionality",
+    "en": "Broadcom wireless network card driver for enabling native WiFi functionality"
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -45,10 +50,38 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "WiFi", "zh": "WiFi" },
-    { "en": "Wireless Network", "zh": "无线网络" },
-    { "en": "Broadcom", "zh": "博通" },
-    { "en": "Continuity", "zh": "连续互通" }
+    {
+      "en": "WiFi",
+      "zh-CN": "WiFi",
+      "zh-TW": "WiFi",
+      "ja": "WiFi",
+      "de": "WiFi",
+      "ru": "WiFi"
+    },
+    {
+      "en": "Wireless Network",
+      "zh-CN": "无线网络",
+      "zh-TW": "無線網路",
+      "ja": "ワイヤレスネットワーク",
+      "de": "Drahtloses Netzwerk",
+      "ru": "Беспроводная сеть"
+    },
+    {
+      "en": "Broadcom",
+      "zh-CN": "博通",
+      "zh-TW": "博通",
+      "ja": "Broadcom",
+      "de": "Broadcom",
+      "ru": "Broadcom"
+    },
+    {
+      "en": "Continuity",
+      "zh-CN": "连续互通",
+      "zh-TW": "連續互通",
+      "ja": "連携機能",
+      "de": "Kontinuität",
+      "ru": "Непрерывность"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/AirportBrcmFixup",

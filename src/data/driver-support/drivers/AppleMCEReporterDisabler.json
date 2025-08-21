@@ -1,13 +1,18 @@
 {
   "id": "AppleMCEReporterDisabler",
-  "name": {
-    "en": "AppleMCEReporterDisabler",
-    "zh": "AppleMCEReporterDisabler"
-  },
+  "name": "AppleMCEReporterDisabler",
   "category": "system",
   "description": {
-    "en": "Disables Apple MCE reporter to fix kernel panics on AMD systems.",
-    "zh": "禁用Apple MCE报告，修复AMD系统内核崩溃"
+    "zh-CN": "禁用Apple MCE报告，修复AMD系统内核崩溃",
+    "zh-TW": "禁用Apple MCE報告，修復AMD系統核心當機",
+    "zh-HK": "禁用Apple MCE報告，修復AMD系統核心當機",
+    "ja": "無効化s Apple MCE reporter to fix kernel panics on AMD システムs.",
+    "ko": "비활성화s Apple MCE reporter to fix kernel panics on AMD 시스템s.",
+    "es": "deshabilitars Apple MCE reporter to fix kernel panics on AMD sistemas.",
+    "fr": "désactivers Apple MCE reporter to fix kernel panics on AMD systèmes.",
+    "de": "deaktivierens Apple MCE reporter to fix kernel panics on AMD Systems.",
+    "ru": "отключитьs Apple MCE reporter to fix kernel panics on AMD системаs.",
+    "en": "Disables Apple MCE reporter to fix kernel panics on AMD systems."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -41,11 +46,32 @@
   "maintainer": "AMD-OSX",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "System", "zh": "系统" },
+    {
+      "en": "System",
+      "zh-CN": "系统",
+      "zh-TW": "系統",
+      "ja": "System",
+      "de": "System",
+      "ru": "System"
+    },
     "AMD",
     "MCE",
-    { "en": "Kernel Panic", "zh": "内核崩溃" },
-    { "en": "Fix", "zh": "修复" }
+    {
+      "en": "Kernel Panic",
+      "zh-CN": "内核崩溃",
+      "zh-TW": "核心當機",
+      "ja": "Kernel Panic",
+      "de": "Kernel Panic",
+      "ru": "Kernel Panic"
+    },
+    {
+      "en": "Fix",
+      "zh-CN": "修复",
+      "zh-TW": "修復",
+      "ja": "Fix",
+      "de": "Fix",
+      "ru": "Fix"
+    }
   ],
   "links": {
     "website": "https://github.com/AMD-OSX/AMD_Vanilla",

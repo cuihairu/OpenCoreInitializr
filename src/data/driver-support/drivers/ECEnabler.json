@@ -1,13 +1,18 @@
 {
   "id": "ECEnabler",
-  "name": {
-    "en": "ECEnabler",
-    "zh": "ECEnabler"
-  },
+  "name": "ECEnabler",
   "category": "system",
   "description": {
-    "en": "Embedded Controller driver, fixes battery status reading.",
-    "zh": "嵌入式控制器驱动，修复电池状态读取"
+    "zh-CN": "嵌入式控制器驱动，修复电池状态读取",
+    "zh-TW": "嵌入式控制器驅動程式，修復電池状态读取",
+    "zh-HK": "嵌入式控制器驅動程式，修復電池状态读取",
+    "ja": "Embedded Controller ドライバー, fixes battery status reading.",
+    "ko": "Embedded Controller 드라이버, fixes battery status reading.",
+    "es": "Embedded Controller controlador, fixes battery status reading.",
+    "fr": "Embedded Controller pilote, fixes battery status reading.",
+    "de": "Embedded Controller Treiber, fixes battery status reading.",
+    "ru": "Embedded Controller драйвер, fixes battery status reading.",
+    "en": "Embedded Controller driver, fixes battery status reading."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -41,11 +46,23 @@
   "maintainer": "1Revenger1",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "System", "zh": "系统" },
+    {
+      "en": "System",
+      "zh-CN": "系统"
+    },
     "EC",
-    { "en": "Battery", "zh": "电池" },
-    { "en": "Laptop", "zh": "笔记本" },
-    { "en": "Embedded Controller", "zh": "嵌入式控制器" }
+    {
+      "en": "Battery",
+      "zh-CN": "电池"
+    },
+    {
+      "en": "Laptop",
+      "zh-CN": "笔记本"
+    },
+    {
+      "en": "Embedded Controller",
+      "zh-CN": "嵌入式控制器"
+    }
   ],
   "links": {
     "website": "https://github.com/1Revenger1/ECEnabler",

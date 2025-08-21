@@ -1,13 +1,18 @@
 {
   "id": "LucyRTL8125Ethernet",
-  "name": {
-    "en": "LucyRTL8125Ethernet",
-    "zh": "LucyRTL8125Ethernet"
-  },
+  "name": "LucyRTL8125Ethernet",
   "category": "network",
   "description": {
-    "en": "Realtek RTL8125 2.5Gb Ethernet controller driver.",
-    "zh": "Realtek RTL8125 2.5Gb以太网控制器驱动"
+    "zh-CN": "Realtek RTL8125 2.5Gb以太网控制器驱动",
+    "zh-TW": "Realtek RTL8125 2.5Gb以太网控制器驅動程式",
+    "zh-HK": "Realtek RTL8125 2.5Gb以太网控制器驅動程式",
+    "ja": "Realtek RTL8125 2.5Gb Ethernet controller ドライバー.",
+    "ko": "Realtek RTL8125 2.5Gb Ethernet controller 드라이버.",
+    "es": "Realtek RTL8125 2.5Gb Ethernet controller controlador.",
+    "fr": "Realtek RTL8125 2.5Gb Ethernet controller pilote.",
+    "de": "Realtek RTL8125 2.5Gb Ethernet controller Treiber.",
+    "ru": "Realtek RTL8125 2.5Gb Ethernet controller драйвер.",
+    "en": "Realtek RTL8125 2.5Gb Ethernet controller driver."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -41,8 +46,14 @@
   "maintainer": "Mieze",
   "license": "GPL v2",
   "tags": [
-    { "en": "Ethernet", "zh": "以太网" },
-    { "en": "Wired Network", "zh": "有线网络" },
+    {
+      "en": "Ethernet",
+      "zh-CN": "以太网"
+    },
+    {
+      "en": "Wired Network",
+      "zh-CN": "有线网络"
+    },
     "Realtek",
     "2.5Gb"
   ],

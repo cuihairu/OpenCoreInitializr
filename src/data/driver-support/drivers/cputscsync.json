@@ -1,13 +1,18 @@
 {
   "id": "CpuTscSync",
-  "name": {
-    "en": "CpuTscSync",
-    "zh": "CpuTscSync"
-  },
+  "name": "CpuTscSync",
   "category": "system",
   "description": {
+    "zh-CN": "同步多核CPU的TSC时钟，解决时间相关问题",
+    "zh-TW": "同步多核CPU的TSC时钟，解决时间相关问题",
+    "zh-HK": "同步多核CPU的TSC时钟，解决时间相关问题",
     "en": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
-    "zh": "同步多核CPU的TSC时钟，解决时间相关问题"
+    "ja": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "ko": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "es": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "fr": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "de": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues.",
+    "ru": "Synchronizes the TSC clock on multi-core CPUs to resolve time-related issues."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -50,9 +55,15 @@
   "license": "BSD-3-Clause",
   "tags": [
     "CPU",
-    { "en": "Clock Sync", "zh": "时钟同步" },
+    {
+      "en": "Clock Sync",
+      "zh-CN": "时钟同步"
+    },
     "TSC",
-    { "en": "Multi-core", "zh": "多核" }
+    {
+      "en": "Multi-core",
+      "zh-CN": "多核"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/CpuTscSync",

@@ -1,13 +1,18 @@
 {
   "id": "FeatureUnlock",
-  "name": {
-    "en": "FeatureUnlock",
-    "zh": "FeatureUnlock"
-  },
+  "name": "FeatureUnlock",
   "category": "features",
   "description": {
+    "zh-CN": "解锁macOS的各种功能限制，如AirPlay、SideCar等",
+    "zh-TW": "解锁macOS的各种功能限制，如AirPlay、SideCar等",
+    "zh-HK": "解锁macOS的各种功能限制，如AirPlay、SideCar等",
     "en": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
-    "zh": "解锁macOS的各种功能限制，如AirPlay、SideCar等"
+    "ja": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "ko": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "es": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "fr": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "de": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc.",
+    "ru": "Unlocks various macOS feature restrictions, such as AirPlay, SideCar, etc."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -41,7 +46,10 @@
   "maintainer": "Acidanthera",
   "license": "BSD 3-Clause",
   "tags": [
-    { "en": "Feature Unlock", "zh": "功能解锁" },
+    {
+      "en": "Feature Unlock",
+      "zh-CN": "功能解锁"
+    },
     "Sidecar",
     "AirPlay",
     "Universal Control"

@@ -1,13 +1,18 @@
 {
   "id": "AMDRyzenCPUPowerManagement",
-  "name": {
-    "en": "AMD Ryzen CPU Power Management",
-    "zh": "AMD Ryzen CPU 电源管理"
-  },
+  "name": "AMD Ryzen CPU Power Management",
   "category": "system",
   "description": {
-    "en": "Power management driver for AMD Ryzen CPUs.",
-    "zh": "AMD Ryzen CPU电源管理驱动"
+    "zh-CN": "AMD Ryzen CPU电源管理驱动",
+    "zh-TW": "AMD Ryzen CPU電源管理驅動程式",
+    "zh-HK": "AMD Ryzen CPU電源管理驅動程式",
+    "ja": "Power management ドライバー for AMD Ryzen CPUs.",
+    "ko": "Power management 드라이버 for AMD Ryzen CPUs.",
+    "es": "Power management controlador for AMD Ryzen CPUs.",
+    "fr": "Power management pilote for AMD Ryzen CPUs.",
+    "de": "Power management Treiber for AMD Ryzen CPUs.",
+    "ru": "Power management драйвер for AMD Ryzen CPUs.",
+    "en": "Power management driver for AMD Ryzen CPUs."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -33,8 +38,16 @@
         "10.13+"
       ],
       "notes": {
-        "en": "Supports power management for AMD Ryzen processors.",
-        "zh": "支持AMD Ryzen处理器电源管理"
+        "zh-CN": "支持AMD Ryzen处理器电源管理",
+        "zh-TW": "支援AMD Ryzen處理器電源管理",
+        "zh-HK": "支援AMD Ryzen處理器電源管理",
+        "ja": "サポートs power management for AMD Ryzen プロセッサーs.",
+        "ko": "지원s power management for AMD Ryzen 프로세서s.",
+        "es": "soportes power management for AMD Ryzen procesadors.",
+        "fr": "supports power management for AMD Ryzen processeurs.",
+        "de": "Unterstützungs power management for AMD Ryzen Prozessors.",
+        "ru": "поддержкаs power management for AMD Ryzen процессорs.",
+        "en": "Supports power management for AMD Ryzen processors."
       }
     }
   ],
@@ -44,11 +57,26 @@
   "maintainer": "trulyspinach",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "System", "zh": "系统" },
-    { "en": "AMD", "zh": "AMD" },
-    { "en": "CPU", "zh": "CPU" },
-    { "en": "Power Management", "zh": "电源管理" },
-    { "en": "Ryzen", "zh": "锐龙" }
+    {
+      "en": "System",
+      "zh-CN": "系统"
+    },
+    {
+      "en": "AMD",
+      "zh-CN": "AMD"
+    },
+    {
+      "en": "CPU",
+      "zh-CN": "CPU"
+    },
+    {
+      "en": "Power Management",
+      "zh-CN": "电源管理"
+    },
+    {
+      "en": "Ryzen",
+      "zh-CN": "锐龙"
+    }
   ],
   "links": {
     "website": "https://github.com/trulyspinach/SMCAMDProcessor",

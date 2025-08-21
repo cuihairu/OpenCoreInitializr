@@ -1,13 +1,18 @@
 {
   "id": "RadeonSensor",
-  "name": {
-    "en": "RadeonSensor",
-    "zh": "RadeonSensor"
-  },
+  "name": "RadeonSensor",
   "category": "sensors",
   "description": {
-    "en": "AMD Radeon graphics card temperature and fan monitoring driver.",
-    "zh": "AMD Radeon显卡温度和风扇监控驱动"
+    "zh-CN": "AMD Radeon显卡温度和风扇监控驱动",
+    "zh-TW": "AMD Radeon顯示卡温度和风扇監控驅動程式",
+    "zh-HK": "AMD Radeon顯示卡温度和风扇監控驅動程式",
+    "ja": "AMD Radeon グラフィックス card temperature and fan monitoring ドライバー.",
+    "ko": "AMD Radeon 그래픽 card temperature and fan monitoring 드라이버.",
+    "es": "AMD Radeon gráficos card temperature and fan monitoring controlador.",
+    "fr": "AMD Radeon graphiques card temperature and fan monitoring pilote.",
+    "de": "AMD Radeon Grafik card temperature and fan monitoring Treiber.",
+    "ru": "AMD Radeon графика card temperature and fan monitoring драйвер.",
+    "en": "AMD Radeon graphics card temperature and fan monitoring driver."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -44,8 +49,14 @@
   "maintainer": "ChefKissInc",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
-    { "en": "Temperature Monitor", "zh": "温度监控" },
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器"
+    },
+    {
+      "en": "Temperature Monitor",
+      "zh-CN": "温度监控"
+    },
     "AMD",
     "Radeon"
   ],

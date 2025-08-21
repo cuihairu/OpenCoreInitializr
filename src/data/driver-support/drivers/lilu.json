@@ -1,13 +1,18 @@
 {
   "id": "Lilu",
-  "name": {
-    "en": "Lilu",
-    "zh": "Lilu"
-  },
+  "name": "Lilu",
   "category": "essential",
   "description": {
-    "en": "A framework for patching and extending the macOS kernel.",
-    "zh": "驱动平台基础，为其他驱动提供运行时修补功能"
+    "zh-CN": "驱动平台基础，为其他驱动提供运行时修补功能",
+    "zh-TW": "驅動平台基礎，為其他驅動提供運行時修補功能",
+    "zh-HK": "驅動平台基礎，為其他驅動提供運行時修補功能",
+    "ja": "An オープンソース カーネル拡張 bringing a platform for arbitrary kext, library, and program patching throughout the システム for macOS.",
+    "ko": "An 오픈 소스 커널 확장 bringing a platform for arbitrary kext, library, and program patching throughout the 시스템 for macOS.",
+    "es": "An código abierto extensión del kernel bringing a platform for arbitrary kext, library, and program patching throughout the sistema for macOS.",
+    "fr": "An open source extension du noyau bringing a platform for arbitrary kext, library, and program patching throughout the système for macOS.",
+    "de": "An Open Source Kernel-Erweiterung bringing a platform for arbitrary kext, library, and program patching throughout the System for macOS.",
+    "ru": "An открытый исходный код расширение ядра bringing a platform for arbitrary kext, library, and program patching throughout the система for macOS.",
+    "en": "An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS."
   },
   "developmentStatus": "active",
   "compatibility": "excellent",
@@ -31,8 +36,16 @@
         "10.8+"
       ],
       "notes": {
-        "en": "Essential for all Hackintosh systems.",
-        "zh": "所有Hackintosh系统的基础驱动"
+        "zh-CN": "所有Hackintosh系统的基础驱动",
+        "zh-TW": "所有Hackintosh系統的基礎驅動",
+        "ja": "Essential driver for all Hackintosh systems",
+        "de": "Essential driver for all Hackintosh systems",
+        "ru": "Essential driver for all Hackintosh systems",
+        "zh-HK": "所有Hackintosh系統的基礎驅動",
+        "ko": "Essential for all Hackintosh 시스템s.",
+        "es": "Essential for all Hackintosh sistemas.",
+        "fr": "Essential for all Hackintosh systèmes.",
+        "en": "Essential for all Hackintosh systems."
       }
     }
   ],
@@ -42,9 +55,30 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Core", "zh": "核心" },
-    { "en": "Essential", "zh": "必需" },
-    { "en": "Patching", "zh": "修补" }
+    {
+      "en": "Core",
+      "zh-CN": "核心",
+      "zh-TW": "核心",
+      "ja": "コア",
+      "de": "Kern",
+      "ru": "Ядро"
+    },
+    {
+      "en": "Essential",
+      "zh-CN": "必需",
+      "zh-TW": "必需",
+      "ja": "必須",
+      "de": "Wesentlich",
+      "ru": "Необходимо"
+    },
+    {
+      "en": "Patching",
+      "zh-CN": "修补",
+      "zh-TW": "修補",
+      "ja": "パッチング",
+      "de": "Patching",
+      "ru": "Патчинг"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/Lilu",

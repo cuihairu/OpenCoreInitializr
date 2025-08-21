@@ -72,13 +72,14 @@
   "navigation": {
     "hardware": "Hardware Configuration",
     "opencore": "OpenCore Settings",
-    "kexts": "Kexts Selection",
-    "tools": "Tools & Utilities",
+    "kexts": "Kext Selection",
+    "tools": "Tools and Utilities",
     "drivers": "UEFI Drivers",
     "confirmation": "Configuration Summary",
-    "download": "Download & Package",
-    "help": "Help & Documentation",
-    "settings": "Settings"
+    "download": "Download and Package",
+    "help": "Help and Documentation",
+    "settings": "Settings",
+    "docs": "Documentation"
   },
   "hardware": {
     "title": "Hardware Configuration",
@@ -189,6 +190,21 @@
   "kexts": {
     "title": "Kexts Selection",
     "description": "Select kernel extensions for your system",
+    "search": "Search Kexts",
+    "search_placeholder": "Search kexts...",
+    "priority": "Priority",
+    "select_priority": "Select priority",
+    "all_priorities": "All priorities",
+    "essential": "Essential",
+    "recommended": "Recommended",
+    "optional": "Optional",
+    "category": "Category",
+    "all_drivers": "All Drivers",
+    "recommended_drivers": "Recommended Drivers",
+    "recent_updates": "Recent Updates",
+    "loading": "Loading...",
+    "essential_drivers": "Essential Drivers",
+    "optional_drivers": "Optional Drivers",
     "categories": {
       "essential": "Essential Kexts",
       "audio": "Audio Kexts",
@@ -210,6 +226,12 @@
       "description": "Description",
       "compatibility": "Compatibility",
       "dependencies": "Dependencies"
+    },
+    "development_status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "deprecated": "Deprecated",
+      "experimental": "Experimental"
     }
   },
   "tools": {
@@ -435,6 +457,7 @@
     "kexts_desc": "View driver version information"
   },
   "kexts": {
+    "search": "search",
     "title": "Kexts Driver Versions",
     "description": "Recommended driver version information based on your hardware configuration, including system drivers, audio drivers, network drivers, etc.",
     "categories": {
@@ -447,6 +470,13 @@
       "required": "Required",
       "recommended": "Recommended",
       "optional": "Optional"
+    },
+    "development_status": {
+      "stable": "Stable",
+      "beta": "Beta",
+      "alpha": "Alpha",
+      "experimental": "Experimental",
+      "deprecated": "Deprecated"
     },
     "compatibility": {
       "excellent": "Excellent",
@@ -476,6 +506,13 @@
     "add_to_cart": "Add to cart",
     "compatibility_info": "Compatibility Info",
     "status": "Status",
+    "hardware_support": "Hardware Support",
+    "min_os_version": "Min OS Version",
+    "select_priority": "Select Priority",
+    "category": "Category",
+    "essential_drivers": "Essential Drivers",
+    "optional_drivers": "Optional Drivers",
+    "expand": "Expand",
     "title": "Driver Support",
     "subtitle": "Find the right macOS drivers for your hardware",
     "search_placeholder": "Search driver name, description, or tags...",

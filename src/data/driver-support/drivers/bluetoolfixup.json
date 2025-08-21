@@ -1,13 +1,18 @@
 {
   "id": "BlueToolFixup",
-  "name": {
-    "en": "BlueToolFixup",
-    "zh": "BlueToolFixup"
-  },
+  "name": "BlueToolFixup",
   "category": "bluetooth",
   "description": {
-    "en": "Fixes compatibility issues with Bluetooth tools and features in macOS 12+.",
-    "zh": "修复macOS 12+中蓝牙工具和功能的兼容性问题"
+    "zh-CN": "修复macOS 12+中蓝牙工具和功能的兼容性问题",
+    "zh-TW": "修復macOS 12+中蓝牙工具和功能的相容性问题",
+    "zh-HK": "修復macOS 12+中蓝牙工具和功能的相容性问题",
+    "ja": "Fixes 互換性 issues with Bluetooth tools and features in macOS 12+.",
+    "ko": "Fixes 호환성 issues with Bluetooth tools and features in macOS 12+.",
+    "es": "Fixes compatibilidad issues with Bluetooth tools and features in macOS 12+.",
+    "fr": "Fixes compatibilité issues with Bluetooth tools and features in macOS 12+.",
+    "de": "Fixes Kompatibilität issues with Bluetooth tools and features in macOS 12+.",
+    "ru": "Fixes совместимость issues with Bluetooth tools and features in macOS 12+.",
+    "en": "Fixes compatibility issues with Bluetooth tools and features in macOS 12+."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -42,9 +47,15 @@
   "maintainer": "Acidanthera",
   "license": "GPL v2",
   "tags": [
-    { "en": "Bluetooth", "zh": "蓝牙" },
+    {
+      "en": "Bluetooth",
+      "zh-CN": "蓝牙"
+    },
     "Broadcom",
-    { "en": "Compatibility Fix", "zh": "兼容性修复" },
+    {
+      "en": "Compatibility Fix",
+      "zh-CN": "兼容性修复"
+    },
     "macOS 12+"
   ],
   "links": {

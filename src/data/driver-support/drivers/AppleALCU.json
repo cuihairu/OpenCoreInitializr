@@ -1,13 +1,18 @@
 {
   "id": "AppleALCU",
-  "name": {
-    "en": "AppleALCU",
-    "zh": "AppleALCU"
-  },
+  "name": "AppleALCU",
   "category": "audio",
   "description": {
-    "en": "A minimal version of AppleALC, supporting only digital audio output. Suitable for systems that only require digital audio.",
-    "zh": "精简版AppleALC，仅支持数字音频输出，适用于只需要数字音频的系统"
+    "zh-CN": "精简版AppleALC，仅支持数字音频输出，适用于只需要数字音频的系统",
+    "zh-TW": "精简版AppleALC，仅支援数字音频输出，适用于只需要数字音频的系統",
+    "zh-HK": "精简版AppleALC，仅支援数字音频输出，适用于只需要数字音频的系統",
+    "ja": "A minimal バージョン of AppleALC, サポートing only digital オーディオ output. Suitable for システムs that only require digital オーディオ.",
+    "ko": "A minimal 버전 of AppleALC, 지원ing only digital 오디오 output. Suitable for 시스템s that only require digital 오디오.",
+    "es": "A minimal versión of AppleALC, soporteing only digital audio output. Suitable for sistemas that only require digital audio.",
+    "fr": "A minimal version of AppleALC, supporting only digital audio output. Suitable for systèmes that only require digital audio.",
+    "de": "A minimal Version of AppleALC, Unterstützunging only digital Audio output. Suitable for Systems that only require digital Audio.",
+    "ru": "A minimal версия of AppleALC, поддержкаing only digital аудио output. Suitable for системаs that only require digital аудио.",
+    "en": "A minimal version of AppleALC, supporting only digital audio output. Suitable for systems that only require digital audio."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -43,8 +48,14 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Audio", "zh": "音频" },
-    { "en": "Digital Audio", "zh": "数字音频" },
+    {
+      "en": "Audio",
+      "zh-CN": "音频"
+    },
+    {
+      "en": "Digital Audio",
+      "zh-CN": "数字音频"
+    },
     "HDMI",
     "DisplayPort"
   ],

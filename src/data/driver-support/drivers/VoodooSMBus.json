@@ -1,13 +1,18 @@
 {
   "id": "VoodooSMBus",
-  "name": {
-    "en": "VoodooSMBus",
-    "zh": "VoodooSMBus"
-  },
+  "name": "VoodooSMBus",
   "category": "input",
   "description": {
-    "en": "SMBus trackpad driver, supports some Synaptics and ELAN trackpads.",
-    "zh": "SMBus触控板驱动，支持部分Synaptics和ELAN触控板"
+    "zh-CN": "SMBus触控板驱动，支持部分Synaptics和ELAN触控板",
+    "zh-TW": "SMBus触控板驅動程式，支援部分Synaptics和ELAN触控板",
+    "zh-HK": "SMBus触控板驅動程式，支援部分Synaptics和ELAN触控板",
+    "ja": "SMBus trackpad ドライバー, サポートs some Synaptics and ELAN trackpads.",
+    "ko": "SMBus trackpad 드라이버, 지원s some Synaptics and ELAN trackpads.",
+    "es": "SMBus trackpad controlador, soportes some Synaptics and ELAN trackpads.",
+    "fr": "SMBus trackpad pilote, supports some Synaptics and ELAN trackpads.",
+    "de": "SMBus trackpad Treiber, Unterstützungs some Synaptics and ELAN trackpads.",
+    "ru": "SMBus trackpad драйвер, поддержкаs some Synaptics and ELAN trackpads.",
+    "en": "SMBus trackpad driver, supports some Synaptics and ELAN trackpads."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -50,7 +55,10 @@
   "license": "GPL-2.0",
   "tags": [
     "SMBus",
-    { "en": "Trackpad", "zh": "触控板" },
+    {
+      "en": "Trackpad",
+      "zh-CN": "触控板"
+    },
     "Synaptics",
     "ELAN"
   ],

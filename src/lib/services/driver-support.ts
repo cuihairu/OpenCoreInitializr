@@ -8,8 +8,13 @@ import type {
   Tag,
   LocalizedText,
   DriverVersion,
-  GithubInfo
+  GithubInfo,
+  DriverPriority,
+  DriverDevelopmentStatus,
+  DriverCompatibility,
+  HardwareSupport
 } from '@/types/driver-support';
+import { i18nUtils } from '@/lib/i18n';
 
 // 导入驱动数据
 import categoriesData from '@/data/driver-support/categories.json';
@@ -19,18 +24,58 @@ const driverModules = import.meta.glob('@/data/driver-support/drivers/**/*.json'
 
 const transformToLocalizedText = (value: any, defaultValue = ''): LocalizedText => {
   if (typeof value === 'string') {
-    return { en: value, zh: value };
+    return { 
+      en: value, 
+      'zh-CN': value, 
+      'zh-TW': value, 
+      'zh-HK': value,
+      ja: value, 
+      ko: value,
+      es: value,
+      fr: value,
+      de: value, 
+      ru: value 
+    };
   }
   if (typeof value === 'object' && value !== null && value.en) {
-    return { en: value.en, zh: value.zh || value.en };
+    return { 
+      en: value.en, 
+      'zh-CN': value['zh-CN'] || value.en,
+      'zh-TW': value['zh-TW'] || value.en,
+      'zh-HK': value['zh-HK'] || value.en,
+      ja: value.ja || value.en,
+      ko: value.ko || value.en,
+      es: value.es || value.en,
+      fr: value.fr || value.en,
+      de: value.de || value.en,
+      ru: value.ru || value.en
+    };
   }
-  return { en: defaultValue, zh: defaultValue };
+  return { 
+    en: defaultValue, 
+    'zh-CN': defaultValue, 
+    'zh-TW': defaultValue, 
+    'zh-HK': defaultValue,
+    ja: defaultValue, 
+    ko: defaultValue,
+    es: defaultValue,
+    fr: defaultValue,
+    de: defaultValue, 
+    ru: defaultValue 
+  };
 };
 
-const transformDriver = (driver: any): DriverSupportInfo => {
-  const id = String(driver.id || driver.name || '').replace(/\.kext$/, '');
+const transformDriver = (driver: any, filename?: string): DriverSupportInfo => {
+  const id = String(driver.id || driver.name || filename || '').replace(/\.kext$/, '');
+  const getNameString = (name: any): string => {
+    if (typeof name === 'string') return name;
+    if (typeof name === 'object' && name !== null) {
+      return name.en || name['zh-CN'] || '';
+    }
+    return '';
+  };
   const nameStr = String(
-    typeof driver.name === 'string' ? driver.name : (driver.name?.en || driver.id || '')
+    getNameString(driver.name) || driver.id || filename || ''
   ).replace(/\.kext$/, '');
   
   const version: DriverVersion = {
@@ -66,12 +111,14 @@ const transformDriver = (driver: any): DriverSupportInfo => {
     github: github,
     notes: transformToLocalizedText(driver.notes),
     tags: driver.tags || [],
+    hardwareSupport: driver.hardwareSupport || [],
   };
 };
 
-const allDrivers: DriverSupportInfo[] = Object.values(driverModules).map((module: any) => {
+const allDrivers: DriverSupportInfo[] = Object.entries(driverModules).map(([path, module]: [string, any]) => {
   const driverData = module.default || module;
-  return transformDriver(driverData);
+  const filename = path.split('/').pop()?.replace('.json', '');
+  return transformDriver(driverData, filename);
 });
 
 // HMR-safe singleton
@@ -105,6 +152,19 @@ export class DriverSupportService {
     return DriverSupportService.instance;
   }
 
+  private getCurrentLanguage(): keyof LocalizedText {
+    if (typeof window !== 'undefined' && (window as any).i18n) {
+      const lang = (window as any).i18n?.language;
+      if (lang === 'zh-CN') return 'zh-CN';
+      if (lang === 'zh-TW') return 'zh-TW';
+      if (lang === 'ja') return 'ja';
+      if (lang === 'de') return 'de';
+      if (lang === 'ru') return 'ru';
+      if (lang?.startsWith('zh')) return 'zh-CN';
+    }
+    return 'en';
+  }
+
   /**
    * 初始化驱动数据库
    */
@@ -131,7 +191,7 @@ export class DriverSupportService {
     const tags: Tag[] = Object.entries(tagsData.tags).map(([id, tagData]) => ({
       id,
       name: (tagData as any).name || tagData,
-      description: (tagData as any).description || { en: '', zh: '' }
+      description: (tagData as any).description || { en: '', 'zh-CN': '' }
     }));
 
     return {
@@ -175,23 +235,28 @@ export class DriverSupportService {
   public searchDrivers(
     filter: DriverSearchFilter,
     page: number = 1,
-    pageSize: number = 20
+    pageSize: number = 50  // 增加默认页面大小以显示更多驱动
   ): DriverSearchResult {
     let filteredDrivers = [...this.database.drivers];
-    const currentLanguage = this.getCurrentLanguage(); // zh or en
+    const currentLanguage = this.getCurrentLanguage(); // zh-CN or en
+
+    // Use the global getText function
+    const getText = (text: LocalizedText | string): string => {
+      return i18nUtils.getText(text);
+    };
 
     // 关键词搜索
     if (filter.keyword) {
       const keyword = filter.keyword.toLowerCase();
       filteredDrivers = filteredDrivers.filter(driver => {
-        const name = (driver.name as LocalizedText)[currentLanguage] || driver.name.en;
-        const description = (driver.description as LocalizedText)[currentLanguage] || driver.description.en;
+        const name = getText(driver.name);
+        const description = getText(driver.description);
         return name.toLowerCase().includes(keyword) ||
                description.toLowerCase().includes(keyword) ||
                driver.tags.some(tagId => {
                  const tagInfo = this.database.tags.find(t => t.id === tagId);
                  if (!tagInfo) return false;
-                 const tagName = (tagInfo.name as LocalizedText)[currentLanguage] || tagInfo.name.en;
+                 const tagName = getText(tagInfo.name);
                  return tagName.toLowerCase().includes(keyword);
                });
       });
@@ -200,115 +265,78 @@ export class DriverSupportService {
     // 分类过滤
     if (filter.categories && filter.categories.length > 0) {
       filteredDrivers = filteredDrivers.filter(driver => 
-        filter.categories!.includes(driver.category)
+        driver.category && filter.categories?.includes(driver.category)
       );
     }
 
-    // 最终去重（保险，确保不会因任何环节导致重复）
-    const uniqueFilteredDrivers = filteredDrivers.filter((driver, index, self) => 
-      index === self.findIndex(d => d.id === driver.id)
-    );
+    // 优先级过滤
+    if (filter.priority && filter.priority.length > 0) {
+      filteredDrivers = filteredDrivers.filter(driver => 
+        filter.priority?.includes(driver.priority)
+      );
+    }
+
+    // 开发状态过滤
+    if (filter.developmentStatus && filter.developmentStatus.length > 0) {
+      filteredDrivers = filteredDrivers.filter(driver => 
+        filter.developmentStatus?.includes(driver.developmentStatus)
+      );
+    }
+
+    // 硬件品牌过滤
+    if (filter.hardwareBrands && filter.hardwareBrands.length > 0) {
+      filteredDrivers = filteredDrivers.filter(driver => 
+        driver.hardwareSupport?.some(support => filter.hardwareBrands?.includes(support.brand))
+      );
+    }
+
+    // macOS 版本过滤
+    if (filter.macosVersions && filter.macosVersions.length > 0) {
+      filteredDrivers = filteredDrivers.filter(driver => 
+        driver.hardwareSupport?.some(support => 
+          support.macosVersions?.some(version => filter.macosVersions?.includes(version))
+        )
+      );
+    }
+
+    // 排序
+    filteredDrivers.sort((a, b) => {
+      const priorityOrder: { [key in DriverPriority]: number } = {
+        essential: 1,
+        recommended: 2,
+        optional: 3,
+        unknown: 4
+      };
+      const priorityA = priorityOrder[a.priority] || 4;
+      const priorityB = priorityOrder[b.priority] || 4;
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+      const nameA = getText(a.name);
+      const nameB = getText(b.name);
+      return nameA.localeCompare(nameB);
+    });
 
     // 分页
-    const total = uniqueFilteredDrivers.length;
-    const totalPages = Math.ceil(total / pageSize);
-    const startIndex = (page - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    const paginatedDrivers = uniqueFilteredDrivers.slice(startIndex, endIndex);
-
-    // 统计信息
-    const stats = this.generateStats(uniqueFilteredDrivers);
+    const totalItems = filteredDrivers.length;
+    const totalPages = Math.ceil(totalItems / pageSize);
+    const paginatedDrivers = filteredDrivers.slice((page - 1) * pageSize, page * pageSize);
 
     return {
       drivers: paginatedDrivers,
-      total,
       pagination: {
         page,
         pageSize,
+        totalItems,
         totalPages
       },
-      stats
-    };
-  }
-
-  /**
-   * 生成搜索统计信息
-   */
-  private generateStats(drivers: DriverSupportInfo[]) {
-    const byCategory = {} as Record<DriverCategory, number>;
-
-    drivers.forEach(driver => {
-      // 按分类统计
-      byCategory[driver.category] = (byCategory[driver.category] || 0) + 1;
-    });
-
-    return {
-      byCategory
-    };
-  }
-
-  /**
-   * 获取推荐驱动
-   */
-  public getRecommendedDrivers(): DriverSupportInfo[] {
-    return this.database.drivers.filter(driver => 
-      driver.tags.includes('essential') || driver.tags.includes('recommended')
-    );
-  }
-
-  /**
-   * 获取最新更新的驱动
-   */
-  public getRecentlyUpdatedDrivers(limit: number = 10): DriverSupportInfo[] {
-    // This is a placeholder as we don't have date information in the new structure
-    return [...this.database.drivers].slice(0, limit);
-  }
-
-  /**
-   * 获取数据库元数据
-   */
-  public getMetadata() {
-    return this.database.metadata;
-  }
-
-  /**
-   * 根据硬件配置获取相关驱动
-   */
-  public getDriversForHardware(hardwareInfo: {
-    cpu?: string;
-    gpu?: string;
-    audio?: string;
-    network?: string;
-  }): DriverSupportInfo[] {
-    const relevantDrivers: DriverSupportInfo[] = [];
-    
-    this.database.drivers.forEach(driver => {
-      const isRelevant = driver.tags.some(tag => {
-        if (hardwareInfo.gpu && tag.toLowerCase().includes('intel') && hardwareInfo.gpu.toLowerCase().includes('intel')) {
-          return true;
-        }
-        if (hardwareInfo.gpu && tag.toLowerCase().includes('amd') && hardwareInfo.gpu.toLowerCase().includes('amd')) {
-          return true;
-        }
-        if (hardwareInfo.gpu && tag.toLowerCase().includes('nvidia') && hardwareInfo.gpu.toLowerCase().includes('nvidia')) {
-          return true;
-        }
-        return false;
-      });
-      
-      if (isRelevant || driver.tags.includes('essential')) {
-        relevantDrivers.push(driver);
+      metadata: {
+        totalDrivers: this.database.metadata.totalDrivers,
+        supportedMacOSVersions: this.database.metadata.supportedMacOSVersions,
+        dataSources: this.database.metadata.dataSources
       }
-    });
-    
-    return relevantDrivers;
-  }
-
-  private getCurrentLanguage(): 'zh' | 'en' {
-    // This is a placeholder. In a real application, you would get the current language from your i18n solution.
-    return 'zh';
+    };
   }
 }
 
-// 导出单例实例
 export const driverSupportService = DriverSupportService.getInstance();

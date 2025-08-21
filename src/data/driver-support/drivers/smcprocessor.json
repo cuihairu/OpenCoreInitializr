@@ -1,13 +1,18 @@
 {
   "id": "SMCProcessor",
-  "name": {
-    "en": "SMCProcessor",
-    "zh": "SMCProcessor"
-  },
+  "name": "SMCProcessor",
   "category": "sensors",
   "description": {
+    "zh-CN": "CPU温度和频率监控插件，VirtualSMC的组件",
+    "zh-TW": "CPU溫度和頻率監控插件，VirtualSMC的組件",
+    "zh-HK": "CPU溫度和頻率監控插件，VirtualSMC的組件",
     "en": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
-    "zh": "CPU温度和频率监控插件，VirtualSMC的组件"
+    "ja": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
+    "ko": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
+    "es": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
+    "fr": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
+    "de": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC.",
+    "ru": "CPU temperature and frequency monitoring plugin, a component of VirtualSMC."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -51,10 +56,38 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
-    { "en": "CPU Monitoring", "zh": "CPU监控" },
-    { "en": "Temperature", "zh": "温度" },
-    { "en": "Frequency", "zh": "频率" },
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器",
+      "zh-TW": "感測器",
+      "ja": "Sensors",
+      "de": "Sensors",
+      "ru": "Sensors"
+    },
+    {
+      "en": "CPU Monitoring",
+      "zh-CN": "CPU监控",
+      "zh-TW": "CPU監控",
+      "ja": "CPU Monitoring",
+      "de": "CPU Monitoring",
+      "ru": "CPU Monitoring"
+    },
+    {
+      "en": "Temperature",
+      "zh-CN": "温度",
+      "zh-TW": "溫度",
+      "ja": "Temperature",
+      "de": "Temperature",
+      "ru": "Temperature"
+    },
+    {
+      "en": "Frequency",
+      "zh-CN": "频率",
+      "zh-TW": "頻率",
+      "ja": "Frequency",
+      "de": "Frequency",
+      "ru": "Frequency"
+    },
     "Intel",
     "AMD"
   ],

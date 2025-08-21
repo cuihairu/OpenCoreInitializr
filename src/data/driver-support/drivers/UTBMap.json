@@ -1,13 +1,18 @@
 {
   "id": "UTBMap",
-  "name": {
-    "en": "UTBMap",
-    "zh": "UTBMap"
-  },
+  "name": "UTBMap",
   "category": "input",
   "description": {
+    "zh-CN": "USB端口映射配置文件，定义具体的USB端口布局",
+    "zh-TW": "USB連接埠映射配置檔案，定義具體的USB連接埠佈局",
+    "zh-HK": "USB連接埠映射配置檔案，定義具體的USB連接埠佈局",
+    "ja": "USB port mapping 設定 file, defining the specific USB port layout.",
+    "ko": "USB port mapping 구성 file, defining the specific USB port layout.",
+    "es": "USB port mapping configuración file, defining the specific USB port layout.",
+    "de": "USB port mapping Konfiguration file, defining the specific USB port layout.",
+    "ru": "USB port mapping конфигурация file, defining the specific USB port layout.",
     "en": "USB port mapping configuration file, defining the specific USB port layout.",
-    "zh": "USB端口映射配置文件，定义具体的USB端口布局"
+    "fr": "USB port mapping configuration file, defining the specific USB port layout."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -31,8 +36,16 @@
         "10.11+"
       ],
       "notes": {
+        "zh-CN": "需要为特定硬件使用USBToolBox工具生成",
+        "zh-TW": "需要为特定硬件使用USBToolBox工具生成",
+        "zh-HK": "需要为特定硬件使用USBToolBox工具生成",
+        "ja": "Needs to be generated for specific ハードウェア using the USBToolBox tool.",
+        "ko": "Needs to be generated for specific 하드웨어 using the USBToolBox tool.",
+        "fr": "Needs to be generated for specific matériel using the USBToolBox tool.",
+        "de": "Needs to be generated for specific Hardware using the USBToolBox tool.",
+        "ru": "Needs to be generated for specific аппаратное обеспечение using the USBToolBox tool.",
         "en": "Needs to be generated for specific hardware using the USBToolBox tool.",
-        "zh": "需要为特定硬件使用USBToolBox工具生成"
+        "es": "Needs to be generated for specific hardware using the USBToolBox tool."
       }
     }
   ],
@@ -44,9 +57,30 @@
   "maintainer": "USBToolBox Team",
   "license": "GPL v3",
   "tags": [
-    { "en": "USB", "zh": "USB" },
-    { "en": "Port Mapping", "zh": "端口映射" },
-    { "en": "Configuration File", "zh": "配置文件" }
+    {
+      "en": "USB",
+      "zh-CN": "USB",
+      "zh-TW": "USB",
+      "ja": "USB",
+      "de": "USB",
+      "ru": "USB"
+    },
+    {
+      "en": "Port Mapping",
+      "zh-CN": "端口映射",
+      "zh-TW": "連接埠映射",
+      "ja": "Port Mapping",
+      "de": "Port Mapping",
+      "ru": "Port Mapping"
+    },
+    {
+      "en": "Configuration File",
+      "zh-CN": "配置文件",
+      "zh-TW": "配置檔案",
+      "ja": "Configuration File",
+      "de": "Configuration File",
+      "ru": "Configuration File"
+    }
   ],
   "links": {
     "website": "https://github.com/USBToolBox/tool",

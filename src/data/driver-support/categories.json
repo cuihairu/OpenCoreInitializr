@@ -4,99 +4,171 @@
       "id": "audio",
       "name": {
         "en": "Audio",
-        "zh": "音频驱动"
+        "zh-CN": "音频驱动",
+        "zh-TW": "音訊驅動程式",
+        "ja": "オーディオドライバー",
+        "de": "Audio-Treiber",
+        "ru": "Аудио драйверы"
       },
       "description": {
         "en": "Drivers for audio devices and sound cards.",
-        "zh": "音频设备和声卡相关的驱动。"
+        "zh-CN": "音频设备和声卡相关的驱动。",
+        "zh-TW": "音訊裝置和音效卡相關的驅動程式。",
+        "ja": "オーディオデバイスとサウンドカード用のドライバー。",
+        "de": "Treiber für Audiogeräte und Soundkarten.",
+        "ru": "Драйверы для аудиоустройств и звуковых карт."
       }
     },
     {
       "id": "network",
       "name": {
         "en": "Network",
-        "zh": "网络驱动"
+        "zh-CN": "网络驱动",
+        "zh-TW": "網路驅動程式",
+        "ja": "ネットワークドライバー",
+        "de": "Netzwerk-Treiber",
+        "ru": "Сетевые драйверы"
       },
       "description": {
         "en": "Drivers for wired and wireless network adapters.",
-        "zh": "有线网络和无线网络相关的驱动。"
+        "zh-CN": "有线网络和无线网络相关的驱动。",
+        "zh-TW": "有線網路和無線網路相關的驅動程式。",
+        "ja": "有線および無線ネットワークアダプター用のドライバー。",
+        "de": "Treiber für kabelgebundene und drahtlose Netzwerkadapter.",
+        "ru": "Драйверы для проводных и беспроводных сетевых адаптеров."
       }
     },
     {
       "id": "bluetooth",
       "name": {
         "en": "Bluetooth",
-        "zh": "蓝牙驱动"
+        "zh-CN": "蓝牙驱动",
+        "zh-TW": "藍牙驅動程式",
+        "ja": "Bluetoothドライバー",
+        "de": "Bluetooth-Treiber",
+        "ru": "Bluetooth драйверы"
       },
       "description": {
         "en": "Drivers for Bluetooth devices and wireless connectivity.",
-        "zh": "蓝牙设备和无线连接相关的驱动。"
+        "zh-CN": "蓝牙设备和无线连接相关的驱动。",
+        "zh-TW": "藍牙裝置和無線連接相關的驅動程式。",
+        "ja": "Bluetoothデバイスとワイヤレス接続用のドライバー。",
+        "de": "Treiber für Bluetooth-Geräte und drahtlose Verbindungen.",
+        "ru": "Драйверы для Bluetooth устройств и беспроводного подключения."
       }
     },
     {
       "id": "usb",
       "name": {
         "en": "USB",
-        "zh": "USB驱动"
+        "zh-CN": "USB驱动",
+        "zh-TW": "USB驅動程式",
+        "ja": "USBドライバー",
+        "de": "USB-Treiber",
+        "ru": "USB драйверы"
       },
       "description": {
         "en": "Drivers for USB port mapping and controllers.",
-        "zh": "USB端口映射和控制器相关的驱动。"
+        "zh-CN": "USB端口映射和控制器相关的驱动。",
+        "zh-TW": "USB連接埠對應和控制器相關的驅動程式。",
+        "ja": "USBポートマッピングとコントローラー用のドライバー。",
+        "de": "Treiber für USB-Port-Mapping und Controller.",
+        "ru": "Драйверы для сопоставления USB-портов и контроллеров."
       }
     },
     {
       "id": "graphics",
       "name": {
         "en": "Graphics",
-        "zh": "显卡驱动"
+        "zh-CN": "显卡驱动",
+        "zh-TW": "顯示卡驅動程式",
+        "ja": "グラフィックスドライバー",
+        "de": "Grafik-Treiber",
+        "ru": "Графические драйверы"
       },
       "description": {
         "en": "Drivers for integrated and discrete graphics cards.",
-        "zh": "集成显卡和独立显卡相关的驱动。"
+        "zh-CN": "集成显卡和独立显卡相关的驱动。",
+        "zh-TW": "整合顯示卡和獨立顯示卡相關的驅動程式。",
+        "ja": "統合グラフィックスカードと専用グラフィックスカード用のドライバー。",
+        "de": "Treiber für integrierte und dedizierte Grafikkarten.",
+        "ru": "Драйверы для встроенных и дискретных видеокарт."
       }
     },
     {
       "id": "sensors",
       "name": {
         "en": "Sensors",
-        "zh": "传感器驱动"
+        "zh-CN": "传感器驱动",
+        "zh-TW": "感測器驅動程式",
+        "ja": "センサードライバー",
+        "de": "Sensor-Treiber",
+        "ru": "Драйверы датчиков"
       },
       "description": {
         "en": "Drivers for monitoring hardware sensors like temperature and fan speed.",
-        "zh": "用于监控硬件传感器（如温度、风扇转速）的驱动。"
+        "zh-CN": "用于监控硬件传感器（如温度、风扇转速）的驱动。",
+        "zh-TW": "用於監控硬體感測器（如溫度、風扇轉速）的驅動程式。",
+        "ja": "温度やファン速度などのハードウェアセンサーを監視するためのドライバー。",
+        "de": "Treiber zur Überwachung von Hardware-Sensoren wie Temperatur und Lüftergeschwindigkeit.",
+        "ru": "Драйверы для мониторинга аппаратных датчиков, таких как температура и скорость вентилятора."
       }
     },
     {
       "id": "input-devices",
       "name": {
         "en": "Input Devices",
-        "zh": "输入设备驱动"
+        "zh-CN": "输入设备驱动",
+        "zh-TW": "輸入裝置驅動程式",
+        "ja": "入力デバイスドライバー",
+        "de": "Eingabegeräte-Treiber",
+        "ru": "Драйверы устройств ввода"
       },
       "description": {
         "en": "Drivers for keyboards, trackpads, and other input devices.",
-        "zh": "键盘、触控板等输入设备相关的驱动。"
+        "zh-CN": "键盘、触控板等输入设备相关的驱动。",
+        "zh-TW": "鍵盤、觸控板等輸入裝置相關的驅動程式。",
+        "ja": "キーボード、トラックパッドなどの入力デバイス用のドライバー。",
+        "de": "Treiber für Tastaturen, Trackpads und andere Eingabegeräte.",
+        "ru": "Драйверы для клавиатур, трекпадов и других устройств ввода."
       }
     },
     {
       "id": "system",
       "name": {
         "en": "System",
-        "zh": "系统驱动"
+        "zh-CN": "系统驱动",
+        "zh-TW": "系統驅動程式",
+        "ja": "システムドライバー",
+        "de": "System-Treiber",
+        "ru": "Системные драйверы"
       },
       "description": {
         "en": "Essential drivers for system stability and core functionality.",
-        "zh": "维持系统稳定和核心功能所必需的驱动。"
+        "zh-CN": "维持系统稳定和核心功能所必需的驱动。",
+        "zh-TW": "維持系統穩定和核心功能所必需的驅動程式。",
+        "ja": "システムの安定性とコア機能に不可欠なドライバー。",
+        "de": "Wesentliche Treiber für Systemstabilität und Kernfunktionalität.",
+        "ru": "Основные драйверы для стабильности системы и базовой функциональности."
       }
     },
     {
       "id": "features",
       "name": {
         "en": "macOS Features",
-        "zh": "macOS特性"
+        "zh-CN": "macOS特性",
+        "zh-TW": "macOS特性",
+        "ja": "macOS機能",
+        "de": "macOS-Funktionen",
+        "ru": "Функции macOS"
       },
       "description": {
         "en": "Drivers that enable or enhance specific macOS features.",
-        "zh": "启用或增强特定macOS功能的驱动。"
+        "zh-CN": "启用或增强特定macOS功能的驱动。",
+        "zh-TW": "啟用或增強特定macOS功能的驅動程式。",
+        "ja": "特定のmacOS機能を有効化または強化するドライバー。",
+        "de": "Treiber, die spezifische macOS-Funktionen aktivieren oder verbessern.",
+        "ru": "Драйверы, которые включают или улучшают определенные функции macOS."
       }
     }
   ]

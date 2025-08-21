@@ -1,13 +1,18 @@
 {
   "id": "AtherosE2200Ethernet",
-  "name": {
-    "en": "AtherosE2200Ethernet",
-    "zh": "AtherosE2200Ethernet"
-  },
+  "name": "AtherosE2200Ethernet",
   "category": "network",
   "description": {
-    "en": "Atheros/Killer Ethernet driver.",
-    "zh": "Atheros/Killer以太网驱动"
+    "zh-CN": "Atheros/Killer以太网驱动",
+    "zh-TW": "Atheros/Killer以太网驅動程式",
+    "zh-HK": "Atheros/Killer以太网驅動程式",
+    "ja": "Atheros/Killer Ethernet ドライバー.",
+    "ko": "Atheros/Killer Ethernet 드라이버.",
+    "es": "Atheros/Killer Ethernet controlador.",
+    "fr": "Atheros/Killer Ethernet pilote.",
+    "de": "Atheros/Killer Ethernet Treiber.",
+    "ru": "Atheros/Killer Ethernet драйвер.",
+    "en": "Atheros/Killer Ethernet driver."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -49,8 +54,14 @@
   "maintainer": "Mieze",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Network", "zh": "网络" },
-    { "en": "Ethernet", "zh": "以太网" },
+    {
+      "en": "Network",
+      "zh-CN": "网络"
+    },
+    {
+      "en": "Ethernet",
+      "zh-CN": "以太网"
+    },
     "Atheros",
     "Killer"
   ],

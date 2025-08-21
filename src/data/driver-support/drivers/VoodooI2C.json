@@ -1,13 +1,18 @@
 {
   "id": "VoodooI2C",
-  "name": {
-    "en": "VoodooI2C",
-    "zh": "VoodooI2C"
-  },
+  "name": "VoodooI2C",
   "category": "input",
   "description": {
-    "en": "I2C trackpad and touchscreen driver, supports precision trackpads on modern laptops.",
-    "zh": "I2C触控板和触摸屏驱动，支持现代笔记本的精密触控板"
+    "zh-CN": "I2C触控板和触摸屏驱动，支持现代笔记本的精密触控板",
+    "zh-TW": "I2C触控板和触摸屏驅動程式，支援现代笔记本的精密触控板",
+    "zh-HK": "I2C触控板和触摸屏驅動程式，支援现代笔记本的精密触控板",
+    "ja": "I2C trackpad and touchscreen ドライバー, サポートs precision trackpads on modern laptops.",
+    "ko": "I2C trackpad and touchscreen 드라이버, 지원s precision trackpads on modern laptops.",
+    "es": "I2C trackpad and touchscreen controlador, soportes precision trackpads on modern laptops.",
+    "fr": "I2C trackpad and touchscreen pilote, supports precision trackpads on modern laptops.",
+    "de": "I2C trackpad and touchscreen Treiber, Unterstützungs precision trackpads on modern laptops.",
+    "ru": "I2C trackpad and touchscreen драйвер, поддержкаs precision trackpads on modern laptops.",
+    "en": "I2C trackpad and touchscreen driver, supports precision trackpads on modern laptops."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -46,9 +51,18 @@
   "license": "GPL-2.0",
   "tags": [
     "I2C",
-    { "en": "Trackpad", "zh": "触控板" },
-    { "en": "Touchscreen", "zh": "触摸屏" },
-    { "en": "Multi-touch", "zh": "多点触控" }
+    {
+      "en": "Trackpad",
+      "zh-CN": "触控板"
+    },
+    {
+      "en": "Touchscreen",
+      "zh-CN": "触摸屏"
+    },
+    {
+      "en": "Multi-touch",
+      "zh-CN": "多点触控"
+    }
   ],
   "links": {
     "website": "https://github.com/VoodooI2C/VoodooI2C",

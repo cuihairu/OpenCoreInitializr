@@ -1,13 +1,18 @@
 {
   "id": "RestrictEvents",
-  "name": {
-    "en": "RestrictEvents",
-    "zh": "RestrictEvents"
-  },
+  "name": "RestrictEvents",
   "category": "system",
   "description": {
-    "en": "Prevents certain processes and events to improve system stability.",
-    "zh": "阻止某些进程和事件，提高系统稳定性"
+    "zh-CN": "阻止某些进程和事件，提高系统稳定性",
+    "zh-TW": "阻止某些进程和事件，提高系統稳定性",
+    "zh-HK": "阻止某些进程和事件，提高系統稳定性",
+    "ja": "Prevents certain processes and events to improve システム stability.",
+    "ko": "Prevents certain processes and events to improve 시스템 stability.",
+    "es": "Prevents certain processes and events to improve sistema stability.",
+    "fr": "Prevents certain processes and events to improve système stability.",
+    "de": "Prevents certain processes and events to improve System stability.",
+    "ru": "Prevents certain processes and events to improve система stability.",
+    "en": "Prevents certain processes and events to improve system stability."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -39,9 +44,18 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "System Stability", "zh": "系统稳定性" },
-    { "en": "Event Filtering", "zh": "事件过滤" },
-    { "en": "Process Management", "zh": "进程管理" }
+    {
+      "en": "System Stability",
+      "zh-CN": "系统稳定性"
+    },
+    {
+      "en": "Event Filtering",
+      "zh-CN": "事件过滤"
+    },
+    {
+      "en": "Process Management",
+      "zh-CN": "进程管理"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/RestrictEvents",

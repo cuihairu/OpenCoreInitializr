@@ -1,13 +1,18 @@
 {
   "id": "SMCAMDProcessor",
-  "name": {
-    "en": "SMCAMDProcessor",
-    "zh": "SMCAMDProcessor"
-  },
+  "name": "SMCAMDProcessor",
   "category": "sensors",
   "description": {
-    "en": "AMD processor temperature monitoring driver, supports Ryzen series.",
-    "zh": "AMD处理器温度监控驱动，支持Ryzen系列"
+    "zh-CN": "AMD处理器温度监控驱动，支持Ryzen系列",
+    "zh-TW": "AMD處理器温度監控驅動程式，支援Ryzen系列",
+    "zh-HK": "AMD處理器温度監控驅動程式，支援Ryzen系列",
+    "ja": "AMD プロセッサー temperature monitoring ドライバー, サポートs Ryzen series.",
+    "ko": "AMD 프로세서 temperature monitoring 드라이버, 지원s Ryzen series.",
+    "es": "AMD procesador temperature monitoring controlador, soportes Ryzen series.",
+    "fr": "AMD processeur temperature monitoring pilote, supports Ryzen series.",
+    "de": "AMD Prozessor temperature monitoring Treiber, Unterstützungs Ryzen series.",
+    "ru": "AMD процессор temperature monitoring драйвер, поддержкаs Ryzen series.",
+    "en": "AMD processor temperature monitoring driver, supports Ryzen series."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -44,10 +49,16 @@
   "maintainer": "trulyspinach",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器"
+    },
     "AMD",
     "CPU",
-    { "en": "Temperature", "zh": "温度" },
+    {
+      "en": "Temperature",
+      "zh-CN": "温度"
+    },
     "Ryzen"
   ],
   "links": {

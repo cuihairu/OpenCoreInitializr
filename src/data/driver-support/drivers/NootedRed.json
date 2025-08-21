@@ -1,13 +1,18 @@
 {
   "id": "NootedRed",
-  "name": {
-    "en": "NootedRed",
-    "zh": "NootedRed"
-  },
+  "name": "NootedRed",
   "category": "graphics",
   "description": {
-    "en": "AMD Vega integrated graphics driver, supports integrated graphics in Ryzen APUs.",
-    "zh": "AMD Vega集成显卡驱动，支持Ryzen APU的集成显卡"
+    "zh-CN": "AMD Vega集成显卡驱动，支持Ryzen APU的集成显卡",
+    "zh-TW": "AMD Vega集成顯卡驅動，支持Ryzen APU的集成顯卡",
+    "zh-HK": "AMD Vega集成顯卡驅動，支持Ryzen APU的集成顯卡",
+    "ja": "AMD Vega integrated グラフィックス ドライバー, サポートs integrated グラフィックス in Ryzen APUs.",
+    "ko": "AMD Vega integrated 그래픽 드라이버, 지원s integrated 그래픽 in Ryzen APUs.",
+    "es": "AMD Vega integrated gráficos controlador, soportes integrated gráficos in Ryzen APUs.",
+    "fr": "AMD Vega integrated graphiques pilote, supports integrated graphiques in Ryzen APUs.",
+    "de": "AMD Vega integrated Grafik Treiber, Unterstützungs integrated Grafik in Ryzen APUs.",
+    "ru": "AMD Vega integrated графика драйвер, поддержкаs integrated графика in Ryzen APUs.",
+    "en": "AMD Vega integrated graphics driver, supports integrated graphics in Ryzen APUs."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -43,10 +48,24 @@
   "maintainer": "ChefKissInc",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Graphics", "zh": "显卡" },
+    {
+      "en": "Graphics",
+      "zh-CN": "显卡",
+      "zh-TW": "顯卡",
+      "ja": "Graphics",
+      "de": "Graphics",
+      "ru": "Graphics"
+    },
     "AMD",
     "Vega",
-    { "en": "Integrated Graphics", "zh": "集成显卡" },
+    {
+      "en": "Integrated Graphics",
+      "zh-CN": "集成显卡",
+      "zh-TW": "集成顯卡",
+      "ja": "Integrated Graphics",
+      "de": "Integrated Graphics",
+      "ru": "Integrated Graphics"
+    },
     "APU"
   ],
   "links": {

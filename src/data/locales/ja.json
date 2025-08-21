@@ -72,6 +72,25 @@
     "confirmation": "設定概要",
     "download": "ダウンロードとパッケージ",
     "help": "ヘルプとドキュメント",
-    "settings": "設定"
+    "settings": "設定",
+    "docs": "ドキュメント"
+  },
+  "kexts": {
+    "title": "Kext選択",
+    "search": "Kextsを検索",
+    "search_placeholder": "Kextsを検索...",
+    "priority": "優先度",
+    "select_priority": "優先度を選択",
+    "all_priorities": "すべての優先度",
+    "essential": "必須",
+    "recommended": "推奨",
+    "optional": "オプション",
+    "category": "カテゴリ",
+    "all_drivers": "すべてのドライバ",
+    "recommended_drivers": "推奨ドライバ",
+    "recent_updates": "最近の更新",
+    "loading": "読み込み中...",
+    "essential_drivers": "必須ドライバ",
+    "optional_drivers": "オプションドライバ"
   }
 }

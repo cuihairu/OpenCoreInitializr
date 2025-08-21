@@ -1,13 +1,18 @@
 {
   "id": "USBToolBox",
-  "name": {
-    "en": "USBToolBox",
-    "zh": "USBToolBox"
-  },
+  "name": "USBToolBox",
   "category": "input",
   "description": {
-    "en": "Runtime driver for USB port mapping tool, used with UTBMap.",
-    "zh": "USB端口映射工具的运行时驱动，配合UTBMap使用"
+    "zh-CN": "USB端口映射工具的运行时驱动，配合UTBMap使用",
+    "zh-TW": "USB連接埠映射工具的运行时驅動程式，配合UTBMap使用",
+    "zh-HK": "USB連接埠映射工具的运行时驅動程式，配合UTBMap使用",
+    "ja": "Runtime ドライバー for USB port mapping tool, used with UTBMap.",
+    "ko": "Runtime 드라이버 for USB port mapping tool, used with UTBMap.",
+    "es": "Runtime controlador for USB port mapping tool, used with UTBMap.",
+    "fr": "Runtime pilote for USB port mapping tool, used with UTBMap.",
+    "de": "Runtime Treiber for USB port mapping tool, used with UTBMap.",
+    "ru": "Runtime драйвер for USB port mapping tool, used with UTBMap.",
+    "en": "Runtime driver for USB port mapping tool, used with UTBMap."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -40,8 +45,14 @@
   "license": "GPL v3",
   "tags": [
     "USB",
-    { "en": "Port Mapping", "zh": "端口映射" },
-    { "en": "Input Devices", "zh": "输入设备" }
+    {
+      "en": "Port Mapping",
+      "zh-CN": "端口映射"
+    },
+    {
+      "en": "Input Devices",
+      "zh-CN": "输入设备"
+    }
   ],
   "links": {
     "website": "https://github.com/USBToolBox/kext",

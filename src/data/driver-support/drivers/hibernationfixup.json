@@ -1,13 +1,18 @@
 {
   "id": "HibernationFixup",
-  "name": {
-    "en": "HibernationFixup",
-    "zh": "HibernationFixup"
-  },
+  "name": "HibernationFixup",
   "category": "features",
   "description": {
+    "zh-CN": "修复休眠功能，支持原生的macOS休眠",
+    "zh-TW": "修復休眠功能，支持原生的macOS休眠",
+    "zh-HK": "修復休眠功能，支持原生的macOS休眠",
     "en": "Fixes hibernation issues, enabling native macOS hibernation.",
-    "zh": "修复休眠功能，支持原生的macOS休眠"
+    "ja": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "ko": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "es": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "fr": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "de": "Fixes hibernation issues, enabling native macOS hibernation.",
+    "ru": "Fixes hibernation issues, enabling native macOS hibernation."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -31,8 +36,16 @@
         "10.10+"
       ],
       "notes": {
+        "zh-CN": "需要正确配置NVRAM和电源管理",
+        "zh-TW": "需要正確配置NVRAM和電源管理",
+        "zh-HK": "需要正確配置NVRAM和電源管理",
+        "ja": "Requires correct NVRAM and power management 設定.",
+        "ko": "Requires correct NVRAM and power management 구성.",
+        "es": "Requires correct NVRAM and power management configuración.",
+        "de": "Requires correct NVRAM and power management Konfiguration.",
+        "ru": "Requires correct NVRAM and power management конфигурация.",
         "en": "Requires correct NVRAM and power management configuration.",
-        "zh": "需要正确配置NVRAM和电源管理"
+        "fr": "Requires correct NVRAM and power management configuration."
       }
     }
   ],
@@ -44,9 +57,30 @@
   "maintainer": "Acidanthera",
   "license": "BSD 3-Clause",
   "tags": [
-    { "en": "Hibernation", "zh": "休眠" },
-    { "en": "Sleep", "zh": "睡眠" },
-    { "en": "Power Management", "zh": "电源管理" }
+    {
+      "en": "Hibernation",
+      "zh-CN": "休眠",
+      "zh-TW": "休眠",
+      "ja": "Hibernation",
+      "de": "Hibernation",
+      "ru": "Hibernation"
+    },
+    {
+      "en": "Sleep",
+      "zh-CN": "睡眠",
+      "zh-TW": "睡眠",
+      "ja": "Sleep",
+      "de": "Sleep",
+      "ru": "Sleep"
+    },
+    {
+      "en": "Power Management",
+      "zh-CN": "电源管理",
+      "zh-TW": "電源管理",
+      "ja": "Power Management",
+      "de": "Power Management",
+      "ru": "Power Management"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/HibernationFixup",

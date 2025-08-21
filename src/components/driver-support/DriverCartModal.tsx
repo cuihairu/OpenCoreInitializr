@@ -1,14 +1,11 @@
-/**
- * 驱动下载清单弹窗组件
- */
 import React from 'react';
 import { X, Download, Trash2, Play, Pause, CheckCircle, AlertCircle, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/Progress';
+import { Card, CardContent } from '@/components/ui/card';
 import { useDriverCart, type CartDriverItem, type DownloadStatus } from '@/lib/store/driver-cart';
 import { driverDownloadService } from '@/lib/services/driver-download';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface DriverCartModalProps {
   isOpen: boolean;
@@ -16,13 +13,13 @@ interface DriverCartModalProps {
 }
 
 const DriverCartModal: React.FC<DriverCartModalProps> = ({ isOpen, onClose }) => {
+  const { getText } = useTranslation();
   const {
     items,
     removeDriver,
     clearCart,
     startDownload,
     pauseDownload,
-    resumeDownload,
     startBatchDownload,
     isDownloading,
     getCartCount,
@@ -217,7 +214,7 @@ const DriverCartModal: React.FC<DriverCartModalProps> = ({ isOpen, onClose }) =>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="font-medium text-lg">{item.driver.name}</h3>
+                          <h3 className="font-medium text-lg">{getText(item.driver.name)}</h3>
                           <Badge variant="outline" className="text-xs">
                             {item.driver.category}
                           </Badge>
@@ -229,7 +226,7 @@ const DriverCartModal: React.FC<DriverCartModalProps> = ({ isOpen, onClose }) =>
                           </Badge>
                         </div>
                         
-                        <p className="text-sm text-gray-600 mb-2">{item.driver.description}</p>
+                        <p className="text-sm text-gray-600 mb-2">{getText(item.driver.description)}</p>
                         
                         <div className="flex items-center gap-4 text-xs text-gray-500">
                           <span>版本: {item.driver.version.version}</span>

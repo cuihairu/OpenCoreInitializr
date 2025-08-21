@@ -1,13 +1,18 @@
 {
   "id": "SMCSuperIO",
-  "name": {
-    "en": "SMCSuperIO",
-    "zh": "SMCSuperIO"
-  },
+  "name": "SMCSuperIO",
   "category": "sensors",
   "description": {
+    "zh-CN": "主板传感器监控插件，VirtualSMC的组件",
+    "zh-TW": "主板感測器監控插件，VirtualSMC的组件",
+    "zh-HK": "主板感測器監控插件，VirtualSMC的组件",
     "en": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
-    "zh": "主板传感器监控插件，VirtualSMC的组件"
+    "ja": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
+    "ko": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
+    "es": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
+    "fr": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
+    "de": "Motherboard sensor monitoring plugin, a component of VirtualSMC.",
+    "ru": "Motherboard sensor monitoring plugin, a component of VirtualSMC."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -41,9 +46,18 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
-    { "en": "Motherboard Monitoring", "zh": "主板监控" },
-    { "en": "Fan Control", "zh": "风扇控制" },
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器"
+    },
+    {
+      "en": "Motherboard Monitoring",
+      "zh-CN": "主板监控"
+    },
+    {
+      "en": "Fan Control",
+      "zh-CN": "风扇控制"
+    },
     "SuperIO"
   ],
   "links": {

@@ -1,21 +1,14 @@
 import { useEffect, useState } from 'react';
 import { driverSupportService } from '@/lib/services/driver-support';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { DriverCategoryInfo, DriverSupportInfo, LocalizedText } from '@/types/driver-support';
+import { DriverCategoryInfo, DriverSupportInfo } from '@/types/driver-support';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export function KextsVersionInfo() {
   const [categories, setCategories] = useState<DriverCategoryInfo[]>([]);
   const [kexts, setKexts] = useState<DriverSupportInfo[]>([]);
-  const { t, i18n } = useTranslation();
-
-  const getText = (text: LocalizedText | string | undefined): string => {
-    if (!text) return '';
-    if (typeof text === 'string') return text;
-    const lang = i18n.language as keyof LocalizedText;
-    return text[lang] || text.en;
-  };
+  const { t, i18n, getText } = useTranslation();
 
   useEffect(() => {
     const fetchDriverData = async () => {
@@ -41,22 +34,22 @@ export function KextsVersionInfo() {
         <CardDescription>{t('Kexts.description')}</CardDescription>
       </CardHeader>
       <CardContent>
-        <Accordion type="multiple" className="w-full" defaultValue={categories.map(c => c.id)}>
+        <div className="w-full space-y-4">
           {categories.map((category) => {
             const categoryKexts = getKextsForCategory(category.id);
             if (categoryKexts.length === 0) {
               return null;
             }
             return (
-              <AccordionItem value={category.id} key={category.id}>
-                <AccordionTrigger>
+              <Collapsible key={category.id} open={true}>
+                <CollapsibleTrigger className="flex w-full items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180">
                   <div className="flex items-center gap-2">
                     {category.icon && <img src={category.icon} alt="" className="w-6 h-6" />}
                     <span className="font-bold">{getText(category.name)}</span>
                     <span className="text-sm text-gray-500">({categoryKexts.length})</span>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
                   <p className="mb-4">{getText(category.description)}</p>
                   <ul className="space-y-2">
                     {categoryKexts.map((kext) => (
@@ -67,11 +60,11 @@ export function KextsVersionInfo() {
                       </li>
                     ))}
                   </ul>
-                </AccordionContent>
-              </AccordionItem>
+                </CollapsibleContent>
+              </Collapsible>
             );
           })}
-        </Accordion>
+        </div>
       </CardContent>
     </Card>
   );

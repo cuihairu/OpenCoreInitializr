@@ -1,13 +1,18 @@
 {
   "id": "WhateverGreen",
-  "name": {
-    "en": "WhateverGreen",
-    "zh": "WhateverGreen"
-  },
+  "name": "WhateverGreen",
   "category": "graphics",
   "description": {
-    "en": "Universal graphics driver, supports various fixes for Intel integrated graphics, AMD and NVIDIA discrete graphics cards.",
-    "zh": "通用显卡驱动，支持Intel集成显卡、AMD和NVIDIA独立显卡的各种修复"
+    "zh-CN": "通用显卡驱动，支持Intel集成显卡、AMD和NVIDIA独立显卡的各种修复",
+    "zh-TW": "通用顯卡驅動，支持Intel集成顯卡、AMD和NVIDIA獨立顯卡的各種修復",
+    "zh-HK": "通用顯卡驅動，支持Intel集成顯卡、AMD和NVIDIA獨立顯卡的各種修復",
+    "en": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "ja": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "ko": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "es": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "fr": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "de": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer.",
+    "ru": "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.5.6 or newer."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -55,11 +60,25 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Graphics", "zh": "显卡" },
+    {
+      "en": "Graphics",
+      "zh-CN": "显卡",
+      "zh-TW": "顯卡",
+      "ja": "グラフィックス",
+      "de": "Grafik",
+      "ru": "Графика"
+    },
     "Intel",
     "AMD",
     "NVIDIA",
-    { "en": "DRM", "zh": "DRM" }
+    {
+      "en": "DRM",
+      "zh-CN": "DRM",
+      "zh-TW": "DRM",
+      "ja": "DRM",
+      "de": "DRM",
+      "ru": "DRM"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/WhateverGreen",

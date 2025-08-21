@@ -1,13 +1,18 @@
 {
   "id": "xhci-unsupported",
-  "name": {
-    "en": "XHCI-unsupported",
-    "zh": "XHCI-unsupported"
-  },
+  "name": "XHCI-unsupported",
   "category": "input",
   "description": {
-    "en": "Provides driver support for unsupported USB 3.0 controllers.",
-    "zh": "为不受支持的USB 3.0控制器提供驱动支持"
+    "zh-CN": "为不受支持的USB 3.0控制器提供驱动支持",
+    "zh-TW": "为不受支援的USB 3.0控制器提供驅動程式支援",
+    "zh-HK": "为不受支援的USB 3.0控制器提供驅動程式支援",
+    "ja": "Provides ドライバー サポート for unサポートed USB 3.0 controllers.",
+    "ko": "Provides 드라이버 지원 for un지원ed USB 3.0 controllers.",
+    "es": "Provides controlador soporte for unsoporteed USB 3.0 controllers.",
+    "fr": "Provides pilote support for unsupported USB 3.0 controllers.",
+    "de": "Provides Treiber Unterstützung for unUnterstützunged USB 3.0 controllers.",
+    "ru": "Provides драйвер поддержка for unподдержкаed USB 3.0 controllers.",
+    "en": "Provides driver support for unsupported USB 3.0 controllers."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -41,7 +46,10 @@
   "tags": [
     "USB 3.0",
     "XHCI",
-    { "en": "Compatibility", "zh": "兼容性" }
+    {
+      "en": "Compatibility",
+      "zh-CN": "兼容性"
+    }
   ],
   "links": {
     "website": "https://github.com/RehabMan/OS-X-USB-Inject-All",

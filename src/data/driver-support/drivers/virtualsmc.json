@@ -1,13 +1,18 @@
 {
   "id": "VirtualSMC",
-  "name": {
-    "en": "VirtualSMC",
-    "zh": "VirtualSMC"
-  },
+  "name": "VirtualSMC",
   "category": "essential",
   "description": {
-    "en": "Emulates the System Management Controller (SMC) for hardware monitoring and system stability.",
-    "zh": "系统管理控制器模拟，提供硬件监控和系统稳定性"
+    "zh-CN": "系统管理控制器模拟，提供硬件监控和系统稳定性",
+    "zh-TW": "系統管理控制器模擬，提供硬體監控和系統穩定性",
+    "zh-HK": "系統管理控制器模擬，提供硬體監控和系統穩定性",
+    "ja": "Emulates the システム Management Controller (SMC) for ハードウェア monitoring and システム stability.",
+    "ko": "Emulates the 시스템 Management Controller (SMC) for 하드웨어 monitoring and 시스템 stability.",
+    "es": "Emulates the sistema Management Controller (SMC) for hardware monitoring and sistema stability.",
+    "fr": "Emulates the système Management Controller (SMC) for matériel monitoring and système stability.",
+    "de": "Emulates the System Management Controller (SMC) for Hardware monitoring and System stability.",
+    "ru": "Emulates the система Management Controller (SMC) for аппаратное обеспечение monitoring and система stability.",
+    "en": "Emulates the System Management Controller (SMC) for hardware monitoring and system stability."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -31,8 +36,16 @@
         "10.6+"
       ],
       "notes": {
+        "zh-CN": "替代FakeSMC的现代化SMC实现",
+        "zh-TW": "替代FakeSMC的現代化SMC實現",
+        "ja": "Modern SMC implementation replacing FakeSMC",
+        "de": "Modern SMC implementation replacing FakeSMC",
+        "ru": "Modern SMC implementation replacing FakeSMC",
+        "zh-HK": "替代FakeSMC的現代化SMC實現",
         "en": "A modern SMC implementation that replaces FakeSMC.",
-        "zh": "替代FakeSMC的现代化SMC实现"
+        "ko": "A modern SMC implementation that replaces FakeSMC.",
+        "es": "A modern SMC implementation that replaces FakeSMC.",
+        "fr": "A modern SMC implementation that replaces FakeSMC."
       }
     }
   ],
@@ -44,9 +57,30 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "SMC", "zh": "SMC" },
-    { "en": "Essential", "zh": "必需" },
-    { "en": "Hardware Monitoring", "zh": "硬件监控" }
+    {
+      "en": "SMC",
+      "zh-CN": "SMC",
+      "zh-TW": "SMC",
+      "ja": "SMC",
+      "de": "SMC",
+      "ru": "SMC"
+    },
+    {
+      "en": "Essential",
+      "zh-CN": "必需",
+      "zh-TW": "必需",
+      "ja": "必須",
+      "de": "Wesentlich",
+      "ru": "Необходимо"
+    },
+    {
+      "en": "Hardware Monitoring",
+      "zh-CN": "硬件监控",
+      "zh-TW": "硬體監控",
+      "ja": "ハードウェア監視",
+      "de": "Hardware-Überwachung",
+      "ru": "Мониторинг оборудования"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/VirtualSMC",

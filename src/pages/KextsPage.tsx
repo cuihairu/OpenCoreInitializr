@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { AlertTriangle, Info } from 'lucide-react';
-import KextsVersionInfo from '../components/KextsVersionInfo';
+import { KextsVersionInfo } from '../components/KextsVersionInfo';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
 const KextsPage: React.FC = () => {

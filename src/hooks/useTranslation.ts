@@ -17,6 +17,7 @@ export const useTranslation = () => {
     formatDate: i18nUtils.formatDate,
     getTextDirection: i18nUtils.getTextDirection,
     exists: i18nUtils.exists,
+    getText: i18nUtils.getText,
   };
 };
 

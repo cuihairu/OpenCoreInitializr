@@ -1,6 +1,7 @@
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
-import type { DriverSupportInfo } from '@/types/driver-support';
+import { i18nUtils } from '@/lib/i18n';
+import type { DriverSupportInfo, LocalizedText } from '@/types/driver-support';
 
 export interface DownloadProgress {
   driverId: string;
@@ -10,8 +11,15 @@ export interface DownloadProgress {
 }
 
 export class DriverDownloadService {
-  private downloadQueue: Map<string, AbortController> = new Map();
-  private progressCallbacks: Map<string, (progress: DownloadProgress) => void> = new Map();
+  private downloadQueue = new Map<string, AbortController>();
+  private progressCallbacks = new Map<string, (progress: DownloadProgress) => void>();
+
+  /**
+   * Get localized text
+   */
+  private getText(text: LocalizedText | string | undefined): string {
+    return i18nUtils.getText(text);
+  }
 
   /**
    * 下载单个驱动
@@ -48,10 +56,10 @@ export class DriverDownloadService {
       // 生成并下载单个驱动文件
       const zip = new JSZip();
       const driverContent = await this.getDriverContent(driver);
-      const folderName = `${driver.name.replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
+      const folderName = `${this.getText(driver.name).replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
       
       zip.folder(folderName)?.file('README.md', this.generateDriverReadme(driver));
-      zip.folder(folderName)?.file(`${driver.name}.kext`, driverContent);
+      zip.folder(folderName)?.file(`${this.getText(driver.name)}.kext`, driverContent);
       
       // 生成并下载ZIP文件
       const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -119,9 +127,9 @@ export class DriverDownloadService {
           const driverContent = await this.getDriverContent(driver);
           
           // 添加到ZIP文件
-          const folderName = `${driver.name.replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
+          const folderName = `${this.getText(driver.name).replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
           zip.folder(folderName)?.file('README.md', this.generateDriverReadme(driver));
-          zip.folder(folderName)?.file(`${driver.name}.kext`, driverContent);
+          zip.folder(folderName)?.file(`${this.getText(driver.name)}.kext`, driverContent);
           
           completedDrivers++;
           
@@ -252,9 +260,7 @@ ${driver.priority}
 ${driver.tags.join(', ')}
 
 ## 链接
-${driver.links?.github ? `- GitHub: ${driver.links.github}` : ''}
-${driver.links?.website ? `- 官网: ${driver.links.website}` : ''}
-${driver.links?.download ? `- 下载: ${driver.links.download}` : ''}
+- 更多信息请访问 OpenCore 官方文档
 
 ## 注意事项
 请确保您的系统满足此驱动的兼容性要求。

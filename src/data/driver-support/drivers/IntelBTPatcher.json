@@ -1,13 +1,18 @@
 {
   "id": "IntelBTPatcher",
-  "name": {
-    "en": "IntelBTPatcher",
-    "zh": "Intel蓝牙补丁"
-  },
+  "name": "IntelBTPatcher",
   "category": "bluetooth",
   "description": {
-    "en": "Patching driver for Intel Bluetooth devices, works with IntelBluetoothFirmware.",
-    "zh": "Intel蓝牙设备的补丁驱动，配合IntelBluetoothFirmware使用"
+    "zh-CN": "Intel蓝牙设备的补丁驱动，配合IntelBluetoothFirmware使用",
+    "zh-TW": "Intel蓝牙设备的补丁驅動程式，配合IntelBluetoothFirmware使用",
+    "zh-HK": "Intel蓝牙设备的补丁驅動程式，配合IntelBluetoothFirmware使用",
+    "ja": "Patching ドライバー for Intel Bluetooth デバイスs, works with IntelBluetoothFirmware.",
+    "ko": "Patching 드라이버 for Intel Bluetooth 장치s, works with IntelBluetoothFirmware.",
+    "es": "Patching controlador for Intel Bluetooth dispositivos, works with IntelBluetoothFirmware.",
+    "fr": "Patching pilote for Intel Bluetooth appareils, works with IntelBluetoothFirmware.",
+    "de": "Patching Treiber for Intel Bluetooth Geräts, works with IntelBluetoothFirmware.",
+    "ru": "Patching драйвер for Intel Bluetooth устройствоs, works with IntelBluetoothFirmware.",
+    "en": "Patching driver for Intel Bluetooth devices, works with IntelBluetoothFirmware."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -48,10 +53,19 @@
   "maintainer": "OpenIntelWireless",
   "license": "GPL v2",
   "tags": [
-    { "en": "Bluetooth", "zh": "蓝牙" },
+    {
+      "en": "Bluetooth",
+      "zh-CN": "蓝牙"
+    },
     "Intel",
-    { "en": "Patch", "zh": "补丁" },
-    { "en": "Wireless", "zh": "无线" }
+    {
+      "en": "Patch",
+      "zh-CN": "补丁"
+    },
+    {
+      "en": "Wireless",
+      "zh-CN": "无线"
+    }
   ],
   "links": {
     "website": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware",

@@ -1,13 +1,18 @@
 {
   "id": "VoodooPS2Controller",
-  "name": {
-    "en": "VoodooPS2Controller",
-    "zh": "VoodooPS2Controller"
-  },
+  "name": "VoodooPS2Controller",
   "category": "input",
   "description": {
-    "en": "PS/2 keyboard and trackpad driver, supports most laptop keyboards and trackpads.",
-    "zh": "PS/2键盘和触控板驱动，支持大多数笔记本电脑的键盘和触控板"
+    "zh-CN": "PS/2键盘和触控板驱动，支持大多数笔记本电脑的键盘和触控板",
+    "zh-TW": "PS/2键盘和触控板驅動程式，支援大多数笔记本电脑的键盘和触控板",
+    "zh-HK": "PS/2键盘和触控板驅動程式，支援大多数笔记本电脑的键盘和触控板",
+    "ja": "PS/2 keyboard and trackpad ドライバー, サポートs most laptop keyboards and trackpads.",
+    "ko": "PS/2 keyboard and trackpad 드라이버, 지원s most laptop keyboards and trackpads.",
+    "es": "PS/2 keyboard and trackpad controlador, soportes most laptop keyboards and trackpads.",
+    "fr": "PS/2 keyboard and trackpad pilote, supports most laptop keyboards and trackpads.",
+    "de": "PS/2 keyboard and trackpad Treiber, Unterstützungs most laptop keyboards and trackpads.",
+    "ru": "PS/2 keyboard and trackpad драйвер, поддержкаs most laptop keyboards and trackpads.",
+    "en": "PS/2 keyboard and trackpad driver, supports most laptop keyboards and trackpads."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -43,9 +48,18 @@
   "license": "BSD-3-Clause",
   "tags": [
     "PS/2",
-    { "en": "Keyboard", "zh": "键盘" },
-    { "en": "Trackpad", "zh": "触控板" },
-    { "en": "Input Devices", "zh": "输入设备" }
+    {
+      "en": "Keyboard",
+      "zh-CN": "键盘"
+    },
+    {
+      "en": "Trackpad",
+      "zh-CN": "触控板"
+    },
+    {
+      "en": "Input Devices",
+      "zh-CN": "输入设备"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/VoodooPS2",

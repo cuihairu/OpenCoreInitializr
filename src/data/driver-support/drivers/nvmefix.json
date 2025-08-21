@@ -1,13 +1,18 @@
 {
   "id": "NVMeFix",
-  "name": {
-    "en": "NVMeFix",
-    "zh": "NVMeFix"
-  },
+  "name": "NVMeFix",
   "category": "system",
   "description": {
+    "zh-CN": "修复NVMe SSD的电源管理和性能问题",
+    "zh-TW": "修復NVMe SSD的電源管理和性能问题",
+    "zh-HK": "修復NVMe SSD的電源管理和性能问题",
+    "ja": "Fixes power management and パフォーマンス issues for NVMe SSDs.",
+    "ko": "Fixes power management and 성능 issues for NVMe SSDs.",
+    "es": "Fixes power management and rendimiento issues for NVMe SSDs.",
+    "de": "Fixes power management and Leistung issues for NVMe SSDs.",
+    "ru": "Fixes power management and производительность issues for NVMe SSDs.",
     "en": "Fixes power management and performance issues for NVMe SSDs.",
-    "zh": "修复NVMe SSD的电源管理和性能问题"
+    "fr": "Fixes power management and performance issues for NVMe SSDs."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -31,8 +36,16 @@
         "10.14+"
       ],
       "notes": {
+        "zh-CN": "改善NVMe SSD的电源管理，减少发热和提高性能",
+        "zh-TW": "改善NVMe SSD的電源管理，减少发热和提高性能",
+        "zh-HK": "改善NVMe SSD的電源管理，减少发热和提高性能",
+        "ja": "Improves power management for NVMe SSDs, reducing heat and improving パフォーマンス.",
+        "ko": "Improves power management for NVMe SSDs, reducing heat and improving 성능.",
+        "es": "Improves power management for NVMe SSDs, reducing heat and improving rendimiento.",
+        "de": "Improves power management for NVMe SSDs, reducing heat and improving Leistung.",
+        "ru": "Improves power management for NVMe SSDs, reducing heat and improving производительность.",
         "en": "Improves power management for NVMe SSDs, reducing heat and improving performance.",
-        "zh": "改善NVMe SSD的电源管理，减少发热和提高性能"
+        "fr": "Improves power management for NVMe SSDs, reducing heat and improving performance."
       }
     }
   ],
@@ -45,9 +58,18 @@
   "license": "BSD-3-Clause",
   "tags": [
     "NVMe",
-    { "en": "Storage", "zh": "存储" },
-    { "en": "Power Management", "zh": "电源管理" },
-    { "en": "Performance", "zh": "性能优化" }
+    {
+      "en": "Storage",
+      "zh-CN": "存储"
+    },
+    {
+      "en": "Power Management",
+      "zh-CN": "电源管理"
+    },
+    {
+      "en": "Performance",
+      "zh-CN": "性能优化"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/NVMeFix",

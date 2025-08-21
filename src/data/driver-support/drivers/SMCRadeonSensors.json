@@ -1,13 +1,18 @@
 {
   "id": "SMCRadeonSensors",
-  "name": {
-    "en": "SMCRadeonSensors",
-    "zh": "SMCRadeonSensors"
-  },
+  "name": "SMCRadeonSensors",
   "category": "sensors",
   "description": {
-    "en": "AMD Radeon graphics card temperature monitoring driver.",
-    "zh": "AMD Radeon显卡温度监控驱动"
+    "zh-CN": "AMD Radeon显卡温度监控驱动",
+    "zh-TW": "AMD Radeon顯示卡温度監控驅動程式",
+    "zh-HK": "AMD Radeon顯示卡温度監控驅動程式",
+    "ja": "AMD Radeon グラフィックス card temperature monitoring ドライバー.",
+    "ko": "AMD Radeon 그래픽 card temperature monitoring 드라이버.",
+    "es": "AMD Radeon gráficos card temperature monitoring controlador.",
+    "fr": "AMD Radeon graphiques card temperature monitoring pilote.",
+    "de": "AMD Radeon Grafik card temperature monitoring Treiber.",
+    "ru": "AMD Radeon графика card temperature monitoring драйвер.",
+    "en": "AMD Radeon graphics card temperature monitoring driver."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -43,10 +48,19 @@
   "maintainer": "ChefKissInc",
   "license": "GPL-2.0",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器"
+    },
     "AMD",
-    { "en": "Graphics Card", "zh": "显卡" },
-    { "en": "Temperature", "zh": "温度" },
+    {
+      "en": "Graphics Card",
+      "zh-CN": "显卡"
+    },
+    {
+      "en": "Temperature",
+      "zh-CN": "温度"
+    },
     "Radeon"
   ],
   "links": {

@@ -1,13 +1,18 @@
 {
   "id": "SMCLightSensor",
-  "name": {
-    "en": "SMCLightSensor",
-    "zh": "SMCLightSensor"
-  },
+  "name": "SMCLightSensor",
   "category": "sensors",
   "description": {
-    "en": "Ambient light sensor driver, supports automatic brightness adjustment.",
-    "zh": "环境光传感器驱动，支持自动亮度调节"
+    "zh-CN": "环境光传感器驱动，支持自动亮度调节",
+    "zh-TW": "環境光感測器驅動，支援自動亮度調節",
+    "zh-HK": "環境光感測器驅動，支援自動亮度調節",
+    "ja": "Ambient light sensor ドライバー, サポートs automatic brightness adjustment.",
+    "ko": "Ambient light sensor 드라이버, 지원s automatic brightness adjustment.",
+    "es": "Ambient light sensor controlador, soportes automatic brightness adjustment.",
+    "fr": "Ambient light sensor pilote, supports automatic brightness adjustment.",
+    "de": "Ambient light sensor Treiber, Unterstützungs automatic brightness adjustment.",
+    "ru": "Ambient light sensor драйвер, поддержкаs automatic brightness adjustment.",
+    "en": "Ambient light sensor driver, supports automatic brightness adjustment."
   },
   "developmentStatus": "stable",
   "compatibility": "excellent",
@@ -43,11 +48,46 @@
   "maintainer": "Acidanthera",
   "license": "BSD-3-Clause",
   "tags": [
-    { "en": "Sensors", "zh": "传感器" },
-    { "en": "Light", "zh": "光线" },
-    { "en": "Auto Brightness", "zh": "自动亮度" },
-    { "en": "Laptop", "zh": "笔记本" },
-    { "en": "Ambient Light", "zh": "环境光" }
+    {
+      "en": "Sensors",
+      "zh-CN": "传感器",
+      "zh-TW": "感測器",
+      "ja": "Sensors",
+      "de": "Sensors",
+      "ru": "Sensors"
+    },
+    {
+      "en": "Light",
+      "zh-CN": "光线",
+      "zh-TW": "光線",
+      "ja": "Light",
+      "de": "Light",
+      "ru": "Light"
+    },
+    {
+      "en": "Auto Brightness",
+      "zh-CN": "自动亮度",
+      "zh-TW": "自動亮度",
+      "ja": "Auto Brightness",
+      "de": "Auto Brightness",
+      "ru": "Auto Brightness"
+    },
+    {
+      "en": "Laptop",
+      "zh-CN": "笔记本",
+      "zh-TW": "筆記型電腦",
+      "ja": "Laptop",
+      "de": "Laptop",
+      "ru": "Laptop"
+    },
+    {
+      "en": "Ambient Light",
+      "zh-CN": "环境光",
+      "zh-TW": "環境光",
+      "ja": "Ambient Light",
+      "de": "Ambient Light",
+      "ru": "Ambient Light"
+    }
   ],
   "links": {
     "website": "https://github.com/acidanthera/VirtualSMC",

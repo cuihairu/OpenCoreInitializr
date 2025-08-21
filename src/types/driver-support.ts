@@ -2,9 +2,17 @@
  * 驱动支持相关的类型定义
  */
 
-export type LocalizedText = {
+export interface LocalizedText {
   en: string;
-  zh: string;
+  'zh-CN': string;
+  'zh-TW': string;
+  'zh-HK': string;
+  ja: string;
+  ko: string;
+  es: string;
+  fr: string;
+  de: string;
+  ru: string;
 };
 
 // 驱动开发状态
@@ -27,7 +35,8 @@ export type DevelopmentStatus =
 export type DriverPriority = 
   | 'essential'     // 必需
   | 'recommended'   // 推荐
-  | 'optional';     // 可选
+  | 'optional'     // 可选
+  | 'unknown';
 
 // 驱动分类
 export type DriverCategory = 
@@ -188,18 +197,22 @@ export interface DriverSearchFilter {
 
 // 搜索结果
 export interface DriverSearchResult {
-  /** 搜索结果列表 */
+  /** 驱动列表 */
   drivers: DriverSupportInfo[];
-  /** 总数量 */
-  total: number;
   /** 分页信息 */
   pagination: {
     page: number;
     pageSize: number;
+    totalItems: number;
     totalPages: number;
   };
-  /** 搜索统计 */
-  stats: {
-    byCategory: Record<DriverCategory, number>;
+  /** 元数据 */
+  metadata: {
+    /** 总驱动数量 */
+    totalDrivers: number;
+    /** 支持的macOS版本 */
+    supportedMacOSVersions: string[];
+    /** 数据来源 */
+    dataSources: string[];
   };
 }

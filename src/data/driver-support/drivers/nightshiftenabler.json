@@ -1,13 +1,18 @@
 {
   "id": "NightShiftEnabler",
-  "name": {
-    "en": "NightShiftEnabler",
-    "zh": "NightShiftEnabler"
-  },
+  "name": "NightShiftEnabler",
   "category": "features",
   "description": {
-    "en": "Enables Night Shift mode on unsupported hardware.",
-    "zh": "在不支持的硬件上启用夜览模式功能"
+    "zh-CN": "在不支持的硬件上启用夜览模式功能",
+    "zh-TW": "在不支援的硬件上啟用夜览模式功能",
+    "zh-HK": "在不支援的硬件上啟用夜览模式功能",
+    "ja": "有効化s Night Shift mode on unサポートed ハードウェア.",
+    "ko": "활성화s Night Shift mode on un지원ed 하드웨어.",
+    "es": "habilitars Night Shift mode on unsoporteed hardware.",
+    "fr": "activers Night Shift mode on unsupported matériel.",
+    "de": "aktivierens Night Shift mode on unUnterstützunged Hardware.",
+    "ru": "включитьs Night Shift mode on unподдержкаed аппаратное обеспечение.",
+    "en": "Enables Night Shift mode on unsupported hardware."
   },
   "developmentStatus": "stable",
   "compatibility": "good",
@@ -39,9 +44,18 @@
   "maintainer": "cdf",
   "license": "MIT",
   "tags": [
-    { "en": "Night Shift", "zh": "夜览" },
-    { "en": "Blue Light Filter", "zh": "蓝光过滤" },
-    { "en": "Display", "zh": "显示" }
+    {
+      "en": "Night Shift",
+      "zh-CN": "夜览"
+    },
+    {
+      "en": "Blue Light Filter",
+      "zh-CN": "蓝光过滤"
+    },
+    {
+      "en": "Display",
+      "zh-CN": "显示"
+    }
   ],
   "links": {
     "website": "https://github.com/cdf/NightShiftEnabler",
