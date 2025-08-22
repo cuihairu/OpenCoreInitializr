@@ -18,12 +18,12 @@
   "compatibility": "good",
   "priority": "recommended",
   "version": {
-    "version": "1.4.0",
-    "releaseDate": "2024-08-15",
-    "lastUpdated": "2024-08-15",
-    "downloadUrl": "https://github.com/SongXiaoXi/AppleIGC/releases/download/1.4.0/AppleIGC-1.4.0-RELEASE.zip",
-    "fileSize": "120KB",
-    "changelog": "支持Intel I225-V和I226-V 2.5G网卡，从Linux移植",
+    "version": "1.6",
+    "releaseDate": "2025-02-13",
+    "lastUpdated": "2025-02-13",
+    "downloadUrl": "https://github.com/SongXiaoXi/AppleIGC/releases/tag/v1.6",
+    "fileSize": "0.0 MB",
+    "changelog": "Some fixes to avoid kernel panic. It may be effective for issues #7 #13 #17",
     "isLatest": true
   },
   "hardwareSupport": [
