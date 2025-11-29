@@ -21,7 +21,7 @@
     "version": "2.4.0",
     "releaseDate": "2024-06-20",
     "lastUpdated": "2024-06-20",
-    "downloadUrl": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/2.4.0",
+    "downloadUrl": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/2.4.0/IntelBluetoothFirmware-2.4.0.zip",
     "fileSize": "1.2 MB",
     "changelog": "Updated firmware support for newer Intel Bluetooth controllers",
     "isLatest": true

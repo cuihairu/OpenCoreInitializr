@@ -12,6 +12,7 @@ import type {
   HardwareConfig,
   OpenCoreConfig,
 } from '@/types';
+import { OPENCORE_VERSIONS } from '@/lib/version';
 
 // Main App Store
 interface AppStore {
@@ -258,14 +259,20 @@ export const useVersionStore = create<VersionStore>()(
         fetchVersions: async () => {
           set({ loading: true, error: null });
           try {
-            // TODO: Implement version fetching logic
-            const response = await fetch('/api/versions');
-            const versions = await response.json();
-            set({ versions, lastUpdated: Date.now(), loading: false });
+            // Use static data for now
+            const versionsMap: Record<string, any> = {};
+            // Assuming the first one is the latest stable
+            const latestOpenCore = OPENCORE_VERSIONS.find(v => !v.prerelease) || OPENCORE_VERSIONS[0];
+            if (latestOpenCore) {
+                versionsMap['OpenCore'] = latestOpenCore;
+            }
+            
+            set({ versions: versionsMap, lastUpdated: Date.now(), loading: false });
           } catch (error) {
             set({ error: (error as Error).message, loading: false });
           }
         },
+
         getLatestVersion: (name: string) => {
           const { versions } = get();
           return versions[name]?.version || null;

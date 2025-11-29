@@ -21,7 +21,7 @@
     "version": "1.7.1",
     "releaseDate": "2025-07-07",
     "lastUpdated": "2025-08-20",
-    "downloadUrl": "https://github.com/acidanthera/Lilu/releases/tag/1.7.1",
+    "downloadUrl": "https://github.com/acidanthera/Lilu/releases/download/1.7.1/Lilu-1.7.1-RELEASE.zip",
     "fileSize": "0.4 MB",
     "changelog": "#### v1.7.1\r\n- Allow loading on macOS 26 without `-lilubetaall`, thanks @AlfCraft07",
     "isLatest": true

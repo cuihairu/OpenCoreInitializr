@@ -21,7 +21,7 @@
     "version": "2.7.1",
     "releaseDate": "2024-11-15",
     "lastUpdated": "2024-11-15",
-    "downloadUrl": "https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.7.1",
+    "downloadUrl": "https://github.com/acidanthera/BrcmPatchRAM/releases/download/2.7.1/BrcmPatchRAM-2.7.1-RELEASE.zip",
     "fileSize": "0.1 MB",
     "changelog": "Part of BrcmPatchRAM package - Bluetooth tool compatibility fixes",
     "isLatest": true

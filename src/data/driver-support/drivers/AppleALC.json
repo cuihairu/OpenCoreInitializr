@@ -21,7 +21,7 @@
     "version": "1.9.5",
     "releaseDate": "2024-12-15",
     "lastUpdated": "2024-12-15",
-    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/tag/1.9.5",
+    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/download/1.9.5/AppleALC-1.9.5-RELEASE.zip",
     "fileSize": "1.2 MB",
     "changelog": "Latest stable release with improved codec support",
     "isLatest": true

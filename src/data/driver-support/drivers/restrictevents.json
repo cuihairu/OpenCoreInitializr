@@ -21,7 +21,7 @@
     "version": "1.1.6",
     "releaseDate": "2024-08-15",
     "lastUpdated": "2024-08-15",
-    "downloadUrl": "https://github.com/acidanthera/RestrictEvents/releases/tag/1.1.6",
+    "downloadUrl": "https://github.com/acidanthera/RestrictEvents/releases/download/1.1.6/RestrictEvents-1.1.6-RELEASE.zip",
     "fileSize": "0.2 MB",
     "changelog": "Improved event filtering and system stability",
     "isLatest": true

@@ -21,7 +21,7 @@
     "version": "1.3.7",
     "releaseDate": "2025-07-07",
     "lastUpdated": "2025-08-20",
-    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.7",
+    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.7/VirtualSMC-1.3.7-RELEASE.zip",
     "fileSize": "0.1 MB",
     "changelog": "Part of VirtualSMC package - CPU monitoring support",
     "isLatest": true
