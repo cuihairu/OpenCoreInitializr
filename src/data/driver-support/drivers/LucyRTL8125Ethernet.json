@@ -20,8 +20,8 @@
   "version": {
     "version": "1.2.2",
     "releaseDate": "2024-06-20",
-    "lastUpdated": "2024-06-20",
-    "downloadUrl": "https://github.com/Mieze/LucyRTL8125Ethernet/releases/tag/1.2.2",
+    "lastUpdated": "2025-02-16",
+    "downloadUrl": "https://github.com/Mieze/LucyRTL8125Ethernet/releases/download/v1.2.2/LucyRTL8125Ethernet-V1.2.2.zip",
     "fileSize": "0.8 MB",
     "changelog": "Bug fixes and performance improvements for RTL8125 controllers",
     "isLatest": true

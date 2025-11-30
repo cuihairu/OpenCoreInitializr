@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "1.0.7",
-    "releaseDate": "2023-09-04",
-    "lastUpdated": "2023-09-04",
-    "downloadUrl": "https://github.com/acidanthera/IntelMausi/releases/download/1.0.7/IntelMausi-1.0.7-RELEASE.zip",
-    "fileSize": "85KB",
-    "changelog": "支持更多Intel以太网控制器，修复连接稳定性问题",
+    "version": "1.0.8",
+    "releaseDate": "2024-12-03",
+    "lastUpdated": "2024-12-03",
+    "downloadUrl": "https://github.com/acidanthera/IntelMausi/releases/download/1.0.8/IntelMausi-1.0.8-RELEASE.zip",
+    "fileSize": "0.8 MB",
+    "changelog": "#### v1.0.8\r\n- Minor fixes found by static analysis",
     "isLatest": true
   },
   "hardwareSupport": [

@@ -157,8 +157,13 @@ async function updateSingleDriverFile(filePath) {
               asset.name.toLowerCase().includes('release') && asset.name.endsWith('.zip')
             ) || latestInfo.assets.find(asset => asset.name.endsWith('.zip')) || latestInfo.assets[0];
             
-            if (mainAsset && mainAsset.size) {
-              driver.version.fileSize = formatFileSize(mainAsset.size);
+            if (mainAsset) {
+              if (mainAsset.browser_download_url) {
+                driver.version.downloadUrl = mainAsset.browser_download_url;
+              }
+              if (mainAsset.size) {
+                driver.version.fileSize = formatFileSize(mainAsset.size);
+              }
             }
           }
           

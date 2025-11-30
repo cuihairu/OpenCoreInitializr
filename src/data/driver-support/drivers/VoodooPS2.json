@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "2.3.6",
-    "releaseDate": "2024-11-25",
-    "lastUpdated": "2024-11-25",
-    "downloadUrl": "https://github.com/acidanthera/VoodooPS2/releases/download/2.3.6/VoodooPS2-2.3.6-RELEASE.zip",
-    "fileSize": "1.8MB",
-    "changelog": "改进触控板手势支持，修复键盘映射问题",
+    "version": "2.3.7",
+    "releaseDate": "2024-12-03",
+    "lastUpdated": "2024-12-03",
+    "downloadUrl": "https://github.com/acidanthera/VoodooPS2/releases/download/2.3.7/VoodooPS2Controller-2.3.7-RELEASE.zip",
+    "fileSize": "0.6 MB",
+    "changelog": "#### v2.3.7\r\n- Fixed multiple PS2/SMBus devices attaching\r\n- Fixed eratic pointer in bootpicker by disabling SMBus/PS2 devices on shutdown",
     "isLatest": true
   },
   "hardwareSupport": [

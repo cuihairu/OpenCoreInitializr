@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "1.1.1",
-    "releaseDate": "2023-12-15",
-    "lastUpdated": "2023-12-15",
-    "downloadUrl": "https://github.com/USBToolBox/kext/releases/tag/1.1.1",
-    "fileSize": "0.2 MB",
-    "changelog": "Improved compatibility and bug fixes for USB port mapping",
+    "version": "1.2.0",
+    "releaseDate": "2025-06-13",
+    "lastUpdated": "2025-06-13",
+    "downloadUrl": "https://github.com/USBToolBox/kext/releases/download/1.2.0/USBToolBox-1.2.0-RELEASE.zip",
+    "fileSize": "0.1 MB",
+    "changelog": "- Tahoe support (WIP)\r\n- Update logging",
     "isLatest": true
   },
   "hardwareSupport": [

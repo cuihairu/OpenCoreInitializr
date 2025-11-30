@@ -21,7 +21,7 @@
     "version": "1.2.0",
     "releaseDate": "2023-06-20",
     "lastUpdated": "2023-06-20",
-    "downloadUrl": "https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip",
+    "downloadUrl": "https://web.archive.org/web/20220121192241/https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip",
     "fileSize": "25KB",
     "changelog": "支持macOS 12.3+，修复AMD系统MCE错误",
     "isLatest": true

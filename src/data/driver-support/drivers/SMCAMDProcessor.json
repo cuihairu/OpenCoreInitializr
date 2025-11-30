@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "0.7.0",
-    "releaseDate": "2023-10-15",
-    "lastUpdated": "2023-10-15",
-    "downloadUrl": "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/0.7.0/SMCAMDProcessor-0.7.0-RELEASE.zip",
-    "fileSize": "120KB",
-    "changelog": "支持更多Ryzen处理器型号，改进温度读取精度",
+    "version": "0.7.2f1",
+    "releaseDate": "2024-03-31",
+    "lastUpdated": "2024-03-31",
+    "downloadUrl": "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/0.7.2f1/AMD.Power.Gadget.app.zip",
+    "fileSize": "5.4 MB",
+    "changelog": "## KEXTs\r\n- #166 NCT6799D SMC support. Thanks to @mbarbierato and @Lorys89\r\n- #167 SMCAMDProcessor data exportation fixes. Thanks to @ChgygLin\r\n\r\n## AMD Power Gadget\r\n- #157 Fixes typo in the user interface. Thanks to @gajdosech2\r\n\r\n[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://k...",
     "isLatest": true
   },
   "hardwareSupport": [

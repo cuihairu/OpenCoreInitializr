@@ -20,7 +20,7 @@
   "version": {
     "version": "2.4.0",
     "releaseDate": "2024-06-20",
-    "lastUpdated": "2024-06-20",
+    "lastUpdated": "2024-02-27",
     "downloadUrl": "https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/2.4.0/IntelBluetoothFirmware-2.4.0.zip",
     "fileSize": "0.1 MB",
     "changelog": "Companion driver for IntelBluetoothFirmware with improved compatibility",

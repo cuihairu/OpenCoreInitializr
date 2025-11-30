@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "optional",
   "version": {
-    "version": "1.3.2",
-    "releaseDate": "2024-01-20",
-    "lastUpdated": "2024-01-20",
-    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.2/VirtualSMC-1.3.2-RELEASE.zip",
-    "fileSize": "45KB",
-    "changelog": "改进光线传感器检测，支持更多设备",
+    "version": "1.3.7",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-07-07",
+    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.7/VirtualSMC-1.3.7-RELEASE.zip",
+    "fileSize": "1.3 MB",
+    "changelog": "#### v1.3.7\r\n- Added constants for macOS 26 support",
     "isLatest": true
   },
   "hardwareSupport": [

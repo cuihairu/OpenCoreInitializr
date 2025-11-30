@@ -18,12 +18,12 @@
   "compatibility": "good",
   "priority": "optional",
   "version": {
-    "version": "1.3.4",
-    "releaseDate": "2024-08-10",
-    "lastUpdated": "2024-08-10",
-    "downloadUrl": "https://github.com/VoodooSMBus/VoodooRMI/releases/download/1.3.4/VoodooRMI-1.3.4.zip",
-    "fileSize": "600KB",
-    "changelog": "改进ThinkPad触控板支持，修复手势识别",
+    "version": "1.4.3",
+    "releaseDate": "2025-09-11",
+    "lastUpdated": "2025-09-11",
+    "downloadUrl": "https://github.com/VoodooSMBus/VoodooRMI/releases/download/1.4.3/VoodooRMI-1.4.3-RELEASE.zip",
+    "fileSize": "0.7 MB",
+    "changelog": "**Full Changelog**: https://github.com/VoodooSMBus/VoodooRMI/compare/1.4.2...1.4.3\r\n\r\nChangelog:\r\n- Fixed F11 configuration on wakeup",
     "isLatest": true
   },
   "hardwareSupport": [

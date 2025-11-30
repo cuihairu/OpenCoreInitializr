@@ -54,15 +54,44 @@ export const createEfiPackage = async (
   const driverSupportService = DriverSupportService.getInstance();
   const allKexts = driverSupportService.searchDrivers({}).drivers;
 
+  console.log('=== DEBUG: Starting kext download preparation ===');
+  console.log('Selected kexts:', state.kexts);
+  console.log('Total available drivers:', allKexts.length);
+
   state.kexts.forEach((kextId) => {
+    console.log(`\n--- Processing kext: ${kextId} ---`);
     const kextData = allKexts.find((k) => k.id === kextId);
-    const downloadUrl = kextData.version.downloadUrl;
-    if (kextData && downloadUrl) {
-      filesToDownload.push({ name: `${kextData.id}.zip`, url: downloadUrl });
-    } else {
-        console.warn(`No downloadUrl found for ${kextId}. Skipping.`);
+    
+    if (!kextData) {
+      console.error(`❌ Kext not found in database: ${kextId}`);
+      return;
     }
+    
+    console.log(`✓ Found kext data:`, {
+      id: kextData.id,
+      name: kextData.name,
+      version: kextData.version?.version,
+      hasDownloadUrl: !!kextData.version?.downloadUrl
+    });
+    
+    const downloadUrl = kextData.version?.downloadUrl;
+    
+    if (!downloadUrl) {
+      console.warn(`⚠️ No downloadUrl for ${kextId}`);
+      return;
+    }
+    
+    console.log(`📥 Download URL: ${downloadUrl}`);
+    filesToDownload.push({ name: `${kextData.id}.zip`, url: downloadUrl });
   });
+
+  console.log('\n=== Files prepared for download ===');
+  console.log(`Total files: ${filesToDownload.length}`);
+  filesToDownload.forEach(f => {
+    console.log(`  - ${f.name}: ${f.url}`);
+  });
+  console.log('===================================\n');
+
 
   // TODO: Add ACPI files from motherboard_data.json to the download list.
 

@@ -2,6 +2,7 @@ import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { i18nUtils } from '@/lib/i18n';
 import type { DriverSupportInfo, LocalizedText } from '@/types/driver-support';
+import { downloadFiles } from '@/lib/download/manager';
 
 export interface DownloadProgress {
   driverId: string;
@@ -50,21 +51,66 @@ export class DriverDownloadService {
         status: 'downloading'
       });
 
-      // 模拟下载过程（实际项目中这里应该是真实的文件下载）
-      await this.simulateDownload(driver, abortController.signal);
+      const downloadUrl = driver.version.downloadUrl;
+      if (!downloadUrl) {
+        throw new Error(`Driver ${driver.name} has no download URL`);
+      }
+
+      // 真实下载
+      const results = await downloadFiles(
+        [{ name: `${driver.id}.zip`, url: downloadUrl }],
+        (progress) => {
+          // Calculate percentage based on loaded/total
+          let percentage = 0;
+          if (progress.total) {
+            percentage = Math.round((progress.loaded / progress.total) * 100);
+          } else {
+            // Fake progress if total is unknown, up to 90%
+            percentage = Math.min(90, Math.round(progress.loaded / 1024 / 10)); 
+          }
+          
+          this.updateProgress(driverId, {
+            driverId,
+            progress: percentage,
+            status: 'downloading'
+          });
+        }
+      );
+
+      if (results.length === 0) {
+        throw new Error('Download returned no results');
+      }
+
+      const downloadedFile = results[0];
 
       // 生成并下载单个驱动文件
       const zip = new JSZip();
-      const driverContent = await this.getDriverContent(driver);
       const folderName = `${this.getText(driver.name).replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
       
+      // Add README
       zip.folder(folderName)?.file('README.md', this.generateDriverReadme(driver));
-      zip.folder(folderName)?.file(`${this.getText(driver.name)}.kext`, driverContent);
+      
+      // Extract the downloaded zip and add its contents to our new zip
+      // Or just add the downloaded zip file itself if we want to keep it simple
+      // For now, let's try to extract if it's a zip, otherwise just add the file
+      try {
+        const loadedZip = await JSZip.loadAsync(downloadedFile.content);
+        const driverFolder = zip.folder(folderName);
+        
+        // Copy all files from downloaded zip to our new zip structure
+        loadedZip.forEach((relativePath, zipEntry) => {
+           driverFolder?.file(relativePath, zipEntry.async('arraybuffer'));
+        });
+      } catch (e) {
+        // If not a zip or extraction fails, just add the file as is
+        console.warn('Failed to extract downloaded file, adding as is:', e);
+        zip.folder(folderName)?.file(`${driver.id}.zip`, downloadedFile.content);
+      }
       
       // 生成并下载ZIP文件
       const zipBlob = await zip.generateAsync({ type: 'blob' });
       const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
-      saveAs(zipBlob, `${driver.name}_${driver.version.version}_${timestamp}.zip`);
+      saveAs(zipBlob, `${this.getText(driver.name)}_${driver.version.version}_${timestamp}.zip`);
 
       // 更新进度：下载完成
       this.updateProgress(driverId, {
@@ -83,6 +129,7 @@ export class DriverDownloadService {
         });
       } else {
         // 下载失败
+        console.error('Download failed:', error);
         this.updateProgress(driverId, {
           driverId,
           progress: 0,
@@ -104,14 +151,46 @@ export class DriverDownloadService {
     onProgress?: (progress: DownloadProgress) => void
   ): Promise<void> {
     const zip = new JSZip();
-    const totalDrivers = drivers.length;
     let completedDrivers = 0;
 
     try {
-      // 为每个驱动创建下载任务
-      const downloadPromises = drivers.map(async (driver, index) => {
+      // Prepare files for download manager
+      const filesToDownload = drivers.map(d => {
+        if (!d.version.downloadUrl) {
+           console.warn(`Skipping ${d.id} due to missing download URL`);
+           return null;
+        }
+        return { name: `${d.id}.zip`, url: d.version.downloadUrl };
+      }).filter(f => f !== null) as { name: string, url: string }[];
+
+      if (filesToDownload.length === 0) {
+        throw new Error('No valid download URLs found');
+      }
+
+      // Notify start
+      if (onProgress) {
+        onProgress({
+          driverId: 'batch',
+          progress: 0,
+          status: 'downloading'
+        });
+      }
+
+      // Use download manager for parallel downloads
+      // We need to track individual progress to update the UI
+      // But downloadFiles aggregates progress mostly. 
+      // We can wrap the onProgress of downloadFiles to update individual items if needed,
+      // but here we are batch downloading to a single ZIP.
+      // The UI expects updates for individual drivers though.
+      
+      // Let's download them one by one or in parallel but tracking each
+      // Actually, downloadFiles supports parallel downloads but the callback is global.
+      // Let's implement a custom parallel download here to track individual progress
+      
+      const downloadPromises = drivers.map(async (driver) => {
+        if (!driver.version.downloadUrl) return;
+
         try {
-          // 开始下载该驱动
           if (onProgress) {
             onProgress({
               driverId: driver.id,
@@ -120,36 +199,60 @@ export class DriverDownloadService {
             });
           }
 
-          // 模拟下载过程
-          await this.simulateDownload(driver, new AbortController().signal);
+          const results = await downloadFiles(
+            [{ name: `${driver.id}.zip`, url: driver.version.downloadUrl }],
+            (progress) => {
+               let percentage = 0;
+               if (progress.total) {
+                 percentage = Math.round((progress.loaded / progress.total) * 100);
+               }
+               if (onProgress) {
+                 onProgress({
+                   driverId: driver.id,
+                   progress: percentage,
+                   status: 'downloading'
+                 });
+               }
+            }
+          );
           
-          // 模拟下载驱动文件内容
-          const driverContent = await this.getDriverContent(driver);
-          
-          // 添加到ZIP文件
-          const folderName = `${this.getText(driver.name).replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
-          zip.folder(folderName)?.file('README.md', this.generateDriverReadme(driver));
-          zip.folder(folderName)?.file(`${this.getText(driver.name)}.kext`, driverContent);
-          
-          completedDrivers++;
-          
-          // 更新该驱动的完成状态
-          if (onProgress) {
-            onProgress({
-              driverId: driver.id,
-              progress: 100,
-              status: 'completed'
-            });
+          if (results.length > 0) {
+             const content = results[0].content;
+             const folderName = `${this.getText(driver.name).replace(/[^a-zA-Z0-9]/g, '_')}_${driver.version.version}`;
+             
+             // Add README
+             zip.folder(folderName)?.file('README.md', this.generateDriverReadme(driver));
+             
+             // Extract and add content
+             try {
+                const loadedZip = await JSZip.loadAsync(content);
+                const driverFolder = zip.folder(folderName);
+                loadedZip.forEach((relativePath, zipEntry) => {
+                   driverFolder?.file(relativePath, zipEntry.async('arraybuffer'));
+                });
+             } catch {
+                zip.folder(folderName)?.file(`${driver.id}.zip`, content);
+             }
+             
+             completedDrivers++;
+             
+             if (onProgress) {
+                onProgress({
+                  driverId: driver.id,
+                  progress: 100,
+                  status: 'completed'
+                });
+             }
           }
-          
+
         } catch (error) {
-          console.error(`下载驱动 ${driver.name} 失败:`, error);
+          console.error(`Failed to download ${driver.name}:`, error);
           if (onProgress) {
             onProgress({
               driverId: driver.id,
               progress: 0,
               status: 'failed',
-              error: error instanceof Error ? error.message : '下载失败'
+              error: error instanceof Error ? error.message : 'Failed'
             });
           }
         }
@@ -157,12 +260,14 @@ export class DriverDownloadService {
 
       await Promise.all(downloadPromises);
 
+      if (completedDrivers === 0) {
+        throw new Error('All downloads failed');
+      }
+
       // 生成并下载ZIP文件
       const zipBlob = await zip.generateAsync({ type: 'blob' });
       const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
       saveAs(zipBlob, `OpenCore_Drivers_${timestamp}.zip`);
-
-      // 批量下载完成，不需要额外的batch进度更新
 
     } catch (error) {
       if (onProgress) {
@@ -203,49 +308,17 @@ export class DriverDownloadService {
   }
 
   /**
-   * 模拟下载过程
-   */
-  private async simulateDownload(driver: DriverSupportInfo, signal: AbortSignal): Promise<void> {
-    const totalSteps = 10;
-    
-    for (let i = 0; i <= totalSteps; i++) {
-      if (signal.aborted) {
-        throw new Error('Download aborted');
-      }
-      
-      // 模拟下载延迟
-      await new Promise(resolve => setTimeout(resolve, 200 + Math.random() * 300));
-      
-      // 更新进度
-      this.updateProgress(driver.id, {
-        driverId: driver.id,
-        progress: Math.round((i / totalSteps) * 100),
-        status: 'downloading'
-      });
-    }
-  }
-
-  /**
-   * 获取驱动内容（模拟）
-   */
-  private async getDriverContent(driver: DriverSupportInfo): Promise<string> {
-    // 在实际项目中，这里应该从真实的URL下载驱动文件
-    // 现在我们返回一个模拟的内容
-    return `# ${driver.name}\n\n这是 ${driver.name} 驱动的模拟内容。\n\n版本: ${driver.version.version}\n描述: ${driver.description}\n\n请从官方源下载真实的驱动文件。`;
-  }
-
-  /**
    * 生成驱动说明文件
    */
   private generateDriverReadme(driver: DriverSupportInfo): string {
-    return `# ${driver.name}
-
+    return `# ${this.getText(driver.name)}
+    
 ## 描述
-${driver.description}
+${this.getText(driver.description)}
 
 ## 版本信息
 - 当前版本: ${driver.version.version}
-- 最后更新: ${new Date(driver.version.lastUpdated).toLocaleDateString('zh-CN')}
+- 最后更新: ${new Date(driver.version.lastUpdated).toLocaleDateString()}
 
 ## 开发状态
 ${driver.developmentStatus}
@@ -256,11 +329,8 @@ ${driver.compatibility}
 ## 优先级
 ${driver.priority}
 
-## 标签
-${driver.tags.join(', ')}
-
 ## 链接
-- 更多信息请访问 OpenCore 官方文档
+- 官方网站: ${driver.source || 'N/A'}
 
 ## 注意事项
 请确保您的系统满足此驱动的兼容性要求。

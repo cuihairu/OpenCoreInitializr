@@ -20,7 +20,7 @@
   "version": {
     "version": "1.5.2",
     "releaseDate": "2024-12-05",
-    "lastUpdated": "2024-12-05",
+    "lastUpdated": "2025-11-20",
     "downloadUrl": "https://github.com/ChefKissInc/NootedRed/releases/download/1.5.2/NootedRed-1.5.2-RELEASE.zip",
     "fileSize": "1.2MB",
     "changelog": "改进Vega集成显卡加速，修复睡眠唤醒问题",

@@ -18,12 +18,12 @@
   "compatibility": "good",
   "priority": "recommended",
   "version": {
-    "version": "1.4.0",
-    "releaseDate": "2024-08-15",
-    "lastUpdated": "2024-08-15",
-    "downloadUrl": "https://github.com/SongXiaoXi/AppleIGC/releases/download/1.4.0/AppleIGC-1.4.0-RELEASE.zip",
-    "fileSize": "120KB",
-    "changelog": "支持Intel I225-V和I226-V 2.5G网卡，从Linux移植",
+    "version": "1.7",
+    "releaseDate": "2025-10-19",
+    "lastUpdated": "2025-10-19",
+    "downloadUrl": "https://github.com/SongXiaoXi/AppleIGC/releases/download/v1.7/AppleIGC.kext.zip",
+    "fileSize": "0.0 MB",
+    "changelog": "Fix issues in the IPv6 packet-processing path that could trigger a kernel panic, primarily on macOS Tahoe.",
     "isLatest": true
   },
   "hardwareSupport": [

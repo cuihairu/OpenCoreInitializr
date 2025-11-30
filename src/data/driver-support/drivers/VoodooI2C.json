@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "2.8",
-    "releaseDate": "2024-10-30",
-    "lastUpdated": "2024-10-30",
-    "downloadUrl": "https://github.com/VoodooI2C/VoodooI2C/releases/download/2.8/VoodooI2C-2.8.zip",
-    "fileSize": "2.5MB",
-    "changelog": "支持更多I2C触控板型号，改进多点触控",
+    "version": "2.9.1",
+    "releaseDate": "2024-11-06",
+    "lastUpdated": "2024-11-06",
+    "downloadUrl": "https://github.com/VoodooI2C/VoodooI2C/releases/download/v2.9.1/VoodooI2C-2.9.1-RELEASE.zip",
+    "fileSize": "1.3 MB",
+    "changelog": "Since the last release there have been 1 commit(s). The descriptions for the first (at most) 10 of these are as follows\n\n\ne3ac3ed - Bump version to 2.9.1 (#564) (Kishor Prins)\n",
     "isLatest": true
   },
   "hardwareSupport": [

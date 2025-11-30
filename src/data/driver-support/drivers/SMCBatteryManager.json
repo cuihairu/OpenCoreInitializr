@@ -18,12 +18,12 @@
   "compatibility": "excellent",
   "priority": "recommended",
   "version": {
-    "version": "1.3.2",
-    "releaseDate": "2024-01-20",
-    "lastUpdated": "2024-01-20",
-    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.2/VirtualSMC-1.3.2-RELEASE.zip",
-    "fileSize": "65KB",
-    "changelog": "改进电池健康度检测，支持更多笔记本型号",
+    "version": "1.3.7",
+    "releaseDate": "2025-07-07",
+    "lastUpdated": "2025-07-07",
+    "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.7/VirtualSMC-1.3.7-RELEASE.zip",
+    "fileSize": "1.3 MB",
+    "changelog": "#### v1.3.7\r\n- Added constants for macOS 26 support",
     "isLatest": true
   },
   "hardwareSupport": [

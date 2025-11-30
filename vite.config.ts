@@ -33,5 +33,34 @@ export default defineConfig(({ mode }) => ({
   server: {
     port: 5173,
     host: true,
+    proxy: {
+      '/api/github-download': {
+        target: 'https://ghproxy.net/https://github.com',
+        changeOrigin: true,
+        followRedirects: true,
+        rewrite: (path) => path.replace(/^\/api\/github-download/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq, req) => {
+            console.log('Proxying GitHub download via ghproxy:', req.url);
+            proxyReq.setHeader('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+          });
+          proxy.on('error', (err, req, res) => {
+            console.error('Proxy error:', err);
+          });
+        },
+      },
+      '/api/wayback-download': {
+        target: 'https://web.archive.org',
+        changeOrigin: true,
+        followRedirects: true,
+        rewrite: (path) => path.replace(/^\/api\/wayback-download/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq, req) => {
+            console.log('Proxying Wayback download:', req.url);
+            proxyReq.setHeader('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+          });
+        },
+      },
+    },
   },
 }))

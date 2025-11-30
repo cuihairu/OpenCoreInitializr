@@ -18,12 +18,12 @@
   "compatibility": "good",
   "priority": "recommended",
   "version": {
-    "version": "2.2.2",
-    "releaseDate": "2018-12-08",
-    "lastUpdated": "2018-12-08",
-    "downloadUrl": "https://github.com/Mieze/AtherosE2200Ethernet/releases/download/2.2.2/AtherosE2200Ethernet-V2.2.2.zip",
-    "fileSize": "65KB",
-    "changelog": "支持Atheros AR816x, AR817x和Killer E220x, E2400, E2500系列网卡",
+    "version": "2.4.0",
+    "releaseDate": "2025-02-22",
+    "lastUpdated": "2025-02-22",
+    "downloadUrl": "https://github.com/Mieze/AtherosE2200Ethernet/releases/download/v2.4.0/AtherosE2200Ethernet-V2.4.0.zip",
+    "fileSize": "0.0 MB",
+    "changelog": "- Support for AppleVTD added (see note).\r\n- Keep some spare network buffers to better handle situations in which the network stack is unable to provide buffer memory according to the driver's demands (mostly MSI boards are affected).",
     "isLatest": true
   },
   "hardwareSupport": [

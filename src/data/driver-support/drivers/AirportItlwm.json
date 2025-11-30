@@ -20,8 +20,8 @@
   "version": {
     "version": "2.3.0",
     "releaseDate": "2024-08-15",
-    "lastUpdated": "2024-08-15",
-    "downloadUrl": "https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0",
+    "lastUpdated": "2024-06-09",
+    "downloadUrl": "https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Monterey.kext.zip",
     "fileSize": "2.1 MB",
     "changelog": "Improved stability and compatibility with latest macOS versions",
     "isLatest": true

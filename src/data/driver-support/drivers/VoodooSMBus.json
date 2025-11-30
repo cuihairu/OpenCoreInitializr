@@ -20,7 +20,7 @@
   "version": {
     "version": "3.0.0",
     "releaseDate": "2024-09-15",
-    "lastUpdated": "2024-09-15",
+    "lastUpdated": "2020-07-07",
     "downloadUrl": "https://github.com/VoodooSMBus/VoodooSMBus/releases/download/3.0.0/VoodooSMBus-3.0.0.zip",
     "fileSize": "800KB",
     "changelog": "重构驱动架构，改进兼容性",

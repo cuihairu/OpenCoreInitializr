@@ -18,12 +18,12 @@
   "compatibility": "good",
   "priority": "optional",
   "version": {
-    "version": "1.9.2",
-    "releaseDate": "2024-12-15",
-    "lastUpdated": "2024-12-15",
-    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/download/1.9.2/AppleALC-1.9.2-RELEASE.zip",
-    "fileSize": "2.1MB",
-    "changelog": "精简版AppleALC，移除模拟音频支持，专注于数字音频",
+    "version": "1.9.6",
+    "releaseDate": "2025-11-03",
+    "lastUpdated": "2025-11-03",
+    "downloadUrl": "https://github.com/acidanthera/AppleALC/releases/download/1.9.6/AppleALC-1.9.6-RELEASE.zip",
+    "fileSize": "3.6 MB",
+    "changelog": "#### v1.9.6\r\n- Added ALC235 layout-id 20 for Lenovo ThinkCentre M920x-N000 by Xezun\r\n- Added ALCS1220A layout-id 89 for Asus Z890 ProArt Creator WiFi by caley13\r\n- Added ALC256 layout-id 41 for Asus X412FAG by I3qua\r\n- Update controllers.plist with Raptor Lake-P/U/H cAVS Audio Controller (0x51CA) by...",
     "isLatest": true
   },
   "hardwareSupport": [
