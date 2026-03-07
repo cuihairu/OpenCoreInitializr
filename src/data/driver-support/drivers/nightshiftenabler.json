@@ -20,7 +20,7 @@
   "version": {
     "version": "1.1.1",
     "releaseDate": "2021-10-20",
-    "lastUpdated": "2025-08-20",
+    "lastUpdated": "2021-10-20",
     "downloadUrl": "https://github.com/cdf/NightShiftEnabler/releases/download/1.1.1/NightShiftEnabler-1.1.1-RELEASE.zip",
     "fileSize": "0.0 MB",
     "changelog": "#### v1.1.1\r\n- Fix Monterey compatibility",

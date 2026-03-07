@@ -20,7 +20,7 @@
   "version": {
     "version": "1.3.7",
     "releaseDate": "2025-07-07",
-    "lastUpdated": "2025-08-20",
+    "lastUpdated": "2025-07-07",
     "downloadUrl": "https://github.com/acidanthera/VirtualSMC/releases/download/1.3.7/VirtualSMC-1.3.7-RELEASE.zip",
     "fileSize": "0.3 MB",
     "changelog": "#### v1.3.7\r\n- Added constants for macOS 26 support",
